@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+  @page { size: 1396px 3840px; margin: 0; }
+  * { margin:0; padding:0; box-sizing:border-box; }
+  body {
+    font-family:'Inter',-apple-system,sans-serif;
+    background:#0f2e22;
+    padding:48px;
+    width:1300px;
+  }
+  .card {
+    background:#ffffff;
+    border-radius:20px;
+    overflow:hidden;
+    box-shadow:0 24px 60px rgba(0,0,0,.25);
+  }
+  .header {
+    background:linear-gradient(135deg,#0f6b43 0%,#13854f 100%);
+    padding:36px 44px;
+    color:#fff;
+  }
+  .header .kicker {
+    font-size:15px; font-weight:600; letter-spacing:2px; text-transform:uppercase;
+    color:#9fe3bf; margin-bottom:6px;
+  }
+  .header h1 { font-size:34px; font-weight:800; letter-spacing:-.5px; }
+  .header p { font-size:17px; font-weight:400; color:#cdeede; margin-top:10px; }
+
+  /* KPI ROW */
+  .kpis { display:flex; gap:16px; padding:30px 44px 6px; }
+  .kpi { flex:1; background:#f5faf7; border:1px solid #e6efe9; border-radius:16px; padding:20px 22px; }
+  .kpi .lbl { font-size:13px; font-weight:700; letter-spacing:.5px; text-transform:uppercase; color:#5a6b62; }
+  .kpi .val { font-size:32px; font-weight:800; color:#11241b; margin-top:8px; letter-spacing:-.5px; }
+  .kpi .delta { font-size:14px; font-weight:700; margin-top:6px; }
+  .kpi .down { color:#b5471f; }
+  .kpi .up   { color:#1d8a4f; }
+  .kpi .src  { font-size:11.5px; color:#8a978f; margin-top:10px; line-height:1.4; }
+  .combined { margin:28px 44px 0; padding:16px 22px; background:#eef6f1; border-left:4px solid #13854f; border-radius:0 10px 10px 0; font-size:15px; color:#2c3b33; line-height:1.55; }
+  .combined b { color:#0f6b43; }
+  .unit { padding:22px 44px 0; }
+  .unit .kpis { padding:14px 0 0; }
+  .unit-name { font-size:16px; font-weight:800; color:#0f6b43; letter-spacing:.3px; display:flex; align-items:center; gap:9px; }
+  .unit-name::before { content:''; width:11px; height:11px; border-radius:3px; background:#13854f; }
+
+  /* SECTION HEADERS */
+  .section { padding:28px 44px 4px; }
+  .sec-head { display:flex; align-items:baseline; gap:14px; margin-bottom:6px; }
+  .sec-num {
+    font-size:13px; font-weight:800; letter-spacing:1px; color:#fff;
+    background:#13854f; border-radius:8px; padding:5px 11px;
+  }
+  .sec-title { font-size:21px; font-weight:800; color:#11241b; letter-spacing:-.2px; }
+  .sec-desc { font-size:15px; color:#5a6b62; font-weight:500; }
+  .sec-source {
+    font-size:13px; color:#5a6b62; background:#eef6f1; border-left:3px solid #13854f;
+    padding:8px 14px; border-radius:0 8px 8px 0; margin:10px 0 16px; line-height:1.5;
+  }
+  .sec-source b { color:#0f6b43; }
+
+  /* TABLES */
+  table { width:100%; border-collapse:collapse; }
+  thead th {
+    background:#0f3d2a; color:#dff5e8;
+    font-size:12.5px; font-weight:700; letter-spacing:.7px; text-transform:uppercase;
+    text-align:left; padding:13px 18px;
+  }
+  thead th:first-child { border-radius:10px 0 0 0; }
+  thead th:last-child  { border-radius:0 10px 0 0; }
+  tbody td {
+    padding:14px 18px; font-size:16px; color:#1d2b24; vertical-align:middle;
+    border-bottom:1px solid #e6efe9; line-height:1.4;
+  }
+  tbody tr:nth-child(even) td { background:#f5faf7; }
+  tbody tr:last-child td { border-bottom:none; }
+  td.num { white-space:nowrap; font-variant-numeric:tabular-nums; }
+  .acao { font-weight:600; color:#11241b; }
+  .acao .sub { display:block; font-weight:400; color:#6a7a71; font-size:13px; margin-top:3px; }
+  .neg { color:#b5471f; font-weight:700; }
+  .pos { color:#1d8a4f; font-weight:700; }
+  .flat { color:#5a6b62; font-weight:700; }
+  .hi { font-weight:800; color:#11241b; }
+
+  .pill {
+    display:inline-block; padding:3px 11px; border-radius:999px;
+    font-size:12px; font-weight:700; letter-spacing:.3px; white-space:nowrap;
+  }
+  .p-look  { background:#e3edff; color:#2a51a8; }
+  .p-rmkt  { background:#e4f6ea; color:#1d8a4f; }
+  .p-topo  { background:#efe7fb; color:#6a3fb0; }
+  .p-keep  { background:#e4f6ea; color:#1d8a4f; }
+  .p-move  { background:#fde8e1; color:#b5471f; }
+  .p-test  { background:#fff1d9; color:#a85d12; }
+
+  /* PLANO CARDS */
+  .asks { display:flex; gap:16px; padding:6px 0 0; }
+  .ask { flex:1; border-radius:16px; padding:22px 22px 18px; }
+  .ask-move { background:#fdf1ec; border:1.5px solid #f3cfc0; }
+  .ask-keep { background:#eef8f1; border:1.5px solid #c9e6d4; }
+  .ask-test { background:#fff8ef; border:1.5px solid #f3dcc4; }
+  .ask .tag {
+    display:inline-block; font-size:11.5px; font-weight:800; letter-spacing:.6px; text-transform:uppercase;
+    padding:4px 10px; border-radius:999px; margin-bottom:12px;
+  }
+  .tag-move { color:#b5471f; background:#fadfd4; }
+  .tag-keep { color:#1d8a4f; background:#d3edda; }
+  .tag-test { color:#a85d12; background:#fae8d3; }
+  .ask h3 { font-size:17px; font-weight:800; color:#22332b; margin-bottom:8px; line-height:1.3; }
+  .ask p { font-size:14.5px; color:#46564e; line-height:1.55; }
+  .ask p b { color:#22332b; }
+
+  /* CALLOUT */
+  .callout {
+    margin:8px 44px 0; padding:18px 22px; background:#fff8ef; border:1.5px solid #f3dcc4;
+    border-radius:14px; font-size:15px; color:#5a4632; line-height:1.6;
+  }
+  .callout b { color:#a85d12; }
+
+  .footer {
+    margin-top:28px; padding:22px 44px; background:#0f3d2a; color:#bfe0cd; font-size:14px;
+    display:flex; justify-content:space-between; align-items:center;
+  }
+  .footer b { color:#fff; }
+</style>
+</head>
+<body>
+  <div class="card">
+    <div class="header">
+      <div class="kicker">Hotéis Ponta Verde · Maceió + Francês</div>
+      <h1>Dispersão do tráfego, conversão e públicos que vão ao motor</h1>
+      <p>Período: 26/mai a 22/jun 2026 vs mesmo período do ano anterior · Dados de GA4 e Meta Ads</p>
+    </div>
+
+    <!-- CONTEXTO COMBINADO (propriedade única) -->
+    <div class="combined">
+      <b>Propriedade única (Maceió + Francês):</b> usuários 18,9 mil (▼46% vs ano anterior), sessões 23,9 mil (▼43%), receita R$ 302 mil (▲85%). Menos gente no site, porém mais receita. A home (/) é compartilhada pelas duas unidades, por isso entra à parte; os números por unidade abaixo somam as páginas próprias de cada hotel (motor + página).
+    </div>
+
+    <!-- KPIs MACEIÓ -->
+    <div class="unit">
+      <div class="unit-name">Maceió</div>
+      <div class="kpis">
+        <div class="kpi">
+          <div class="lbl">Sessões nas páginas</div>
+          <div class="val">7.609</div>
+          <div class="src">Motor + página do hotel · Fonte: GA4</div>
+        </div>
+        <div class="kpi">
+          <div class="lbl">Receita (GA4)</div>
+          <div class="val">R$ 98 mil</div>
+          <div class="src">Atribuída às páginas da unidade · GA4</div>
+        </div>
+        <div class="kpi">
+          <div class="lbl">Conversão Meta → motor</div>
+          <div class="val">2,09%</div>
+          <div class="src">Fonte: GA4 · página × canal</div>
+        </div>
+        <div class="kpi">
+          <div class="lbl">Verba Meta no motor (30d)</div>
+          <div class="val">R$ 3,66 mil</div>
+          <div class="src">Fonte: Meta · conta Maceió</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- KPIs FRANCÊS -->
+    <div class="unit">
+      <div class="unit-name">Francês</div>
+      <div class="kpis">
+        <div class="kpi">
+          <div class="lbl">Sessões nas páginas</div>
+          <div class="val">6.928</div>
+          <div class="src">Motor + página do hotel · Fonte: GA4</div>
+        </div>
+        <div class="kpi">
+          <div class="lbl">Receita (GA4)</div>
+          <div class="val">R$ 137 mil</div>
+          <div class="src">Atribuída às páginas da unidade · GA4</div>
+        </div>
+        <div class="kpi">
+          <div class="lbl">Conversão Meta → motor</div>
+          <div class="val">2,47%</div>
+          <div class="src">Fonte: GA4 · página × canal</div>
+        </div>
+        <div class="kpi">
+          <div class="lbl">Verba Meta no motor (30d)</div>
+          <div class="val">R$ 2,43 mil</div>
+          <div class="src">Fonte: Meta · conta Francês</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 1. TRÁFEGO POR PÁGINA -->
+    <div class="section">
+      <div class="sec-head">
+        <span class="sec-num">1</span>
+        <span class="sec-title">Tráfego por página (vs ano anterior)</span>
+      </div>
+      <div class="sec-source">
+        <b>Fonte:</b> GA4, propriedade "hotel ponta verde – GA4" (ID 343824638). &nbsp;<b>Como puxar:</b> Relatórios › Engajamento › Página de destino. No seletor de datas, ativar "Comparar" › "Ano anterior (dia correspondente da semana)". Métrica: Sessões.
+      </div>
+      <table>
+        <thead>
+          <tr>
+            <th style="width:34%;">Página</th>
+            <th style="width:14%;">Papel</th>
+            <th style="width:13%;">Sessões 2026</th>
+            <th style="width:13%;">Sessões 2025</th>
+            <th>Variação</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td class="acao">Home (/)</td><td>Página principal</td><td class="num">5.165</td><td class="num">5.528</td><td class="flat">-7% (estável)</td></tr>
+          <tr><td class="acao">Motor Maceió<span class="sub">/hotels/HOTEL_OMNI_1111</span></td><td>Motor de reservas</td><td class="num">6.473</td><td class="num">0</td><td class="hi">Novo destino em 2026</td></tr>
+          <tr><td class="acao">Motor Francês<span class="sub">/hotels/HOTEL_OMNI_1896</span></td><td>Motor de reservas</td><td class="num">5.207</td><td class="num">0</td><td class="hi">Novo destino em 2026</td></tr>
+          <tr><td class="acao">Página Maceió<span class="sub">/hoteis/maceio</span></td><td>Página principal</td><td class="num">1.136</td><td class="num">8.609</td><td class="neg">▼ 87%</td></tr>
+          <tr><td class="acao">Página Francês<span class="sub">/hoteis/praia-do-frances</span></td><td>Página principal</td><td class="num">1.721</td><td class="num">16.320</td><td class="neg">▼ 89%</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- 2. DISPERSÃO E CONVERSÃO -->
+    <div class="section">
+      <div class="sec-head">
+        <span class="sec-num">2</span>
+        <span class="sec-title">Dispersão e gap de conversão (origem × destino)</span>
+      </div>
+      <div class="sec-source">
+        <b>Fonte:</b> GA4, propriedade "hotel ponta verde – GA4". &nbsp;<b>Como puxar:</b> Relatórios › Engajamento › Página de destino, adicionar dimensão secundária "Grupo de canais padrão da sessão". Métricas: Sessões, "Taxa de eventos principais da sessão" (conversão) e Receita total.
+      </div>
+      <table>
+        <thead>
+          <tr>
+            <th style="width:40%;">Origem → para onde cai</th>
+            <th style="width:15%;">Sessões</th>
+            <th style="width:18%;">Conversão</th>
+            <th>Receita (GA4, último clique)</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td class="acao">Meta Ads → motor Maceió</td><td class="num">3.968</td><td class="neg">2,09%</td><td class="num">R$ 1.706</td></tr>
+          <tr><td class="acao">Meta Ads → motor Francês</td><td class="num">3.637</td><td class="neg">2,47%</td><td class="num">R$ 905</td></tr>
+          <tr><td class="acao">Google Ads → motor Maceió</td><td class="num">1.415</td><td class="pos">5,94%</td><td class="num">R$ 53.486</td></tr>
+          <tr><td class="acao">Google Ads → motor Francês</td><td class="num">1.110</td><td class="pos">10,0%</td><td class="num">R$ 62.968</td></tr>
+          <tr><td class="acao">Orgânico → home</td><td class="num">1.916</td><td class="pos">5,17%</td><td class="num">R$ 23.754</td></tr>
+          <tr><td class="acao">Referral → home</td><td class="num">1.223</td><td class="pos">8,91%</td><td class="num">R$ 14.439</td></tr>
+        </tbody>
+      </table>
+      <div class="callout" style="margin:14px 0 0;">
+        O principal ponto de melhoria está no tráfego de Meta que entra direto no motor sem uma página de preparação: rejeição entre 66% e 68% e tempo médio de engajamento de ~13s. Google e orgânico, nas mesmas páginas, convertem de 3x a 5x mais.
+      </div>
+    </div>
+
+    <!-- 3. PÚBLICOS META -->
+    <div class="section">
+      <div class="sec-head">
+        <span class="sec-num">3</span>
+        <span class="sec-title">Públicos do Meta que vão ao motor (e se já vendem)</span>
+      </div>
+      <div class="sec-source">
+        <b>Fonte:</b> Meta Ads · contas Hotéis Ponta Verde Maceió (act 299642416227987) e Francês (act 317304155022732). &nbsp;<b>Como puxar:</b> Gerenciador de Anúncios › filtrar campanhas de objetivo "Vendas" (as que levam ao site/motor) › nível Conjunto de anúncios (o nome do conjunto é o público). Colunas: Valor usado, Compras e ROAS de compras. Período: últimos 30 dias. Atribuição: 7 dias clique + 1 dia visualização.
+      </div>
+      <table>
+        <thead>
+          <tr>
+            <th style="width:14%;">Conta</th>
+            <th style="width:24%;">Público (conjunto)</th>
+            <th style="width:12%;">Tipo</th>
+            <th style="width:10%;">Verba 30d</th>
+            <th style="width:10%;">Compras</th>
+            <th style="width:10%;">ROAS</th>
+            <th>Destino ideal</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>Maceió</td><td class="acao">Semelhantes 1% (NE)</td><td><span class="pill p-look">Lookalike</span></td><td class="num">R$ 1.531</td><td class="num">5</td><td class="num">4,4</td><td><span class="pill p-move">Página de preparação</span></td></tr>
+          <tr><td>Maceió</td><td class="acao">Semelhante 2% Compradores 60D</td><td><span class="pill p-look">Lookalike</span></td><td class="num">R$ 927</td><td class="num">0</td><td class="num">—</td><td><span class="pill p-move">Página de preparação</span></td></tr>
+          <tr><td>Maceió</td><td class="acao">Abandono Carrinho (Site) 30D</td><td><span class="pill p-rmkt">Remarketing</span></td><td class="num">R$ 706</td><td class="num">5</td><td class="num hi">19,2</td><td><span class="pill p-keep">Manter no motor</span></td></tr>
+          <tr><td>Maceió</td><td class="acao">Base Last Minute</td><td><span class="pill p-rmkt">Remarketing</span></td><td class="num">R$ 497</td><td class="num">1</td><td class="num hi">36,4</td><td><span class="pill p-keep">Manter no motor</span></td></tr>
+          <tr><td>Francês</td><td class="acao">Carrinho Abandonado 180D</td><td><span class="pill p-rmkt">Remarketing</span></td><td class="num">R$ 1.558</td><td class="num">9</td><td class="num hi">8,4</td><td><span class="pill p-keep">Manter (encurtar janela)</span></td></tr>
+          <tr><td>Francês</td><td class="acao">Base Last Minute</td><td><span class="pill p-rmkt">Remarketing</span></td><td class="num">R$ 533</td><td class="num">2</td><td class="num hi">12,1</td><td><span class="pill p-keep">Manter no motor</span></td></tr>
+          <tr><td>Francês</td><td class="acao">Redes Sociais 180D</td><td><span class="pill p-topo">Topo/engaj.</span></td><td class="num">R$ 334</td><td class="num">3</td><td class="num">71*</td><td><span class="pill p-test">Testar preparação</span></td></tr>
+        </tbody>
+      </table>
+      <div class="callout" style="margin:14px 0 0;">
+        <b>*O ROAS de 71 vem de pouquíssimas vendas</b> (provavelmente uma reserva de valor alto atribuída por visualização), então deve ser lido como exceção, não como padrão. &nbsp;<b>Vale reforçar: esses públicos já geram vendas.</b> Pela janela do Meta (7 dias de clique + 1 dia de visualização) são cerca de R$ 65 mil; pelo último clique do GA4, cerca de R$ 2,6 mil. A maior parte dessa diferença está no remarketing, que recebe o crédito por reservas que provavelmente já aconteceriam. Por isso o plano abaixo separa prospecção de remarketing.
+      </div>
+    </div>
+
+    <!-- 4. PLANO DE AÇÃO -->
+    <div class="section">
+      <div class="sec-head">
+        <span class="sec-num">4</span>
+        <span class="sec-title">Plano de ação</span>
+        <span class="sec-desc">trocar o destino só de quem chega frio, blindar quem já vende</span>
+      </div>
+      <div class="asks">
+        <div class="ask ask-move">
+          <span class="tag tag-move">Trocar destino</span>
+          <h3>Prospecção fria → página de preparação</h3>
+          <p>Maceió (Semelhantes 1% e Semelhante 2% Compradores) e Francês (Redes Sociais 180D) passam a cair na <b>página do hotel</b> (/hoteis/maceio, /hoteis/praia-do-frances), com oferta e prova social, e só de lá ao motor. É a fatia que converte 2% por chegar crua no checkout.</p>
+        </div>
+        <div class="ask ask-keep">
+          <span class="tag tag-keep">Manter no motor</span>
+          <h3>Remarketing quente continua direto</h3>
+          <p>Abandono de Carrinho e Last Minute <b>seguem indo ao motor</b>: já têm venda registrada e ROAS alto (19, 36, 8, 12). Quem abandonou o carrinho deve voltar ao checkout, não a uma página institucional. Mudar aqui derrubaria resultado.</p>
+        </div>
+        <div class="ask ask-test">
+          <span class="tag tag-test">Testar e medir</span>
+          <h3>Teste A/B medido</h3>
+          <p>Rodar o item 1 como <b>teste de 15 dias</b> (motor vs página de preparação), medindo conversão e receita real em GA4 e Meta antes de escalar.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- 5. FICHA TÉCNICA -->
+    <div class="section">
+      <div class="sec-head">
+        <span class="sec-num">5</span>
+        <span class="sec-title">Ficha técnica: fonte e como puxar cada métrica</span>
+      </div>
+      <table>
+        <thead>
+          <tr>
+            <th style="width:24%;">Métrica</th>
+            <th style="width:20%;">Fonte</th>
+            <th>Caminho / como puxar</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="acao">Usuários, sessões, visualizações e receita (YoY)</td>
+            <td>GA4 · "hotel ponta verde – GA4" (ID 343824638)</td>
+            <td class="crit">Relatórios › Visão geral da aquisição. Período 26/mai a 22/jun 2026 com comparação "Ano anterior (dia correspondente da semana)".</td>
+          </tr>
+          <tr>
+            <td class="acao">Tráfego por página (YoY)</td>
+            <td>GA4</td>
+            <td class="crit">Relatórios › Engajamento › Página de destino (caminho da página). Mesma comparação de ano anterior. Métrica Sessões.</td>
+          </tr>
+          <tr>
+            <td class="acao">Conversão e receita por origem × página</td>
+            <td>GA4</td>
+            <td class="crit">Engajamento › Página de destino + dimensão secundária "Grupo de canais padrão da sessão". Métricas: Sessões, "Taxa de eventos principais da sessão", Receita total.</td>
+          </tr>
+          <tr>
+            <td class="acao">Públicos que vão ao motor</td>
+            <td>Meta Ads · contas 299642416227987 (Maceió) e 317304155022732 (Francês)</td>
+            <td class="crit">Gerenciador de Anúncios › filtrar campanhas de objetivo "Vendas" (levam ao site/motor) › nível Conjunto. O nome do conjunto identifica o público.</td>
+          </tr>
+          <tr>
+            <td class="acao">Verba, compras e ROAS por público</td>
+            <td>Meta Ads</td>
+            <td class="crit">Nível Conjunto › colunas "Valor usado", "Compras" e "ROAS de compras". Período últimos 30 dias. Atribuição 7 dias clique + 1 dia visualização.</td>
+          </tr>
+        </tbody>
+      </table>
+      <div class="callout" style="margin:14px 0 0;">
+        <b>Observações de medição:</b> (1) A "taxa de conversão" do GA4 não é comparável ano a ano porque a configuração de eventos-chave mudou (31,6 mil em 2025 vs 2,3 mil em 2026); o sinal confiável de conversão é a receita. (2) GA4 usa último clique e Meta usa 7d clique + 1d visualização, por isso os valores de venda divergem: para receita total usamos GA4, para eficiência por público usamos o Meta.
+      </div>
+    </div>
+
+    <div class="footer">
+      <span>Período: <b>26/mai a 22/jun 2026</b> vs ano anterior · Fontes: <b>GA4 + Meta Ads</b></span>
+      <span>Trilha Performance Digital</span>
+    </div>
+  </div>
+</body>
+</html>
