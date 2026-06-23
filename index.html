@@ -126,6 +126,36 @@
     display:flex; justify-content:space-between; align-items:center;
   }
   .footer b { color:#fff; }
+
+  /* TABS */
+  .tab-nav {
+    display:flex; gap:0; border-bottom:2px solid #e6efe9; margin:28px 44px 0;
+  }
+  .tab-btn {
+    padding:12px 24px; font-size:14px; font-weight:700; border:none; background:none;
+    cursor:pointer; color:#5a6b62; border-bottom:3px solid transparent; margin-bottom:-2px;
+    letter-spacing:.2px; transition:color .15s;
+  }
+  .tab-btn.active { color:#0f6b43; border-bottom-color:#0f6b43; }
+  .tab-btn:hover { color:#0f6b43; }
+
+  /* tabela de tráfego */
+  .traf-unit { padding:28px 44px 4px; }
+  .traf-unit-name {
+    font-size:17px; font-weight:800; color:#0f6b43; letter-spacing:.3px;
+    display:flex; align-items:center; gap:9px; margin-bottom:14px;
+  }
+  .traf-unit-name::before { content:''; width:11px; height:11px; border-radius:3px; background:#13854f; }
+  .cat-label {
+    font-size:11.5px; font-weight:800; letter-spacing:.8px; text-transform:uppercase;
+    color:#5a6b62; padding:10px 18px 4px; display:block;
+  }
+  .new26 { color:#1d8a4f; font-weight:700; font-size:13px; }
+  .var-neg { color:#b5471f; font-weight:700; }
+  .var-pos { color:#1d8a4f; font-weight:700; }
+  .var-flat { color:#5a6b62; font-weight:600; }
+  .path { font-size:13px; color:#5a6b62; display:block; }
+  .cat-row td { background:#f0f7f3 !important; padding:0; border-bottom:none; }
 </style>
 </head>
 <body>
@@ -234,6 +264,14 @@
         </div>
       </div>
     </div>
+
+    <!-- TAB NAV -->
+    <div class="tab-nav">
+      <button class="tab-btn active" onclick="switchTab('dispersao', this)">Dispersão &amp; Conversão</button>
+      <button class="tab-btn" onclick="switchTab('trafego', this)">Tráfego por página · 3 meses</button>
+    </div>
+
+    <div id="tab-dispersao" class="tab-content">
 
     <!-- 1. TRÁFEGO POR PÁGINA -->
     <div class="section">
@@ -443,10 +481,109 @@
       </div>
     </div>
 
+    </div><!-- /tab-dispersao -->
+
+    <!-- TAB: TRÁFEGO POR PÁGINA -->
+    <div id="tab-trafego" class="tab-content" style="display:none;">
+      <div class="traf-unit">
+        <div class="traf-unit-name">Maceió</div>
+        <div class="sec-source" style="margin-bottom:14px;">
+          <b>Fonte:</b> GA4, property 343824638 ("hotel ponta verde – GA4"). <b>Período:</b> 23/mar–22/jun 2026 vs 23/mar–22/jun 2025. <b>Métrica:</b> Visualizações (page views). Relatórios › Engajamento › Páginas e telas. Exportado em 23/jun/2026.
+        </div>
+        <table>
+          <thead>
+            <tr>
+              <th style="width:48%;">Página</th>
+              <th style="width:17%;text-align:right;">Views 2026</th>
+              <th style="width:17%;text-align:right;">Views 2025</th>
+              <th style="width:18%;">Variação</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr class="cat-row"><td colspan="4"><span class="cat-label">Motor de reservas</span></td></tr>
+            <tr><td><span class="acao">/hotels/HOTEL_OMNI_1111</span></td><td class="num" style="text-align:right;">34.631</td><td class="num" style="text-align:right;">—</td><td><span class="new26">Novo em 2026</span></td></tr>
+            <tr><td><span class="acao">/hotels/HOTEL_OMNI_1111/rooms/10787</span></td><td class="num" style="text-align:right;">251</td><td class="num" style="text-align:right;">—</td><td><span class="new26">Novo</span></td></tr>
+            <tr><td><span class="acao">/hotels/HOTEL_OMNI_1111/rooms/3235</span></td><td class="num" style="text-align:right;">196</td><td class="num" style="text-align:right;">—</td><td><span class="new26">Novo</span></td></tr>
+            <tr><td><span class="acao">/hotels/HOTEL_OMNI_1111/rooms/25096</span></td><td class="num" style="text-align:right;">170</td><td class="num" style="text-align:right;">—</td><td><span class="new26">Novo</span></td></tr>
+            <tr><td><span class="acao">/hotels/HOTEL_OMNI_1111/rooms/77685</span></td><td class="num" style="text-align:right;">125</td><td class="num" style="text-align:right;">—</td><td><span class="new26">Novo</span></td></tr>
+            <tr class="cat-row"><td colspan="4"><span class="cat-label">Página institucional</span></td></tr>
+            <tr><td><span class="acao">/hoteis/maceio</span></td><td class="num" style="text-align:right;">18.646</td><td class="num" style="text-align:right;">39.376</td><td><span class="var-neg">▼ 52,65%</span></td></tr>
+            <tr><td><span class="acao">/hoteis/maceio/sobre-o-hotel</span></td><td class="num" style="text-align:right;">486</td><td class="num" style="text-align:right;">671</td><td><span class="var-neg">▼ 27,57%</span></td></tr>
+            <tr><td><span class="acao">/hoteis/maceio/sala-de-eventos</span></td><td class="num" style="text-align:right;">150</td><td class="num" style="text-align:right;">120</td><td><span class="var-pos">▲ 25,0%</span></td></tr>
+            <tr class="cat-row"><td colspan="4"><span class="cat-label">Conteúdo / blog</span></td></tr>
+            <tr><td><span class="acao">/maceio-em-7-dias/</span></td><td class="num" style="text-align:right;">641</td><td class="num" style="text-align:right;">1.710</td><td><span class="var-neg">▼ 62,51%</span></td></tr>
+            <tr><td><span class="acao">/4-beach-clubs-imperdiveis-para-curtir-o-verao-em-maceio</span></td><td class="num" style="text-align:right;">564</td><td class="num" style="text-align:right;">—</td><td><span class="new26">Novo</span></td></tr>
+            <tr><td><span class="acao">/argentina-em-maceio</span></td><td class="num" style="text-align:right;">475</td><td class="num" style="text-align:right;">—</td><td><span class="new26">Novo</span></td></tr>
+            <tr><td><span class="acao">/praias-de-maceio/</span></td><td class="num" style="text-align:right;">342</td><td class="num" style="text-align:right;">525</td><td><span class="var-neg">▼ 34,86%</span></td></tr>
+            <tr><td><span class="acao">/5-dicas-de-passeio-noturno-em-maceio</span></td><td class="num" style="text-align:right;">338</td><td class="num" style="text-align:right;">—</td><td><span class="new26">Novo</span></td></tr>
+            <tr><td><span class="acao">/5-cafeterias-em-maceio-para-voce-conhecer</span></td><td class="num" style="text-align:right;">332</td><td class="num" style="text-align:right;">—</td><td><span class="new26">Novo</span></td></tr>
+            <tr><td><span class="acao">/restaurantes-em-maceio/</span></td><td class="num" style="text-align:right;">215</td><td class="num" style="text-align:right;">112</td><td><span class="var-pos">▲ 91,96%</span></td></tr>
+            <tr><td><span class="acao">/roda-gigante-de-maceio-conheca-tudo-sobre-a-nova-atracao-da-cidade</span></td><td class="num" style="text-align:right;">214</td><td class="num" style="text-align:right;">—</td><td><span class="new26">Novo</span></td></tr>
+            <tr><td><span class="acao">/pizzarias-em-maceio/</span></td><td class="num" style="text-align:right;">197</td><td class="num" style="text-align:right;">166</td><td><span class="var-pos">▲ 18,67%</span></td></tr>
+            <tr><td><span class="acao">/sao-joao-em-maceio-2/</span></td><td class="num" style="text-align:right;">163</td><td class="num" style="text-align:right;">98</td><td><span class="var-pos">▲ 66,33%</span></td></tr>
+            <tr><td><span class="acao">/maceio-e-praia-do-frances/</span></td><td class="num" style="text-align:right;">159</td><td class="num" style="text-align:right;">388</td><td><span class="var-neg">▼ 59,02%</span></td></tr>
+            <tr><td><span class="acao">/artesanato-de-maceio/</span></td><td class="num" style="text-align:right;">152</td><td class="num" style="text-align:right;">137</td><td><span class="var-pos">▲ 10,95%</span></td></tr>
+            <tr><td><span class="acao">/piscinas-naturais-em-maceio/</span></td><td class="num" style="text-align:right;">139</td><td class="num" style="text-align:right;">196</td><td><span class="var-neg">▼ 29,08%</span></td></tr>
+            <tr><td><span class="acao">/5-restaurantes-em-maceio-para-voce-conhecer</span></td><td class="num" style="text-align:right;">128</td><td class="num" style="text-align:right;">—</td><td><span class="new26">Novo</span></td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="traf-unit" style="padding-top:32px;">
+        <div class="traf-unit-name">Francês</div>
+        <table>
+          <thead>
+            <tr>
+              <th style="width:48%;">Página</th>
+              <th style="width:17%;text-align:right;">Views 2026</th>
+              <th style="width:17%;text-align:right;">Views 2025</th>
+              <th style="width:18%;">Variação</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr class="cat-row"><td colspan="4"><span class="cat-label">Motor de reservas</span></td></tr>
+            <tr><td><span class="acao">/hotels/HOTEL_OMNI_1896</span></td><td class="num" style="text-align:right;">25.163</td><td class="num" style="text-align:right;">—</td><td><span class="new26">Novo em 2026</span></td></tr>
+            <tr><td><span class="acao">/hotels/HOTEL_OMNI_1896/hotelresults</span></td><td class="num" style="text-align:right;">6.583</td><td class="num" style="text-align:right;">—</td><td><span class="new26">Novo</span></td></tr>
+            <tr><td><span class="acao">/hotels/HOTEL_OMNI_1896/rooms/77773</span></td><td class="num" style="text-align:right;">514</td><td class="num" style="text-align:right;">—</td><td><span class="new26">Novo</span></td></tr>
+            <tr><td><span class="acao">/hotels/HOTEL_OMNI_1896/rooms/77772</span></td><td class="num" style="text-align:right;">393</td><td class="num" style="text-align:right;">—</td><td><span class="new26">Novo</span></td></tr>
+            <tr><td><span class="acao">/hotels/HOTEL_OMNI_1896/rooms/31209</span></td><td class="num" style="text-align:right;">341</td><td class="num" style="text-align:right;">—</td><td><span class="new26">Novo</span></td></tr>
+            <tr><td><span class="acao">/hotels/HOTEL_OMNI_1896/rooms/31210</span></td><td class="num" style="text-align:right;">193</td><td class="num" style="text-align:right;">—</td><td><span class="new26">Novo</span></td></tr>
+            <tr><td><span class="acao">/hotels/HOTEL_OMNI_1896/rooms/31211</span></td><td class="num" style="text-align:right;">152</td><td class="num" style="text-align:right;">—</td><td><span class="new26">Novo</span></td></tr>
+            <tr><td><span class="acao">/hotels/HOTEL_OMNI_1896/rooms/142759</span></td><td class="num" style="text-align:right;">120</td><td class="num" style="text-align:right;">—</td><td><span class="new26">Novo</span></td></tr>
+            <tr><td><span class="acao">/hotels/HOTEL_OMNI_1896/rooms/142752</span></td><td class="num" style="text-align:right;">77</td><td class="num" style="text-align:right;">—</td><td><span class="new26">Novo</span></td></tr>
+            <tr class="cat-row"><td colspan="4"><span class="cat-label">Página institucional</span></td></tr>
+            <tr><td><span class="acao">/hoteis/praia-do-frances</span></td><td class="num" style="text-align:right;">21.566</td><td class="num" style="text-align:right;">55.724</td><td><span class="var-neg">▼ 61,3%</span></td></tr>
+            <tr><td><span class="acao">/hoteis/praia-do-frances/sobre-o-hotel</span></td><td class="num" style="text-align:right;">351</td><td class="num" style="text-align:right;">387</td><td><span class="var-neg">▼ 9,3%</span></td></tr>
+            <tr class="cat-row"><td colspan="4"><span class="cat-label">Conteúdo / blog</span></td></tr>
+            <tr><td><span class="acao">/praia-do-frances-em-4-dias/</span></td><td class="num" style="text-align:right;">232</td><td class="num" style="text-align:right;">452</td><td><span class="var-neg">▼ 48,67%</span></td></tr>
+            <tr><td><span class="acao">/5-dicas-para-curtir-a-praia-do-frances</span></td><td class="num" style="text-align:right;">202</td><td class="num" style="text-align:right;">—</td><td><span class="new26">Novo</span></td></tr>
+            <tr><td><span class="acao">/onde-fica-a-praia-do-frances/</span></td><td class="num" style="text-align:right;">162</td><td class="num" style="text-align:right;">309</td><td><span class="var-neg">▼ 47,57%</span></td></tr>
+            <tr><td><span class="acao">/maceio-e-praia-do-frances/</span></td><td class="num" style="text-align:right;">159</td><td class="num" style="text-align:right;">388</td><td><span class="var-neg">▼ 59,02%</span></td></tr>
+            <tr><td><span class="acao">/a-praia-do-frances-te-espera-em-janeiro</span></td><td class="num" style="text-align:right;">158</td><td class="num" style="text-align:right;">—</td><td><span class="new26">Novo</span></td></tr>
+            <tr><td><span class="acao">/la-rue-gastronomia-cultura-e-charme-na-praia-do-frances</span></td><td class="num" style="text-align:right;">112</td><td class="num" style="text-align:right;">—</td><td><span class="new26">Novo</span></td></tr>
+            <tr><td><span class="acao">/onde-comer-na-praia-do-frances/</span></td><td class="num" style="text-align:right;">83</td><td class="num" style="text-align:right;">127</td><td><span class="var-neg">▼ 34,65%</span></td></tr>
+            <tr><td><span class="acao">/descubra-o-que-fazer-na-praia-do-frances-um-paraiso-em-alagoas</span></td><td class="num" style="text-align:right;">61</td><td class="num" style="text-align:right;">—</td><td><span class="new26">Novo</span></td></tr>
+            <tr><td><span class="acao">/da-para-curtir-maceio-e-a-praia-do-frances-na-mesma-viagem</span></td><td class="num" style="text-align:right;">57</td><td class="num" style="text-align:right;">—</td><td><span class="new26">Novo</span></td></tr>
+          </tbody>
+        </table>
+        <div class="sec-source" style="margin-top:14px;">
+          <b>Fonte:</b> GA4, property 343824638 ("hotel ponta verde – GA4"). <b>Período:</b> 23/mar–22/jun 2026 vs 23/mar–22/jun 2025. <b>Métrica:</b> Visualizações (page views). Exportado em 23/jun/2026.
+        </div>
+      </div>
+    </div><!-- /tab-trafego -->
+
     <div class="footer">
       <span>Período: <b>26/mai a 22/jun 2026</b> vs ano anterior · Fontes: <b>GA4 + Meta Ads</b></span>
       <span>Trilha Performance Digital</span>
     </div>
   </div>
+<script>
+function switchTab(name, btn) {
+  document.querySelectorAll('.tab-content').forEach(function(el){ el.style.display='none'; });
+  document.getElementById('tab-' + name).style.display = 'block';
+  document.querySelectorAll('.tab-btn').forEach(function(b){ b.classList.remove('active'); });
+  btn.classList.add('active');
+}
+</script>
 </body>
 </html>
