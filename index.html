@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <style>
   @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
-  @page { size: 1396px 3840px; margin: 0; }
+  @page { size: 1396px 4200px; margin: 0; }
   * { margin:0; padding:0; box-sizing:border-box; }
   body {
     font-family:'Inter',-apple-system,sans-serif;
@@ -92,6 +92,7 @@
   .p-look  { background:#e3edff; color:#2a51a8; }
   .p-rmkt  { background:#e4f6ea; color:#1d8a4f; }
   .p-topo  { background:#efe7fb; color:#6a3fb0; }
+  .p-brand { background:#d9f0ef; color:#0f7a73; }
   .p-keep  { background:#e4f6ea; color:#1d8a4f; }
   .p-move  { background:#fde8e1; color:#b5471f; }
   .p-test  { background:#fff1d9; color:#a85d12; }
@@ -161,7 +162,7 @@
         </div>
         <div class="kpi">
           <div class="lbl">Verba Meta no motor (30d)</div>
-          <div class="val">R$ 3,66 mil</div>
+          <div class="val">R$ 3.659,90</div>
           <div class="src">Fonte: Meta · conta Maceió</div>
         </div>
       </div>
@@ -188,7 +189,7 @@
         </div>
         <div class="kpi">
           <div class="lbl">Verba Meta no motor (30d)</div>
-          <div class="val">R$ 2,43 mil</div>
+          <div class="val">R$ 2.425,36</div>
           <div class="src">Fonte: Meta · conta Francês</div>
         </div>
       </div>
@@ -288,6 +289,30 @@
       </table>
       <div class="callout" style="margin:14px 0 0;">
         <b>*O ROAS de 71 vem de pouquíssimas vendas</b> (provavelmente uma reserva de valor alto atribuída por visualização), então deve ser lido como exceção, não como padrão. &nbsp;<b>Vale reforçar: esses públicos já geram vendas.</b> Pela janela do Meta (7 dias de clique + 1 dia de visualização) são cerca de R$ 65 mil; pelo último clique do GA4, cerca de R$ 2,6 mil. A maior parte dessa diferença está no remarketing, que recebe o crédito por reservas que provavelmente já aconteceriam. Por isso o plano abaixo separa prospecção de remarketing.
+      </div>
+
+      <div style="margin:26px 0 0; font-size:18px; font-weight:800; color:#11241b; letter-spacing:-.2px;">E o que o Google leva ao motor</div>
+      <div class="sec-source">
+        <b>Fonte:</b> GA4, propriedade "hotel ponta verde – GA4". &nbsp;<b>Como puxar:</b> mesmo relatório da seção 2 (Página de destino), trocando a dimensão secundária para "Campanha da sessão"; ler as campanhas do Google (Search/Brandterms) nas páginas do motor (/hotels/HOTEL_OMNI_*).
+      </div>
+      <table>
+        <thead>
+          <tr>
+            <th style="width:14%;">Conta</th>
+            <th style="width:30%;">Campanha</th>
+            <th style="width:16%;">Tipo</th>
+            <th style="width:12%;">Sessões</th>
+            <th style="width:13%;">Conversão</th>
+            <th>Receita (GA4)</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>Maceió</td><td class="acao">PVM · Search · Brandterms</td><td><span class="pill p-brand">Busca de marca</span></td><td class="num">1.206</td><td class="num pos">6,8%</td><td class="num">R$ 53.486</td></tr>
+          <tr><td>Francês</td><td class="acao">PVF · Search · Brandterms</td><td><span class="pill p-brand">Busca de marca</span></td><td class="num">1.015</td><td class="num pos">10,6%</td><td class="num">R$ 59.733</td></tr>
+        </tbody>
+      </table>
+      <div class="callout" style="margin:14px 0 0;">
+        No Google, o motor recebe quase só <b>busca de marca</b> (quem já procura o hotel pelo nome): intenção altíssima, converte de 7% a 11% e gera R$ 113 mil com pouco mais de 2 mil sessões. É o oposto do Meta (prospecção e lookalike a ~2%). Por isso o Google deve continuar indo direto ao motor, e o ajuste de destino vale só para o Meta de prospecção.
       </div>
     </div>
 
