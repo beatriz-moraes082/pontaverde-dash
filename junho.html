@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+  @page { size: 1396px 4200px; margin: 0; }
+  * { margin:0; padding:0; box-sizing:border-box; }
+  body {
+    font-family:'Inter',-apple-system,sans-serif;
+    background:#0f2e22;
+    padding:48px;
+  }
+  .card {
+    background:#ffffff;
+    border-radius:20px;
+    overflow:hidden;
+    box-shadow:0 24px 60px rgba(0,0,0,.25);
+    max-width:1300px;
+    margin:0 auto;
+  }
+  .header {
+    background:linear-gradient(135deg,#0f6b43 0%,#13854f 100%);
+    padding:36px 44px;
+    color:#fff;
+  }
+  .header .kicker {
+    font-size:15px; font-weight:600; letter-spacing:2px; text-transform:uppercase;
+    color:#9fe3bf; margin-bottom:6px;
+  }
+  .header h1 { font-size:34px; font-weight:800; letter-spacing:-.5px; }
+  .header p { font-size:17px; font-weight:400; color:#cdeede; margin-top:10px; }
+
+  /* KPI ROW */
+  .kpis { display:flex; gap:16px; padding:30px 44px 6px; }
+  .kpi { flex:1; background:#f5faf7; border:1px solid #e6efe9; border-radius:16px; padding:20px 22px; }
+  .kpi .lbl { font-size:13px; font-weight:700; letter-spacing:.5px; text-transform:uppercase; color:#5a6b62; }
+  .kpi .val { font-size:32px; font-weight:800; color:#11241b; margin-top:8px; letter-spacing:-.5px; }
+  .kpi .delta { font-size:14px; font-weight:700; margin-top:6px; }
+  .kpi .down { color:#b5471f; }
+  .kpi .up   { color:#1d8a4f; }
+  .kpi .src  { font-size:11.5px; color:#8a978f; margin-top:10px; line-height:1.4; }
+  .combined { margin:28px 44px 0; padding:16px 22px; background:#eef6f1; border-left:4px solid #13854f; border-radius:0 10px 10px 0; font-size:15px; color:#2c3b33; line-height:1.55; }
+  .combined b { color:#0f6b43; }
+  .unit { padding:22px 44px 0; }
+  .unit .kpis { padding:14px 0 0; }
+  .unit-name { font-size:16px; font-weight:800; color:#0f6b43; letter-spacing:.3px; display:flex; align-items:center; gap:9px; }
+  .unit-name::before { content:''; width:11px; height:11px; border-radius:3px; background:#13854f; }
+
+  /* SECTION HEADERS */
+  .section { padding:28px 44px 4px; }
+  .sec-head { display:flex; align-items:baseline; gap:14px; margin-bottom:6px; }
+  .sec-num {
+    font-size:13px; font-weight:800; letter-spacing:1px; color:#fff;
+    background:#13854f; border-radius:8px; padding:5px 11px;
+  }
+  .sec-title { font-size:21px; font-weight:800; color:#11241b; letter-spacing:-.2px; }
+  .sec-desc { font-size:15px; color:#5a6b62; font-weight:500; }
+  .sec-source {
+    font-size:13px; color:#5a6b62; background:#eef6f1; border-left:3px solid #13854f;
+    padding:8px 14px; border-radius:0 8px 8px 0; margin:10px 0 16px; line-height:1.5;
+  }
+  .sec-source b { color:#0f6b43; }
+
+  /* TABLES */
+  table { width:100%; border-collapse:collapse; }
+  thead th {
+    background:#0f3d2a; color:#dff5e8;
+    font-size:12.5px; font-weight:700; letter-spacing:.7px; text-transform:uppercase;
+    text-align:left; padding:13px 18px;
+  }
+  thead th:first-child { border-radius:10px 0 0 0; }
+  thead th:last-child  { border-radius:0 10px 0 0; }
+  tbody td {
+    padding:14px 18px; font-size:16px; color:#1d2b24; vertical-align:middle;
+    border-bottom:1px solid #e6efe9; line-height:1.4;
+  }
+  tbody tr:nth-child(even) td { background:#f5faf7; }
+  tbody tr:last-child td { border-bottom:none; }
+  td.num { white-space:nowrap; font-variant-numeric:tabular-nums; }
+  .acao { font-weight:600; color:#11241b; }
+  .acao .sub { display:block; font-weight:400; color:#6a7a71; font-size:13px; margin-top:3px; }
+  .neg { color:#b5471f; font-weight:700; }
+  .pos { color:#1d8a4f; font-weight:700; }
+  .flat { color:#5a6b62; font-weight:700; }
+  .hi { font-weight:800; color:#11241b; }
+
+  .pill {
+    display:inline-block; padding:3px 11px; border-radius:999px;
+    font-size:12px; font-weight:700; letter-spacing:.3px; white-space:nowrap;
+  }
+  .p-look  { background:#e3edff; color:#2a51a8; }
+  .p-rmkt  { background:#e4f6ea; color:#1d8a4f; }
+  .p-topo  { background:#efe7fb; color:#6a3fb0; }
+  .p-brand { background:#d9f0ef; color:#0f7a73; }
+  .p-keep  { background:#e4f6ea; color:#1d8a4f; }
+  .p-move  { background:#fde8e1; color:#b5471f; }
+  .p-test  { background:#fff1d9; color:#a85d12; }
+
+  /* PLANO CARDS */
+  .asks { display:flex; gap:16px; padding:6px 0 0; }
+  .ask { flex:1; border-radius:16px; padding:22px 22px 18px; }
+  .ask-move { background:#fdf1ec; border:1.5px solid #f3cfc0; }
+  .ask-keep { background:#eef8f1; border:1.5px solid #c9e6d4; }
+  .ask-test { background:#fff8ef; border:1.5px solid #f3dcc4; }
+  .ask .tag {
+    display:inline-block; font-size:11.5px; font-weight:800; letter-spacing:.6px; text-transform:uppercase;
+    padding:4px 10px; border-radius:999px; margin-bottom:12px;
+  }
+  .tag-move { color:#b5471f; background:#fadfd4; }
+  .tag-keep { color:#1d8a4f; background:#d3edda; }
+  .tag-test { color:#a85d12; background:#fae8d3; }
+  .ask h3 { font-size:17px; font-weight:800; color:#22332b; margin-bottom:8px; line-height:1.3; }
+  .ask p { font-size:14.5px; color:#46564e; line-height:1.55; }
+  .ask p b { color:#22332b; }
+
+  /* CALLOUT */
+  .callout {
+    margin:8px 44px 0; padding:18px 22px; background:#fff8ef; border:1.5px solid #f3dcc4;
+    border-radius:14px; font-size:15px; color:#5a4632; line-height:1.6;
+  }
+  .callout b { color:#a85d12; }
+
+  .footer {
+    margin-top:28px; padding:22px 44px; background:#0f3d2a; color:#bfe0cd; font-size:14px;
+    display:flex; justify-content:space-between; align-items:center;
+  }
+  .footer b { color:#fff; }
+
+  /* TABS */
+  .tab-nav {
+    display:flex; gap:8px; margin:28px 44px 0; background:#f0f7f3;
+    padding:6px; border-radius:12px;
+  }
+  .tab-btn {
+    flex:1; padding:12px 20px; font-size:14px; font-weight:700; border:none;
+    background:transparent; cursor:pointer; color:#5a6b62; border-radius:9px;
+    letter-spacing:.2px; transition:all .18s; text-align:center;
+  }
+  .tab-btn.active { background:#0f6b43; color:#fff; box-shadow:0 2px 8px rgba(15,107,67,.25); }
+  .tab-btn:hover:not(.active) { background:#dff0e8; color:#0f6b43; }
+
+  /* tabela de tráfego */
+  .traf-unit { padding:28px 44px 4px; }
+  .traf-unit-name {
+    font-size:17px; font-weight:800; color:#0f6b43; letter-spacing:.3px;
+    display:flex; align-items:center; gap:9px; margin-bottom:14px;
+  }
+  .traf-unit-name::before { content:''; width:11px; height:11px; border-radius:3px; background:#13854f; }
+  .cat-label {
+    font-size:11.5px; font-weight:800; letter-spacing:.8px; text-transform:uppercase;
+    color:#5a6b62; padding:10px 18px 4px; display:block;
+  }
+  .acao-link { font-weight:600; color:#0f6b43; text-decoration:underline; text-underline-offset:3px; }
+  .acao-link::after { content:' ↗'; font-size:11px; opacity:.7; }
+  .acao-link:hover { color:#0a4f32; }
+  .new26 { color:#1d8a4f; font-weight:700; font-size:13px; }
+  .var-neg { color:#b5471f; font-weight:700; }
+  .var-pos { color:#1d8a4f; font-weight:700; }
+  .var-flat { color:#5a6b62; font-weight:600; }
+  .path { font-size:13px; color:#5a6b62; display:block; }
+  .cat-row td { background:#f0f7f3 !important; padding:0; border-bottom:none; }
+</style>
+</head>
+<body>
+  <div class="card">
+    <div class="header">
+      <div class="kicker">Hotéis Ponta Verde · Maceió + Francês</div>
+      <h1>Estudo de Junho 2026</h1>
+      <p>Tráfego e audiência por página · Junho 2026 vs Junho 2025 · Fonte: GA4 (property 343824638)</p>
+    </div>
+
+    <div id="tab-junho" class="tab-content" style="display:block;">
+      <div class="section">
+        <div class="sec-head">
+          <span class="sec-num">1</span>
+          <span class="sec-title">Visão geral · Junho 2026 vs Junho 2025</span>
+        </div>
+        <div class="sec-source">
+          <b>Fonte:</b> GA4, property 343824638 ("hotel ponta verde – GA4"). <b>Período:</b> 01/jun–30/jun/2026 vs 01/jun–30/jun/2025 (comparação "Ano anterior"). Recorte por unidade: Engajamento › Páginas e telas, filtrado pelas páginas de cada hotel (institucional + motor + conteúdo). Puxado em 07/jul/2026.
+        </div>
+        <div style="background:#eef6f1;border-left:4px solid #0f6b43;border-radius:0 8px 8px 0;padding:12px 16px;margin:18px 0;font-size:14px;color:#0f4d31;">
+          Separando por unidade, a queda de audiência está concentrada no <b>Francês (usuários ▼39%)</b>. <b>Maceió segurou (▲8%)</b>. O número combinado (▼37%) escondia isso.
+        </div>
+        <div style="display:flex;gap:16px;flex-wrap:wrap;">
+          <div style="flex:1;min-width:290px;background:#f0f7f3;border-radius:12px;padding:20px 22px;">
+            <div style="font-size:15px;font-weight:800;color:#0f6b43;margin-bottom:14px;display:flex;align-items:center;gap:8px;"><span style="width:10px;height:10px;background:#0f6b43;border-radius:2px;display:inline-block;"></span>Maceió</div>
+            <div style="border-bottom:1px solid #dfe9e3;padding-bottom:12px;margin-bottom:12px;">
+              <div style="font-size:12px;color:#5a6b62;font-weight:600;text-transform:uppercase;letter-spacing:.5px;">Usuários ativos</div>
+              <div style="font-size:26px;font-weight:800;color:#0f6b43;margin:4px 0 2px;">11.261 <span style="font-size:14px;font-weight:700;color:#27ae60;">▲ 8,4%</span></div>
+              <div style="font-size:13px;color:#888;">vs 10.386 em jun/2025</div>
+            </div>
+            <div style="display:flex;gap:20px;flex-wrap:wrap;">
+              <div><div style="font-size:12px;color:#5a6b62;font-weight:600;">Visitas*</div><div style="font-size:18px;font-weight:700;color:#0f6b43;">23.714</div><div style="font-size:12px;color:#888;">vs 13.228</div></div>
+              <div><div style="font-size:12px;color:#5a6b62;font-weight:600;">Views/usuário</div><div style="font-size:18px;font-weight:700;color:#0f6b43;">2,11</div><div style="font-size:12px;color:#888;">vs 1,27</div></div>
+              <div><div style="font-size:12px;color:#5a6b62;font-weight:600;">Tempo</div><div style="font-size:18px;font-weight:700;color:#0f6b43;">27s</div><div style="font-size:12px;color:#888;">vs 24s</div></div>
+            </div>
+          </div>
+          <div style="flex:1;min-width:290px;background:#f0f7f3;border-radius:12px;padding:20px 22px;">
+            <div style="font-size:15px;font-weight:800;color:#0f6b43;margin-bottom:14px;display:flex;align-items:center;gap:8px;"><span style="width:10px;height:10px;background:#0f6b43;border-radius:2px;display:inline-block;"></span>Francês</div>
+            <div style="border-bottom:1px solid #dfe9e3;padding-bottom:12px;margin-bottom:12px;">
+              <div style="font-size:12px;color:#5a6b62;font-weight:600;text-transform:uppercase;letter-spacing:.5px;">Usuários ativos</div>
+              <div style="font-size:26px;font-weight:800;color:#0f6b43;margin:4px 0 2px;">7.781 <span style="font-size:14px;font-weight:700;color:#c0392b;">▼ 39,0%</span></div>
+              <div style="font-size:13px;color:#888;">vs 12.764 em jun/2025</div>
+            </div>
+            <div style="display:flex;gap:20px;flex-wrap:wrap;">
+              <div><div style="font-size:12px;color:#5a6b62;font-weight:600;">Visitas*</div><div style="font-size:18px;font-weight:700;color:#0f6b43;">18.769</div><div style="font-size:12px;color:#888;">vs 16.248</div></div>
+              <div><div style="font-size:12px;color:#5a6b62;font-weight:600;">Views/usuário</div><div style="font-size:18px;font-weight:700;color:#0f6b43;">2,41</div><div style="font-size:12px;color:#888;">vs 1,27</div></div>
+              <div><div style="font-size:12px;color:#5a6b62;font-weight:600;">Tempo</div><div style="font-size:18px;font-weight:700;color:#0f6b43;">26s</div><div style="font-size:12px;color:#888;">vs 11s</div></div>
+            </div>
+          </div>
+        </div>
+        <div style="font-size:12px;color:#888;margin-top:12px;line-height:1.5;">* Visitas (visualizações) inclui o motor de reservas, rastreado só a partir de 2026, então a alta ano a ano é parcialmente metodológica: o indicador confiável de audiência é <b>usuários ativos</b>. Home e páginas genéricas são compartilhadas e ficam fora das duas unidades, por isso Maceió + Francês não somam o total da propriedade.</div>
+      </div>
+
+      <div class="section">
+        <div class="sec-head">
+          <span class="sec-num">2</span>
+          <span class="sec-title">Tráfego por página · Junho 2026 vs Junho 2025</span>
+        </div>
+
+        <div class="traf-unit">
+          <div class="traf-unit-name">Home (ambas as unidades)</div>
+          <table>
+            <thead>
+              <tr>
+                <th style="width:52%;">Página</th>
+                <th style="width:16%;text-align:right;">Visitas jun/2026</th>
+                <th style="width:16%;text-align:right;">Visitas jun/2025</th>
+                <th style="width:16%;">Variação</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr><td><a class="acao-link" href="https://www.hotelpontaverde.com.br/" target="_blank">/ (home)</a></td><td class="num" style="text-align:right;">11.346</td><td class="num" style="text-align:right;">7.633</td><td><span class="var-pos">▲ 48,64%</span></td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="traf-unit" style="padding-top:28px;">
+          <div class="traf-unit-name">Maceió</div>
+          <table>
+            <thead>
+              <tr>
+                <th style="width:52%;">Página</th>
+                <th style="width:16%;text-align:right;">Visitas jun/2026</th>
+                <th style="width:16%;text-align:right;">Visitas jun/2025</th>
+                <th style="width:16%;">Variação</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="cat-row"><td colspan="4"><span class="cat-label">Motor de reservas</span></td></tr>
+              <tr><td><a class="acao-link" href="https://reservas.hotelpontaverde.com.br/hotels/HOTEL_OMNI_1111" target="_blank">/hotels/HOTEL_OMNI_1111</a></td><td class="num" style="text-align:right;">16.758</td><td class="num" style="text-align:right;">—</td><td><span class="new26">Novo em 2026</span></td></tr>
+              <tr class="cat-row"><td colspan="4"><span class="cat-label">Página institucional</span></td></tr>
+              <tr><td><a class="acao-link" href="https://www.hotelpontaverde.com.br/hoteis/maceio" target="_blank">/hoteis/maceio</a></td><td class="num" style="text-align:right;">4.159</td><td class="num" style="text-align:right;">11.389</td><td><span class="var-neg">▼ 63,48%</span></td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="traf-unit" style="padding-top:28px;">
+          <div class="traf-unit-name">Francês</div>
+          <table>
+            <thead>
+              <tr>
+                <th style="width:52%;">Página</th>
+                <th style="width:16%;text-align:right;">Visitas jun/2026</th>
+                <th style="width:16%;text-align:right;">Visitas jun/2025</th>
+                <th style="width:16%;">Variação</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="cat-row"><td colspan="4"><span class="cat-label">Motor de reservas</span></td></tr>
+              <tr><td><a class="acao-link" href="https://reservas.hotelpontaverde.com.br/hotels/HOTEL_OMNI_1896" target="_blank">/hotels/HOTEL_OMNI_1896</a></td><td class="num" style="text-align:right;">13.279</td><td class="num" style="text-align:right;">—</td><td><span class="new26">Novo em 2026</span></td></tr>
+              <tr class="cat-row"><td colspan="4"><span class="cat-label">Página institucional</span></td></tr>
+              <tr><td><a class="acao-link" href="https://www.hotelpontaverde.com.br/hoteis/praia-do-frances" target="_blank">/hoteis/praia-do-frances</a></td><td class="num" style="text-align:right;">3.929</td><td class="num" style="text-align:right;">15.523</td><td><span class="var-neg">▼ 74,69%</span></td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div><!-- /tab-junho -->
+
+    <div class="footer">
+      <span>Período: <b>01/jun a 30/jun 2026</b> vs mesmo mês do ano anterior · Fonte: <b>GA4</b></span>
+      <span>Trilha Performance Digital</span>
+    </div>
+  </div>
+</body>
+</html>
