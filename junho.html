@@ -2,397 +2,417 @@
 <html lang="pt-BR">
 <head>
 <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Estudo de Junho 2026 · Hotéis Ponta Verde</title>
 <style>
-  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
-  @page { size: 1396px 4200px; margin: 0; }
-  * { margin:0; padding:0; box-sizing:border-box; }
-  body {
-    font-family:'Inter',-apple-system,sans-serif;
-    background:#0f2e22;
-    padding:48px;
-  }
-  .card {
-    background:#ffffff;
-    border-radius:20px;
-    overflow:hidden;
-    box-shadow:0 24px 60px rgba(0,0,0,.25);
-    max-width:1300px;
-    margin:0 auto;
-  }
-  .header {
-    background:linear-gradient(135deg,#0f6b43 0%,#13854f 100%);
-    padding:36px 44px;
-    color:#fff;
-  }
-  .header .kicker {
-    font-size:15px; font-weight:600; letter-spacing:2px; text-transform:uppercase;
-    color:#9fe3bf; margin-bottom:6px;
-  }
-  .header h1 { font-size:34px; font-weight:800; letter-spacing:-.5px; }
-  .header p { font-size:17px; font-weight:400; color:#cdeede; margin-top:10px; }
+  @import url('https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,400;1,9..144,500&family=Hanken+Grotesk:wght@400;500;600;700;800&display=swap');
 
-  /* KPI ROW */
-  .kpis { display:flex; gap:16px; padding:30px 44px 6px; }
-  .kpi { flex:1; background:#f5faf7; border:1px solid #e6efe9; border-radius:16px; padding:20px 22px; }
-  .kpi .lbl { font-size:13px; font-weight:700; letter-spacing:.5px; text-transform:uppercase; color:#5a6b62; }
-  .kpi .val { font-size:32px; font-weight:800; color:#11241b; margin-top:8px; letter-spacing:-.5px; }
-  .kpi .delta { font-size:14px; font-weight:700; margin-top:6px; }
-  .kpi .down { color:#b5471f; }
-  .kpi .up   { color:#1d8a4f; }
-  .kpi .src  { font-size:11.5px; color:#8a978f; margin-top:10px; line-height:1.4; }
-  .combined { margin:28px 44px 0; padding:16px 22px; background:#eef6f1; border-left:4px solid #13854f; border-radius:0 10px 10px 0; font-size:15px; color:#2c3b33; line-height:1.55; }
-  .combined b { color:#0f6b43; }
-  .unit { padding:22px 44px 0; }
-  .unit .kpis { padding:14px 0 0; }
-  .unit-name { font-size:16px; font-weight:800; color:#0f6b43; letter-spacing:.3px; display:flex; align-items:center; gap:9px; }
-  .unit-name::before { content:''; width:11px; height:11px; border-radius:3px; background:#13854f; }
+  :root{
+    --paper:#eef3ef;
+    --card:#ffffff;
+    --ink:#10231a;
+    --ink-soft:#51635a;
+    --muted:#8b988f;
+    --line:#e3ece6;
+    --green:#0f6b43;
+    --green-2:#13854f;
+    --green-deep:#0b3624;
+    --up:#1d8a4f;
+    --watch:#a86a12;
+    --watch-bg:#fdf5e7;
+    --watch-line:#eccf92;
+    --tint:#f2f8f4;
+  }
+  *{margin:0;padding:0;box-sizing:border-box;}
+  body{
+    font-family:'Hanken Grotesk',-apple-system,sans-serif;
+    background:
+      radial-gradient(1200px 600px at 80% -10%, #e3efe7 0%, rgba(227,239,231,0) 60%),
+      var(--paper);
+    color:var(--ink);
+    padding:44px 24px;
+    -webkit-font-smoothing:antialiased;
+    font-variant-numeric:tabular-nums;
+  }
+  .sheet{
+    max-width:1000px;margin:0 auto;background:var(--card);
+    border-radius:26px;overflow:hidden;
+    box-shadow:0 1px 0 rgba(16,35,26,.04), 0 30px 70px -30px rgba(11,54,36,.32);
+  }
 
-  /* SECTION HEADERS */
-  .section { padding:28px 44px 4px; }
-  .sec-head { display:flex; align-items:baseline; gap:14px; margin-bottom:6px; }
-  .sec-num {
-    font-size:13px; font-weight:800; letter-spacing:1px; color:#fff;
-    background:#13854f; border-radius:8px; padding:5px 11px;
+  /* MASTHEAD */
+  .mast{padding:52px 56px 34px;border-bottom:1px solid var(--line);}
+  .kicker{
+    font-size:12.5px;font-weight:700;letter-spacing:2.4px;text-transform:uppercase;
+    color:var(--green);margin-bottom:20px;
   }
-  .sec-title { font-size:21px; font-weight:800; color:#11241b; letter-spacing:-.2px; }
-  .sec-desc { font-size:15px; color:#5a6b62; font-weight:500; }
-  .sec-source {
-    font-size:13px; color:#5a6b62; background:#eef6f1; border-left:3px solid #13854f;
-    padding:8px 14px; border-radius:0 8px 8px 0; margin:10px 0 16px; line-height:1.5;
+  .display{
+    font-family:'Fraunces',serif;font-weight:600;font-size:clamp(40px,7vw,60px);
+    line-height:.98;letter-spacing:-.5px;color:var(--ink);
   }
-  .sec-source b { color:#0f6b43; }
+  .display .it{font-style:italic;font-weight:500;color:var(--green);}
+  .dek{
+    margin-top:20px;max-width:640px;font-size:16px;line-height:1.6;color:var(--ink-soft);
+  }
+
+  /* HERO RESULT */
+  .hero{
+    margin:0;padding:38px 56px 42px;
+    background:linear-gradient(150deg,#0b3624 0%,#124a30 62%,#155636 100%);
+    color:#eaf5ee;position:relative;
+  }
+  .hero::after{
+    content:'';position:absolute;inset:0;pointer-events:none;
+    background:radial-gradient(600px 300px at 92% 120%, rgba(159,227,191,.14), rgba(0,0,0,0) 70%);
+  }
+  .hero-tag{
+    font-size:12.5px;font-weight:700;letter-spacing:1.6px;text-transform:uppercase;
+    color:#9fdcbb;margin-bottom:6px;
+  }
+  .hero-head{
+    font-family:'Fraunces',serif;font-weight:600;font-size:clamp(24px,4vw,32px);
+    line-height:1.1;letter-spacing:-.3px;color:#fff;margin-bottom:28px;
+  }
+  .hero-grid{display:grid;grid-template-columns:1fr 1fr;gap:26px;position:relative;z-index:1;}
+  .hero-unit{border-top:1px solid rgba(255,255,255,.16);padding-top:18px;}
+  .hero-unit .u{
+    font-size:13px;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:#bfe0cd;
+    display:flex;align-items:center;gap:8px;margin-bottom:12px;
+  }
+  .hero-unit .u::before{content:'';width:9px;height:9px;border-radius:2px;background:#9fdcbb;}
+  .hero-val{
+    font-family:'Fraunces',serif;font-weight:600;font-size:clamp(34px,5.5vw,46px);
+    line-height:1;letter-spacing:-1px;color:#fff;
+  }
+  .meta-pill{
+    display:inline-block;margin-top:14px;padding:6px 13px;border-radius:999px;
+    background:rgba(159,220,187,.16);border:1px solid rgba(159,220,187,.4);
+    font-size:13.5px;font-weight:700;color:#c8f0d8;letter-spacing:.2px;
+  }
+  .hero-sub{margin-top:12px;font-size:13.5px;color:#a9cdb8;line-height:1.5;}
+  .hero-sub b{color:#e4f5ec;font-weight:700;}
+  .hero-combined{
+    position:relative;z-index:1;margin-top:30px;padding-top:20px;
+    border-top:1px solid rgba(255,255,255,.16);
+    font-size:14.5px;color:#cdeede;line-height:1.6;
+  }
+  .hero-combined b{color:#fff;font-weight:700;}
+
+  /* SECTIONS */
+  .sec{padding:44px 56px;border-bottom:1px solid var(--line);}
+  .sec:last-of-type{border-bottom:none;}
+  .eyebrow{display:flex;align-items:baseline;gap:14px;margin-bottom:6px;flex-wrap:wrap;}
+  .num{
+    font-family:'Fraunces',serif;font-size:15px;font-weight:600;color:#fff;
+    background:var(--green);border-radius:8px;padding:3px 11px;letter-spacing:.5px;
+  }
+  .etitle{font-family:'Fraunces',serif;font-size:26px;font-weight:600;letter-spacing:-.3px;color:var(--ink);}
+  .edesc{margin:10px 0 0;font-size:15px;line-height:1.6;color:var(--ink-soft);max-width:720px;}
+  .src{
+    margin:16px 0 24px;font-size:12.5px;line-height:1.55;color:var(--muted);
+    padding:11px 15px;background:var(--tint);border-radius:10px;border-left:3px solid #cfe6d9;
+  }
+  .src b{color:var(--green);font-weight:700;}
+
+  /* CARD GRIDS */
+  .grid-3{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;}
+  .grid-2{display:grid;grid-template-columns:1fr 1fr;gap:18px;}
+
+  .drv{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:22px 22px 20px;}
+  .drv-k{font-size:12px;font-weight:700;letter-spacing:.8px;text-transform:uppercase;color:var(--green);margin-bottom:14px;}
+  .drv-h{font-family:'Fraunces',serif;font-size:19px;font-weight:600;color:var(--ink);line-height:1.2;margin-bottom:14px;}
+  .drv-nums{display:flex;gap:22px;margin-bottom:12px;}
+  .drv-nums .n .lab{font-size:11.5px;color:var(--muted);font-weight:600;text-transform:uppercase;letter-spacing:.4px;}
+  .drv-nums .n .big{font-size:22px;font-weight:800;color:var(--up);margin-top:3px;letter-spacing:-.3px;}
+  .drv-note{font-size:13px;line-height:1.5;color:var(--ink-soft);}
+
+  /* UNIT METRIC CARD */
+  .ucard{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:24px 26px;}
+  .uname{
+    font-size:14px;font-weight:800;letter-spacing:.4px;color:var(--green);text-transform:uppercase;
+    display:flex;align-items:center;gap:9px;margin-bottom:18px;
+  }
+  .uname::before{content:'';width:11px;height:11px;border-radius:3px;background:var(--green-2);}
+  .headline{border-bottom:1px solid var(--line);padding-bottom:16px;margin-bottom:16px;}
+  .headline .lab{font-size:11.5px;font-weight:700;letter-spacing:.6px;text-transform:uppercase;color:var(--muted);}
+  .headline .big{font-family:'Fraunces',serif;font-size:30px;font-weight:600;color:var(--ink);margin:5px 0 4px;letter-spacing:-.5px;}
+  .headline .big .d{font-family:'Hanken Grotesk';font-size:15px;font-weight:700;margin-left:4px;}
+  .headline .ref{font-size:13px;color:var(--muted);}
+  .headline .ref b{color:var(--up);font-weight:700;}
+  .mgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px 14px;}
+  .m .lab{font-size:11.5px;font-weight:600;color:var(--muted);text-transform:uppercase;letter-spacing:.3px;}
+  .m .val{font-size:18px;font-weight:800;color:var(--ink);margin-top:4px;letter-spacing:-.2px;}
+  .m .val .d{font-size:13px;font-weight:700;margin-left:3px;}
+  .m .ref{font-size:12px;color:var(--muted);margin-top:2px;}
+
+  .up{color:var(--up);} .watch-c{color:var(--watch);}
+  .d.up{color:var(--up);} .d.watch-c{color:var(--watch);}
 
   /* TABLES */
-  table { width:100%; border-collapse:collapse; }
-  thead th {
-    background:#0f3d2a; color:#dff5e8;
-    font-size:12.5px; font-weight:700; letter-spacing:.7px; text-transform:uppercase;
-    text-align:left; padding:13px 18px;
+  .tbl-wrap{overflow-x:auto;border:1px solid var(--line);border-radius:14px;}
+  table{width:100%;border-collapse:collapse;min-width:420px;}
+  thead th{
+    background:#0e3f2a;color:#dbf1e5;font-size:11.5px;font-weight:700;letter-spacing:.7px;
+    text-transform:uppercase;text-align:left;padding:12px 16px;
   }
-  thead th:first-child { border-radius:10px 0 0 0; }
-  thead th:last-child  { border-radius:0 10px 0 0; }
-  tbody td {
-    padding:14px 18px; font-size:16px; color:#1d2b24; vertical-align:middle;
-    border-bottom:1px solid #e6efe9; line-height:1.4;
-  }
-  tbody tr:nth-child(even) td { background:#f5faf7; }
-  tbody tr:last-child td { border-bottom:none; }
-  td.num { white-space:nowrap; font-variant-numeric:tabular-nums; }
-  .acao { font-weight:600; color:#11241b; }
-  .acao .sub { display:block; font-weight:400; color:#6a7a71; font-size:13px; margin-top:3px; }
-  .neg { color:#b5471f; font-weight:700; }
-  .pos { color:#1d8a4f; font-weight:700; }
-  .flat { color:#5a6b62; font-weight:700; }
-  .hi { font-weight:800; color:#11241b; }
+  tbody td{padding:13px 16px;font-size:15px;color:var(--ink);border-top:1px solid var(--line);line-height:1.35;}
+  tbody tr:first-child td{border-top:none;}
+  td.r{text-align:right;white-space:nowrap;}
+  .catrow td{background:var(--tint);padding:7px 16px;font-size:11px;font-weight:800;letter-spacing:.7px;text-transform:uppercase;color:var(--ink-soft);}
+  .plink{color:var(--green);text-decoration:none;border-bottom:1px solid #bfe0cd;padding-bottom:1px;}
+  .plink:hover{border-color:var(--green);}
+  .plink .ar{font-size:11px;opacity:.6;}
+  .vneg{color:var(--watch);font-weight:700;}
+  .vpos{color:var(--up);font-weight:700;}
+  .vnew{color:var(--up);font-weight:700;font-size:13px;}
+  .subnote{font-size:12px;color:var(--muted);margin-top:11px;line-height:1.55;}
+  .subnote b{color:var(--ink-soft);}
 
-  .pill {
-    display:inline-block; padding:3px 11px; border-radius:999px;
-    font-size:12px; font-weight:700; letter-spacing:.3px; white-space:nowrap;
-  }
-  .p-look  { background:#e3edff; color:#2a51a8; }
-  .p-rmkt  { background:#e4f6ea; color:#1d8a4f; }
-  .p-topo  { background:#efe7fb; color:#6a3fb0; }
-  .p-brand { background:#d9f0ef; color:#0f7a73; }
-  .p-keep  { background:#e4f6ea; color:#1d8a4f; }
-  .p-move  { background:#fde8e1; color:#b5471f; }
-  .p-test  { background:#fff1d9; color:#a85d12; }
+  .stack{display:grid;grid-template-columns:1fr;gap:22px;}
 
-  /* PLANO CARDS */
-  .asks { display:flex; gap:16px; padding:6px 0 0; }
-  .ask { flex:1; border-radius:16px; padding:22px 22px 18px; }
-  .ask-move { background:#fdf1ec; border:1.5px solid #f3cfc0; }
-  .ask-keep { background:#eef8f1; border:1.5px solid #c9e6d4; }
-  .ask-test { background:#fff8ef; border:1.5px solid #f3dcc4; }
-  .ask .tag {
-    display:inline-block; font-size:11.5px; font-weight:800; letter-spacing:.6px; text-transform:uppercase;
-    padding:4px 10px; border-radius:999px; margin-bottom:12px;
+  /* WATCH SECTION */
+  .watch-lead{
+    background:var(--watch-bg);border:1px solid var(--watch-line);border-radius:14px;
+    padding:18px 20px;font-size:14.5px;line-height:1.6;color:#6b4a12;margin:2px 0 22px;
   }
-  .tag-move { color:#b5471f; background:#fadfd4; }
-  .tag-keep { color:#1d8a4f; background:#d3edda; }
-  .tag-test { color:#a85d12; background:#fae8d3; }
-  .ask h3 { font-size:17px; font-weight:800; color:#22332b; margin-bottom:8px; line-height:1.3; }
-  .ask p { font-size:14.5px; color:#46564e; line-height:1.55; }
-  .ask p b { color:#22332b; }
+  .watch-lead b{color:var(--watch);}
+  .act{
+    margin-top:22px;padding:20px 22px;border-radius:14px;
+    background:var(--green-deep);color:#eaf5ee;font-size:14.5px;line-height:1.6;
+  }
+  .act .t{font-family:'Fraunces',serif;font-size:15px;font-weight:600;color:#9fdcbb;letter-spacing:.3px;margin-bottom:6px;text-transform:uppercase;}
+  .act b{color:#fff;font-weight:700;}
 
-  /* CALLOUT */
-  .callout {
-    margin:8px 44px 0; padding:18px 22px; background:#fff8ef; border:1.5px solid #f3dcc4;
-    border-radius:14px; font-size:15px; color:#5a4632; line-height:1.6;
+  /* FOOTER */
+  .foot{
+    padding:26px 56px;background:var(--green-deep);color:#bfe0cd;font-size:13.5px;
+    display:flex;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap;
   }
-  .callout b { color:#a85d12; }
+  .foot b{color:#fff;font-weight:700;}
+  .foot .sig{font-family:'Fraunces',serif;font-style:italic;font-size:15px;color:#eaf5ee;}
 
-  .footer {
-    margin-top:28px; padding:22px 44px; background:#0f3d2a; color:#bfe0cd; font-size:14px;
-    display:flex; justify-content:space-between; align-items:center;
+  @media (max-width:720px){
+    body{padding:20px 12px;}
+    .mast,.hero,.sec,.foot{padding-left:26px;padding-right:26px;}
+    .grid-3,.grid-2,.hero-grid,.mgrid{grid-template-columns:1fr;}
+    .mgrid{grid-template-columns:repeat(3,1fr);}
   }
-  .footer b { color:#fff; }
-
-  /* TABS */
-  .tab-nav {
-    display:flex; gap:8px; margin:28px 44px 0; background:#f0f7f3;
-    padding:6px; border-radius:12px;
-  }
-  .tab-btn {
-    flex:1; padding:12px 20px; font-size:14px; font-weight:700; border:none;
-    background:transparent; cursor:pointer; color:#5a6b62; border-radius:9px;
-    letter-spacing:.2px; transition:all .18s; text-align:center;
-  }
-  .tab-btn.active { background:#0f6b43; color:#fff; box-shadow:0 2px 8px rgba(15,107,67,.25); }
-  .tab-btn:hover:not(.active) { background:#dff0e8; color:#0f6b43; }
-
-  /* tabela de tráfego */
-  .traf-unit { padding:28px 44px 4px; }
-  .traf-unit-name {
-    font-size:17px; font-weight:800; color:#0f6b43; letter-spacing:.3px;
-    display:flex; align-items:center; gap:9px; margin-bottom:14px;
-  }
-  .traf-unit-name::before { content:''; width:11px; height:11px; border-radius:3px; background:#13854f; }
-  .cat-label {
-    font-size:11.5px; font-weight:800; letter-spacing:.8px; text-transform:uppercase;
-    color:#5a6b62; padding:10px 18px 4px; display:block;
-  }
-  .acao-link { font-weight:600; color:#0f6b43; text-decoration:underline; text-underline-offset:3px; }
-  .acao-link::after { content:' ↗'; font-size:11px; opacity:.7; }
-  .acao-link:hover { color:#0a4f32; }
-  .new26 { color:#1d8a4f; font-weight:700; font-size:13px; }
-  .var-neg { color:#b5471f; font-weight:700; }
-  .var-pos { color:#1d8a4f; font-weight:700; }
-  .var-flat { color:#5a6b62; font-weight:600; }
-  .path { font-size:13px; color:#5a6b62; display:block; }
-  .cat-row td { background:#f0f7f3 !important; padding:0; border-bottom:none; }
 </style>
 </head>
 <body>
-  <div class="card">
-    <div class="header">
+  <main class="sheet">
+
+    <!-- MASTHEAD -->
+    <header class="mast">
       <div class="kicker">Hotéis Ponta Verde · Maceió + Francês</div>
-      <h1>Estudo de Junho 2026</h1>
-      <p>Por que a conversão do site está caindo · Junho 2026 vs 2025 · por unidade</p>
-    </div>
+      <h1 class="display">Estudo de <span class="it">Junho</span> 2026</h1>
+      <p class="dek">Junho fechou acima da meta nas duas unidades. Este relatório mostra o resultado, o que puxou o mês e onde ainda há vazão. Comparação Junho 2026 vs Junho 2025, por unidade.</p>
+    </header>
 
-    <div id="tab-junho" class="tab-content" style="display:block;">
-      <div style="background:#0f4d31;border-radius:14px;padding:24px 26px;color:#eaf5ee;margin-bottom:26px;">
-        <div style="font-size:13px;font-weight:700;text-transform:uppercase;letter-spacing:.6px;color:#9fd3b8;margin-bottom:6px;">Pergunta central</div>
-        <div style="font-size:21px;font-weight:800;margin-bottom:4px;color:#ffffff;">Por que a conversão do site está caindo?</div>
-        <div style="font-size:14px;color:#bfe0cd;margin-bottom:18px;">Taxa de conversão do site: Maceió 0,83% (▼53% no ano) · Francês 0,85% (▼41%). A sequência que explica:</div>
-        <div style="display:flex;flex-direction:column;gap:11px;">
-          <div style="display:flex;gap:12px;align-items:flex-start;"><span style="flex-shrink:0;width:24px;height:24px;border-radius:50%;background:#1d8a4f;color:#fff;display:flex;align-items:center;justify-content:center;font-size:13px;font-weight:700;">1</span><div style="font-size:14px;line-height:1.5;"><b>O mix de tráfego esfriou.</b> A página institucional (que aquecia a decisão) caiu 63-75% e o tráfego passou a cair direto no motor. A prospecção fria do Meta vai direto para a hora de reservar.</div></div>
-          <div style="display:flex;gap:12px;align-items:flex-start;"><span style="flex-shrink:0;width:24px;height:24px;border-radius:50%;background:#1d8a4f;color:#fff;display:flex;align-items:center;justify-content:center;font-size:13px;font-weight:700;">2</span><div style="font-size:14px;line-height:1.5;"><b>Menos aquecimento no meio de funil.</b> A home reteve menos gente (tempo caiu de 26s para 11s, ▼58%): o público chega ao motor sem o desejo formado.</div></div>
-          <div style="display:flex;gap:12px;align-items:flex-start;"><span style="flex-shrink:0;width:24px;height:24px;border-radius:50%;background:#1d8a4f;color:#fff;display:flex;align-items:center;justify-content:center;font-size:13px;font-weight:700;">3</span><div style="font-size:14px;line-height:1.5;"><b>O público dispersa no motor.</b> Rejeição de 40-44% no motor de reservas: chega e sai sem reservar.</div></div>
-          <div style="display:flex;gap:12px;align-items:flex-start;"><span style="flex-shrink:0;width:24px;height:24px;border-radius:50%;background:#1d8a4f;color:#fff;display:flex;align-items:center;justify-content:center;font-size:13px;font-weight:700;">4</span><div style="font-size:14px;line-height:1.5;"><b>A conversão média cai.</b> Quem chega com intenção (Google Brandterms) converte 6,8%; quem chega frio (Meta → motor), ~2%. Como o mix pendeu para o frio, a taxa média despenca.</div></div>
-          <div style="display:flex;gap:12px;align-items:flex-start;"><span style="flex-shrink:0;width:24px;height:24px;border-radius:50%;background:#1d8a4f;color:#fff;display:flex;align-items:center;justify-content:center;font-size:13px;font-weight:700;">5</span><div style="font-size:14px;line-height:1.5;"><b>Fricção comercial trava quem quer reservar.</b> Ticket caiu ~30% no ano (hipótese: desconto de 25% da reforma, <b>a confirmar com a Maria</b>) e carrinho abandonado.</div></div>
-          <div style="display:flex;gap:12px;align-items:flex-start;"><span style="flex-shrink:0;width:24px;height:24px;border-radius:50%;background:#1d8a4f;color:#fff;display:flex;align-items:center;justify-content:center;font-size:13px;font-weight:700;">6</span><div style="font-size:14px;line-height:1.5;"><b>Mais verba não corrige, piora.</b> O site satura em torno de R$ 8 mil: acima disso a verba traz tráfego ainda mais frio, empurrando a conversão para baixo.</div></div>
+    <!-- HERO · RESULTADO -->
+    <section class="hero">
+      <div class="hero-tag">O resultado</div>
+      <div class="hero-head">Junho bateu a meta nas duas unidades.</div>
+      <div class="hero-grid">
+        <div class="hero-unit">
+          <div class="u">Maceió</div>
+          <div class="hero-val">R$ 212,5 mil</div>
+          <div class="meta-pill">+46,6% acima da meta</div>
+          <div class="hero-sub">Receita do site · meta R$ 145 mil · <b>+213% vs 2025</b></div>
         </div>
-        <div style="margin-top:18px;padding-top:15px;border-top:1px solid rgba(255,255,255,.16);font-size:14px;line-height:1.6;color:#eaf5ee;">
-          <b style="color:#9fd3b8;">Alavancas:</b> reaquecer o meio de funil (prospecção na institucional antes do motor), recuperar carrinho, revisar ticket/desconto com a Maria, não cortar o Google (assist confirmado).
+        <div class="hero-unit">
+          <div class="u">Francês</div>
+          <div class="hero-val">R$ 173,2 mil</div>
+          <div class="meta-pill">+39,2% acima da meta</div>
+          <div class="hero-sub">Receita do site · meta R$ 124 mil · <b>+67% vs 2025</b></div>
         </div>
       </div>
-      <div class="section">
-        <div class="sec-head">
-          <span class="sec-num">1</span>
-          <span class="sec-title">Visão geral · Junho 2026 vs Junho 2025</span>
-        </div>
-        <div class="sec-source">
-          <b>Fonte:</b> GA4, property 343824638 ("hotel ponta verde – GA4"). <b>Período:</b> 01/jun–30/jun/2026 vs 01/jun–30/jun/2025 (comparação "Ano anterior"). Recorte por unidade: Engajamento › Páginas e telas, filtrado pelas páginas de cada hotel (institucional + motor + conteúdo). Puxado em 07/jul/2026.
-        </div>
-        <div style="background:#eef6f1;border-left:4px solid #0f6b43;border-radius:0 8px 8px 0;padding:12px 16px;margin:18px 0;font-size:14px;color:#0f4d31;">
-          Separando por unidade, a queda de audiência está concentrada no <b>Francês (usuários ▼39%)</b>. <b>Maceió segurou (▲8%)</b>. O número combinado (▼37%) escondia isso.
-        </div>
-        <div style="display:flex;gap:16px;flex-wrap:wrap;">
-          <div style="flex:1;min-width:290px;background:#f0f7f3;border-radius:12px;padding:20px 22px;">
-            <div style="font-size:15px;font-weight:800;color:#0f6b43;margin-bottom:14px;display:flex;align-items:center;gap:8px;"><span style="width:10px;height:10px;background:#0f6b43;border-radius:2px;display:inline-block;"></span>Maceió</div>
-            <div style="border-bottom:1px solid #dfe9e3;padding-bottom:12px;margin-bottom:12px;">
-              <div style="font-size:12px;color:#5a6b62;font-weight:600;text-transform:uppercase;letter-spacing:.5px;">Usuários ativos</div>
-              <div style="font-size:26px;font-weight:800;color:#0f6b43;margin:4px 0 2px;">11.261 <span style="font-size:14px;font-weight:700;color:#27ae60;">▲ 8,4%</span></div>
-              <div style="font-size:13px;color:#888;">vs 10.386 em jun/2025</div>
-            </div>
-            <div style="display:flex;gap:20px;flex-wrap:wrap;">
-              <div><div style="font-size:12px;color:#5a6b62;font-weight:600;">Visitas*</div><div style="font-size:18px;font-weight:700;color:#0f6b43;">23.714</div><div style="font-size:12px;color:#888;">vs 13.228</div></div>
-              <div><div style="font-size:12px;color:#5a6b62;font-weight:600;">Views/usuário</div><div style="font-size:18px;font-weight:700;color:#0f6b43;">2,11</div><div style="font-size:12px;color:#888;">vs 1,27</div></div>
-              <div><div style="font-size:12px;color:#5a6b62;font-weight:600;">Tempo</div><div style="font-size:18px;font-weight:700;color:#0f6b43;">27s</div><div style="font-size:12px;color:#888;">vs 24s</div></div>
-            </div>
-          </div>
-          <div style="flex:1;min-width:290px;background:#f0f7f3;border-radius:12px;padding:20px 22px;">
-            <div style="font-size:15px;font-weight:800;color:#0f6b43;margin-bottom:14px;display:flex;align-items:center;gap:8px;"><span style="width:10px;height:10px;background:#0f6b43;border-radius:2px;display:inline-block;"></span>Francês</div>
-            <div style="border-bottom:1px solid #dfe9e3;padding-bottom:12px;margin-bottom:12px;">
-              <div style="font-size:12px;color:#5a6b62;font-weight:600;text-transform:uppercase;letter-spacing:.5px;">Usuários ativos</div>
-              <div style="font-size:26px;font-weight:800;color:#0f6b43;margin:4px 0 2px;">7.781 <span style="font-size:14px;font-weight:700;color:#c0392b;">▼ 39,0%</span></div>
-              <div style="font-size:13px;color:#888;">vs 12.764 em jun/2025</div>
-            </div>
-            <div style="display:flex;gap:20px;flex-wrap:wrap;">
-              <div><div style="font-size:12px;color:#5a6b62;font-weight:600;">Visitas*</div><div style="font-size:18px;font-weight:700;color:#0f6b43;">18.769</div><div style="font-size:12px;color:#888;">vs 16.248</div></div>
-              <div><div style="font-size:12px;color:#5a6b62;font-weight:600;">Views/usuário</div><div style="font-size:18px;font-weight:700;color:#0f6b43;">2,41</div><div style="font-size:12px;color:#888;">vs 1,27</div></div>
-              <div><div style="font-size:12px;color:#5a6b62;font-weight:600;">Tempo</div><div style="font-size:18px;font-weight:700;color:#0f6b43;">26s</div><div style="font-size:12px;color:#888;">vs 11s</div></div>
-            </div>
-          </div>
-        </div>
-        <div style="font-size:12px;color:#888;margin-top:12px;line-height:1.5;">* Visitas (visualizações) inclui o motor de reservas, rastreado só a partir de 2026, então a alta ano a ano é parcialmente metodológica: o indicador confiável de audiência é <b>usuários ativos</b>. Home e páginas genéricas são compartilhadas e ficam fora das duas unidades, por isso Maceió + Francês não somam o total da propriedade.</div>
-      </div>
+      <div class="hero-combined">Juntas, as duas unidades geraram <b>R$ 385,7 mil</b> de receita no site em junho, <b>+43% acima da meta</b> somada.</div>
+    </section>
 
-      <div class="section">
-        <div class="sec-head">
-          <span class="sec-num">2</span>
-          <span class="sec-title">Receita, investimento e eficiência · Junho 2026 vs Junho 2025</span>
-        </div>
-        <div class="sec-source">
-          <b>Fonte:</b> Receita, ROAS, CAC e taxa de conversão do site = Volux (verdade da meta), fechamento de junho. Investimento total da conta (Meta + Google) puxado via API das contas de anúncio em 07/jul/2026.
-        </div>
-        <div style="background:#fdf3e2;border:1px solid #e6c67a;border-radius:8px;padding:12px 16px;margin:14px 0 0;font-size:13px;color:#7a5406;line-height:1.55;">
-          <b>Divergência de receita:</b> GA4 marca ~R$ 349k (compra bruta do motor, propriedade inteira) e Volux ~R$ 110k (receita digital confirmada, referência da meta). Usamos o Volux; vale reconciliar a base oficial.
-        </div>
-        <div style="background:#eef6f1;border-left:4px solid #0f6b43;border-radius:0 8px 8px 0;padding:14px 18px;margin:18px 0;font-size:14px;color:#0f4d31;line-height:1.7;">
-          <b>Leitura.</b>
-          <ul style="margin:8px 0 0;padding-left:20px;">
-            <li>Receita caiu (Maceió ▼28%, Francês ▼41%), mas não por mídia: invest. no site caiu (▼49% e ▼65%) e a eficiência subiu (ROAS ▲42–70%, CAC ▼29–55%).</li>
-            <li>Site satura ~R$ 8 mil: mais verba não fecha a meta.</li>
-            <li>Vazões reais: ticket (▼30%, hipótese do desconto de 25% da reforma, <b>a confirmar com a Maria</b>) e carrinho/conversão (taxa ▼41–53%).</li>
-            <li>Não cortar o Google: brandterms sustenta o Meta (assist confirmado).</li>
-          </ul>
-        </div>
-        <div style="display:flex;gap:16px;flex-wrap:wrap;">
-          <div style="flex:1;min-width:290px;background:#f0f7f3;border-radius:12px;padding:20px 22px;">
-            <div style="font-size:15px;font-weight:800;color:#0f6b43;margin-bottom:14px;display:flex;align-items:center;gap:8px;"><span style="width:10px;height:10px;background:#0f6b43;border-radius:2px;display:inline-block;"></span>Maceió</div>
-            <div style="border-bottom:1px solid #dfe9e3;padding-bottom:12px;margin-bottom:12px;">
-              <div style="font-size:12px;color:#5a6b62;font-weight:600;text-transform:uppercase;letter-spacing:.5px;">Receita do site</div>
-              <div style="font-size:26px;font-weight:800;color:#0f6b43;margin:4px 0 2px;">R$ 49.014 <span style="font-size:14px;font-weight:700;color:#c0392b;">▼ 28%</span></div>
-              <div style="font-size:13px;color:#888;">vs R$ 67.834 em jun/2025 · <b style="color:#c0392b;">−66% vs meta (R$ 145k)</b></div>
-            </div>
-            <div style="display:flex;gap:18px;flex-wrap:wrap;">
-              <div><div style="font-size:12px;color:#5a6b62;font-weight:600;">ROAS</div><div style="font-size:18px;font-weight:700;color:#27ae60;">20,73 ▲42%</div><div style="font-size:12px;color:#888;">vs 14,55</div></div>
-              <div><div style="font-size:12px;color:#5a6b62;font-weight:600;">CAC</div><div style="font-size:18px;font-weight:700;color:#27ae60;">R$ 84 ▼29%</div><div style="font-size:12px;color:#888;">vs R$ 120</div></div>
-              <div><div style="font-size:12px;color:#5a6b62;font-weight:600;">Conversão site</div><div style="font-size:18px;font-weight:700;color:#c0392b;">0,83%</div><div style="font-size:12px;color:#888;">vs 1,79%</div></div>
-            </div>
-            <div style="display:flex;gap:18px;flex-wrap:wrap;margin-top:12px;border-top:1px dashed #dfe9e3;padding-top:12px;">
-              <div><div style="font-size:12px;color:#5a6b62;font-weight:600;">Invest. site</div><div style="font-size:18px;font-weight:700;color:#0f6b43;">R$ 2.364</div><div style="font-size:12px;color:#888;">vs 4.663 (▼49%)</div></div>
-              <div><div style="font-size:12px;color:#5a6b62;font-weight:600;">Invest. total conta</div><div style="font-size:18px;font-weight:700;color:#0f6b43;">R$ 17.422</div><div style="font-size:12px;color:#888;">vs 8.962 · Meta+Google</div></div>
-            </div>
+    <!-- 01 · POR QUE BATEU -->
+    <section class="sec">
+      <div class="eyebrow">
+        <span class="num">01</span>
+        <span class="etitle">Por que bateu</span>
+      </div>
+      <p class="edesc">O resultado veio de três movimentos na mesma direção: mais gente certa entrando, convertendo melhor e com a mídia mais eficiente.</p>
+      <div class="src"><b>Fonte:</b> Volux, dashboard da Maria (aba de junho, verdade da meta), fechamento de junho, atualizado 01/07/2026. Variações vs junho/2025.</div>
+      <div class="grid-3">
+        <div class="drv">
+          <div class="drv-k">Motor 1</div>
+          <div class="drv-h">Muito mais tráfego qualificado</div>
+          <div class="drv-nums">
+            <div class="n"><div class="lab">Maceió</div><div class="big">+328%</div></div>
+            <div class="n"><div class="lab">Francês</div><div class="big">+430%</div></div>
           </div>
-          <div style="flex:1;min-width:290px;background:#f0f7f3;border-radius:12px;padding:20px 22px;">
-            <div style="font-size:15px;font-weight:800;color:#0f6b43;margin-bottom:14px;display:flex;align-items:center;gap:8px;"><span style="width:10px;height:10px;background:#0f6b43;border-radius:2px;display:inline-block;"></span>Francês</div>
-            <div style="border-bottom:1px solid #dfe9e3;padding-bottom:12px;margin-bottom:12px;">
-              <div style="font-size:12px;color:#5a6b62;font-weight:600;text-transform:uppercase;letter-spacing:.5px;">Receita do site</div>
-              <div style="font-size:26px;font-weight:800;color:#0f6b43;margin:4px 0 2px;">R$ 60.929 <span style="font-size:14px;font-weight:700;color:#c0392b;">▼ 41%</span></div>
-              <div style="font-size:13px;color:#888;">vs R$ 103.629 em jun/2025 · <b style="color:#c0392b;">−51% vs meta (R$ 124k)</b></div>
-            </div>
-            <div style="display:flex;gap:18px;flex-wrap:wrap;">
-              <div><div style="font-size:12px;color:#5a6b62;font-weight:600;">ROAS</div><div style="font-size:18px;font-weight:700;color:#27ae60;">32,56 ▲70%</div><div style="font-size:12px;color:#888;">vs 19,21</div></div>
-              <div><div style="font-size:12px;color:#5a6b62;font-weight:600;">CAC</div><div style="font-size:18px;font-weight:700;color:#27ae60;">R$ 67 ▼55%</div><div style="font-size:12px;color:#888;">vs R$ 150</div></div>
-              <div><div style="font-size:12px;color:#5a6b62;font-weight:600;">Conversão site</div><div style="font-size:18px;font-weight:700;color:#c0392b;">0,85%</div><div style="font-size:12px;color:#888;">vs 1,43%</div></div>
-            </div>
-            <div style="display:flex;gap:18px;flex-wrap:wrap;margin-top:12px;border-top:1px dashed #dfe9e3;padding-top:12px;">
-              <div><div style="font-size:12px;color:#5a6b62;font-weight:600;">Invest. site</div><div style="font-size:18px;font-weight:700;color:#0f6b43;">R$ 1.871</div><div style="font-size:12px;color:#888;">vs 5.395 (▼65%)</div></div>
-              <div><div style="font-size:12px;color:#5a6b62;font-weight:600;">Invest. total conta</div><div style="font-size:18px;font-weight:700;color:#0f6b43;">R$ 12.966</div><div style="font-size:12px;color:#888;">vs 12.058 · Meta+Google</div></div>
-            </div>
+          <div class="drv-note">80 a 83% do tráfego do site já chega qualificado. Base maior e mais quente na entrada.</div>
+        </div>
+        <div class="drv">
+          <div class="drv-k">Motor 2</div>
+          <div class="drv-h">A conversão subiu</div>
+          <div class="drv-nums">
+            <div class="n"><div class="lab">Maceió</div><div class="big">1,42%</div></div>
+            <div class="n"><div class="lab">Francês</div><div class="big">1,22%</div></div>
+          </div>
+          <div class="drv-note">Alta no ano (+16% e +6,5%): a base maior converteu melhor, não pior.</div>
+        </div>
+        <div class="drv">
+          <div class="drv-k">Motor 3</div>
+          <div class="drv-h">Mídia mais eficiente</div>
+          <div class="drv-nums">
+            <div class="n"><div class="lab">ROAS</div><div class="big">▲ 35 a 70%</div></div>
+            <div class="n"><div class="lab">CAC</div><div class="big">▼ 21 a 45%</div></div>
+          </div>
+          <div class="drv-note">ROAS subiu e custo por reserva caiu, mesmo com mais investimento.</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 02 · EFICIÊNCIA POR UNIDADE -->
+    <section class="sec">
+      <div class="eyebrow">
+        <span class="num">02</span>
+        <span class="etitle">Eficiência por unidade</span>
+      </div>
+      <p class="edesc">O detalhe de receita, eficiência e investimento de cada hotel no site, contra 2025 e contra a meta.</p>
+      <div class="src"><b>Fonte:</b> Receita Digital, ROAS, CAC, taxa de conversão e investimento do site = Volux, dashboard da Maria (aba de junho, verdade da meta), fechamento de junho, atualizado 01/07/2026.</div>
+      <div class="grid-2">
+        <div class="ucard">
+          <div class="uname">Maceió</div>
+          <div class="headline">
+            <div class="lab">Receita do site</div>
+            <div class="big">R$ 212.532 <span class="d up">▲ 213%</span></div>
+            <div class="ref">vs R$ 67.834 em jun/2025 · <b>+46,6% vs meta (R$ 145k)</b></div>
+          </div>
+          <div class="mgrid">
+            <div class="m"><div class="lab">ROAS</div><div class="val up">24,69 <span class="d up">▲70%</span></div><div class="ref">vs 14,55</div></div>
+            <div class="m"><div class="lab">CAC</div><div class="val up">R$ 95 <span class="d up">▼21%</span></div><div class="ref">vs R$ 120</div></div>
+            <div class="m"><div class="lab">Conversão</div><div class="val up">1,42% <span class="d up">▲16%</span></div><div class="ref">vs 1,22%</div></div>
+            <div class="m"><div class="lab">Invest. site</div><div class="val">R$ 8.607</div><div class="ref">vs 4.663 (▲85%)</div></div>
+            <div class="m"><div class="lab">Tráfego qualif.</div><div class="val up">+328%</div><div class="ref">80,6% do total</div></div>
+            <div class="m"><div class="lab">Reservas</div><div class="val up">91 <span class="d up">▲133%</span></div><div class="ref">vs 39</div></div>
+          </div>
+        </div>
+        <div class="ucard">
+          <div class="uname">Francês</div>
+          <div class="headline">
+            <div class="lab">Receita do site</div>
+            <div class="big">R$ 173.150 <span class="d up">▲ 67%</span></div>
+            <div class="ref">vs R$ 103.629 em jun/2025 · <b>+39,2% vs meta (R$ 124k)</b></div>
+          </div>
+          <div class="mgrid">
+            <div class="m"><div class="lab">ROAS</div><div class="val up">25,87 <span class="d up">▲35%</span></div><div class="ref">vs 19,21</div></div>
+            <div class="m"><div class="lab">CAC</div><div class="val up">R$ 83 <span class="d up">▼45%</span></div><div class="ref">vs R$ 150</div></div>
+            <div class="m"><div class="lab">Conversão</div><div class="val up">1,22% <span class="d up">▲6,5%</span></div><div class="ref">vs 1,14%</div></div>
+            <div class="m"><div class="lab">Invest. site</div><div class="val">R$ 6.692</div><div class="ref">vs 5.395 (▲24%)</div></div>
+            <div class="m"><div class="lab">Tráfego qualif.</div><div class="val up">+430%</div><div class="ref">82,7% do total</div></div>
+            <div class="m"><div class="lab">Reservas</div><div class="val up">81 <span class="d up">▲125%</span></div><div class="ref">vs 36</div></div>
           </div>
         </div>
       </div>
+    </section>
 
-      <div class="section">
-        <div class="sec-head">
-          <span class="sec-num">3</span>
-          <span class="sec-title">Tráfego por página · Junho 2026 vs Junho 2025</span>
+    <!-- 03 · DE ONDE VEIO O PÚBLICO -->
+    <section class="sec">
+      <div class="eyebrow">
+        <span class="num">03</span>
+        <span class="etitle">De onde veio o público</span>
+      </div>
+      <p class="edesc">A audiência do site pelo GA4 (outro medidor, complementar ao Volux). Aqui aparece o contraste que abre a próxima seção: Maceió segurou a audiência, o Francês perdeu topo de funil, mesmo tendo batido a receita.</p>
+      <div class="src"><b>Fonte:</b> GA4, property 343824638 ("hotel ponta verde – GA4"). Período 01 a 30/jun/2026 vs 2025 ("Ano anterior"). Engajamento › Páginas e telas, filtrado pelas páginas de cada hotel. Puxado em 07/jul/2026.</div>
+
+      <div class="grid-2" style="margin-bottom:26px;">
+        <div class="ucard">
+          <div class="uname">Maceió</div>
+          <div class="headline">
+            <div class="lab">Usuários ativos</div>
+            <div class="big">11.261 <span class="d up">▲ 8,4%</span></div>
+            <div class="ref">vs 10.386 em jun/2025</div>
+          </div>
+          <div class="mgrid">
+            <div class="m"><div class="lab">Visitas*</div><div class="val">23.714</div><div class="ref">vs 13.228</div></div>
+            <div class="m"><div class="lab">Views/usuário</div><div class="val">2,11</div><div class="ref">vs 1,27</div></div>
+            <div class="m"><div class="lab">Tempo</div><div class="val">27s</div><div class="ref">vs 24s</div></div>
+          </div>
         </div>
-
-        <div class="traf-unit">
-          <div class="traf-unit-name">Home (ambas as unidades)</div>
-          <table>
-            <thead>
-              <tr>
-                <th style="width:52%;">Página</th>
-                <th style="width:16%;text-align:right;">Visitas jun/2026</th>
-                <th style="width:16%;text-align:right;">Visitas jun/2025</th>
-                <th style="width:16%;">Variação</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr><td><a class="acao-link" href="https://www.hotelpontaverde.com.br/" target="_blank">/ (home)</a></td><td class="num" style="text-align:right;">11.346</td><td class="num" style="text-align:right;">7.633</td><td><span class="var-pos">▲ 48,64%</span></td></tr>
-            </tbody>
-          </table>
-        </div>
-
-        <div class="traf-unit" style="padding-top:28px;">
-          <div class="traf-unit-name">Maceió</div>
-          <table>
-            <thead>
-              <tr>
-                <th style="width:52%;">Página</th>
-                <th style="width:16%;text-align:right;">Visitas jun/2026</th>
-                <th style="width:16%;text-align:right;">Visitas jun/2025</th>
-                <th style="width:16%;">Variação</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr class="cat-row"><td colspan="4"><span class="cat-label">Motor de reservas</span></td></tr>
-              <tr><td><a class="acao-link" href="https://reservas.hotelpontaverde.com.br/hotels/HOTEL_OMNI_1111" target="_blank">/hotels/HOTEL_OMNI_1111</a></td><td class="num" style="text-align:right;">16.758</td><td class="num" style="text-align:right;">—</td><td><span class="new26">Novo em 2026</span></td></tr>
-              <tr class="cat-row"><td colspan="4"><span class="cat-label">Página institucional</span></td></tr>
-              <tr><td><a class="acao-link" href="https://www.hotelpontaverde.com.br/hoteis/maceio" target="_blank">/hoteis/maceio</a></td><td class="num" style="text-align:right;">4.159</td><td class="num" style="text-align:right;">11.389</td><td><span class="var-neg">▼ 63,48%</span></td></tr>
-            </tbody>
-          </table>
-        </div>
-
-        <div class="traf-unit" style="padding-top:28px;">
-          <div class="traf-unit-name">Francês</div>
-          <table>
-            <thead>
-              <tr>
-                <th style="width:52%;">Página</th>
-                <th style="width:16%;text-align:right;">Visitas jun/2026</th>
-                <th style="width:16%;text-align:right;">Visitas jun/2025</th>
-                <th style="width:16%;">Variação</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr class="cat-row"><td colspan="4"><span class="cat-label">Motor de reservas</span></td></tr>
-              <tr><td><a class="acao-link" href="https://reservas.hotelpontaverde.com.br/hotels/HOTEL_OMNI_1896" target="_blank">/hotels/HOTEL_OMNI_1896</a></td><td class="num" style="text-align:right;">13.279</td><td class="num" style="text-align:right;">—</td><td><span class="new26">Novo em 2026</span></td></tr>
-              <tr class="cat-row"><td colspan="4"><span class="cat-label">Página institucional</span></td></tr>
-              <tr><td><a class="acao-link" href="https://www.hotelpontaverde.com.br/hoteis/praia-do-frances" target="_blank">/hoteis/praia-do-frances</a></td><td class="num" style="text-align:right;">3.929</td><td class="num" style="text-align:right;">15.523</td><td><span class="var-neg">▼ 74,69%</span></td></tr>
-            </tbody>
-          </table>
+        <div class="ucard">
+          <div class="uname">Francês</div>
+          <div class="headline">
+            <div class="lab">Usuários ativos</div>
+            <div class="big">7.781 <span class="d watch-c">▼ 39,0%</span></div>
+            <div class="ref">vs 12.764 em jun/2025</div>
+          </div>
+          <div class="mgrid">
+            <div class="m"><div class="lab">Visitas*</div><div class="val">18.769</div><div class="ref">vs 16.248</div></div>
+            <div class="m"><div class="lab">Views/usuário</div><div class="val">2,41</div><div class="ref">vs 1,27</div></div>
+            <div class="m"><div class="lab">Tempo</div><div class="val">26s</div><div class="ref">vs 11s</div></div>
+          </div>
         </div>
       </div>
+      <p class="subnote" style="margin-bottom:26px;">* Visitas (visualizações) inclui o motor de reservas, rastreado só a partir de 2026, então a alta ano a ano é parcialmente metodológica: o indicador confiável de audiência é <b>usuários ativos</b>. Home e páginas genéricas são compartilhadas e ficam fora das duas unidades, por isso Maceió + Francês não somam o total.</p>
 
-      <div class="section">
-        <div class="sec-head">
-          <span class="sec-num">4</span>
-          <span class="sec-title">Onde o público dispersa · engajamento por página · Junho 2026</span>
+      <div class="stack">
+        <div>
+          <div class="uname" style="margin-bottom:12px;">Tráfego por página</div>
+          <div class="tbl-wrap">
+            <table>
+              <thead><tr><th style="width:46%;">Página</th><th class="r">Jun/2026</th><th class="r">Jun/2025</th><th>Variação</th></tr></thead>
+              <tbody>
+                <tr class="catrow"><td colspan="4">Home · ambas as unidades</td></tr>
+                <tr><td><a class="plink" href="https://www.hotelpontaverde.com.br/" target="_blank" rel="noopener">/ (home) <span class="ar">↗</span></a></td><td class="r">11.346</td><td class="r">7.633</td><td><span class="vpos">▲ 48,6%</span></td></tr>
+                <tr class="catrow"><td colspan="4">Maceió · motor de reservas</td></tr>
+                <tr><td><a class="plink" href="https://reservas.hotelpontaverde.com.br/hotels/HOTEL_OMNI_1111" target="_blank" rel="noopener">/hotels/HOTEL_OMNI_1111 <span class="ar">↗</span></a></td><td class="r">16.758</td><td class="r">n/d</td><td><span class="vnew">Novo em 2026</span></td></tr>
+                <tr class="catrow"><td colspan="4">Maceió · página institucional</td></tr>
+                <tr><td><a class="plink" href="https://www.hotelpontaverde.com.br/hoteis/maceio" target="_blank" rel="noopener">/hoteis/maceio <span class="ar">↗</span></a></td><td class="r">4.159</td><td class="r">11.389</td><td><span class="vneg">▼ 63,5%</span></td></tr>
+                <tr class="catrow"><td colspan="4">Francês · motor de reservas</td></tr>
+                <tr><td><a class="plink" href="https://reservas.hotelpontaverde.com.br/hotels/HOTEL_OMNI_1896" target="_blank" rel="noopener">/hotels/HOTEL_OMNI_1896 <span class="ar">↗</span></a></td><td class="r">13.279</td><td class="r">n/d</td><td><span class="vnew">Novo em 2026</span></td></tr>
+                <tr class="catrow"><td colspan="4">Francês · página institucional</td></tr>
+                <tr><td><a class="plink" href="https://www.hotelpontaverde.com.br/hoteis/praia-do-frances" target="_blank" rel="noopener">/hoteis/praia-do-frances <span class="ar">↗</span></a></td><td class="r">3.929</td><td class="r">15.523</td><td><span class="vneg">▼ 74,7%</span></td></tr>
+              </tbody>
+            </table>
+          </div>
         </div>
-        <div class="sec-source">
-          <b>Fonte:</b> GA4, Engajamento › Páginas e telas. Taxa de rejeição (% de sessões que saem sem interagir) e tempo médio de engajamento por página, junho 2026. Puxado em 07/jul/2026.
-        </div>
-        <div style="background:#eef6f1;border-left:4px solid #0f6b43;border-radius:0 8px 8px 0;padding:14px 18px;margin:18px 0;font-size:14px;color:#0f4d31;line-height:1.7;">
-          <b>Leitura.</b>
-          <ul style="margin:8px 0 0;padding-left:20px;">
-            <li>Dispersão concentrada no motor (rejeição 44% Francês, 40% Maceió), casa com a conversão de 0,83-0,85%.</li>
-            <li>Home perdeu retenção: tempo 26s para 11s (▼58%).</li>
-            <li>Institucionais seguram (rejeição 16-20%), não são o vazamento.</li>
-            <li>Ação: levar a prospecção para a institucional antes do motor.</li>
-          </ul>
-        </div>
+      </div>
+    </section>
+
+    <!-- 04 · ONDE AINDA HÁ VAZÃO -->
+    <section class="sec">
+      <div class="eyebrow">
+        <span class="num">04</span>
+        <span class="etitle">Onde ainda há vazão</span>
+      </div>
+      <p class="edesc">O mês foi forte, mas há dois pontos de atenção para sustentar o resultado nos próximos meses.</p>
+      <div class="watch-lead"><b>1. Topo de funil do Francês.</b> Os usuários ativos caíram 39% e a página institucional perdeu 75% das visitas. A receita veio da base qualificada (fundo de funil), mas a descoberta está mais rasa: sustentar o ritmo exige realimentar o topo.</div>
+      <div class="watch-lead"><b>2. Retenção no site.</b> O maior ponto de fuga é o motor de reservas, e a home perdeu tempo de permanência. São pontos de otimização de site para blindar a conversão, que hoje está boa.</div>
+
+      <div class="src"><b>Fonte:</b> GA4, Engajamento › Páginas e telas. Taxa de rejeição (% de sessões que saem sem interagir) e tempo médio de engajamento por página, junho 2026. Puxado em 07/jul/2026.</div>
+      <div class="tbl-wrap">
         <table>
-          <thead>
-            <tr>
-              <th style="width:42%;">Página</th>
-              <th style="width:18%;text-align:right;">Taxa de rejeição</th>
-              <th style="width:16%;text-align:right;">Tempo médio</th>
-              <th style="width:24%;">Sinal</th>
-            </tr>
-          </thead>
+          <thead><tr><th style="width:44%;">Página</th><th class="r">Rejeição</th><th class="r">Tempo médio</th><th>Sinal</th></tr></thead>
           <tbody>
-            <tr><td><a class="acao-link" href="https://reservas.hotelpontaverde.com.br/hotels/HOTEL_OMNI_1896" target="_blank">Motor Francês (HOTEL_OMNI_1896)</a></td><td class="num" style="text-align:right;color:#c0392b;font-weight:700;">44,2%</td><td class="num" style="text-align:right;">28s</td><td><span class="var-neg">Maior ponto de fuga</span></td></tr>
-            <tr><td><a class="acao-link" href="https://reservas.hotelpontaverde.com.br/hotels/HOTEL_OMNI_1111" target="_blank">Motor Maceió (HOTEL_OMNI_1111)</a></td><td class="num" style="text-align:right;color:#c0392b;font-weight:700;">39,5%</td><td class="num" style="text-align:right;">29s</td><td><span class="var-neg">Fuga alta</span></td></tr>
-            <tr><td><a class="acao-link" href="https://www.hotelpontaverde.com.br/" target="_blank">Home /</a></td><td class="num" style="text-align:right;">26,4%</td><td class="num" style="text-align:right;font-weight:700;">11s</td><td><span style="color:#b8860b;font-weight:600;">Perdeu retenção (era 26s, ▼58%)</span></td></tr>
-            <tr><td><a class="acao-link" href="https://www.hotelpontaverde.com.br/hoteis/praia-do-frances" target="_blank">/hoteis/praia-do-frances</a></td><td class="num" style="text-align:right;color:#1d8a4f;">19,9%</td><td class="num" style="text-align:right;">—</td><td><span class="var-pos">Segura bem</span></td></tr>
-            <tr><td><a class="acao-link" href="https://www.hotelpontaverde.com.br/hoteis/maceio" target="_blank">/hoteis/maceio</a></td><td class="num" style="text-align:right;color:#1d8a4f;">16,0%</td><td class="num" style="text-align:right;">—</td><td><span class="var-pos">Menor fuga</span></td></tr>
+            <tr><td><a class="plink" href="https://reservas.hotelpontaverde.com.br/hotels/HOTEL_OMNI_1896" target="_blank" rel="noopener">Motor Francês <span class="ar">↗</span></a></td><td class="r vneg">44,2%</td><td class="r">28s</td><td><span class="vneg">Maior ponto de fuga</span></td></tr>
+            <tr><td><a class="plink" href="https://reservas.hotelpontaverde.com.br/hotels/HOTEL_OMNI_1111" target="_blank" rel="noopener">Motor Maceió <span class="ar">↗</span></a></td><td class="r vneg">39,5%</td><td class="r">29s</td><td><span class="vneg">Fuga alta</span></td></tr>
+            <tr><td><a class="plink" href="https://www.hotelpontaverde.com.br/" target="_blank" rel="noopener">Home / <span class="ar">↗</span></a></td><td class="r">26,4%</td><td class="r">11s</td><td><span class="watch-c" style="font-weight:700;">Perdeu retenção (era 26s, ▼58%)</span></td></tr>
+            <tr><td><a class="plink" href="https://www.hotelpontaverde.com.br/hoteis/praia-do-frances" target="_blank" rel="noopener">/hoteis/praia-do-frances <span class="ar">↗</span></a></td><td class="r vpos">19,9%</td><td class="r">n/d</td><td><span class="vpos">Segura bem</span></td></tr>
+            <tr><td><a class="plink" href="https://www.hotelpontaverde.com.br/hoteis/maceio" target="_blank" rel="noopener">/hoteis/maceio <span class="ar">↗</span></a></td><td class="r vpos">16,0%</td><td class="r">n/d</td><td><span class="vpos">Menor fuga</span></td></tr>
           </tbody>
         </table>
-        <div style="font-size:12px;color:#888;margin-top:10px;line-height:1.5;">Rejeição = 100% menos a taxa de engajamento do GA4 (sessão engajada = passou de 10s, converteu ou viu 2+ páginas). As institucionais têm tempo médio ~0s no relatório (a sessão engaja em outra página), por isso o sinal delas é lido pela rejeição, que é baixa.</div>
       </div>
-    </div><!-- /tab-junho -->
+      <p class="subnote">Rejeição = 100% menos a taxa de engajamento do GA4 (sessão engajada = passou de 10s, converteu ou viu 2+ páginas). As institucionais têm tempo médio próximo de 0s no relatório (a sessão engaja em outra página), por isso o sinal delas é lido pela rejeição, que é baixa.</p>
 
-    <div class="footer">
-      <span>Período: <b>01/jun a 30/jun 2026</b> vs mesmo mês do ano anterior · Fontes: <b>GA4 · Volux · Meta/Google</b></span>
-      <span>Trilha Performance Digital</span>
-    </div>
-  </div>
+      <div class="act">
+        <div class="t">Alavancas para sustentar</div>
+        Manter o mix qualificado que está convertendo, <b>realimentar o topo de funil do Francês</b> (institucional e descoberta), otimizar a retenção da home e do motor, e <b>não cortar o Google</b> (o brandterms sustenta o Meta, assist confirmado).
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="foot">
+      <span>Período <b>01 a 30/jun 2026</b> vs mesmo mês de 2025 · Fontes <b>Volux · GA4 · Meta/Google</b></span>
+      <span class="sig">Trilha Performance Digital</span>
+    </footer>
+
+  </main>
 </body>
 </html>
