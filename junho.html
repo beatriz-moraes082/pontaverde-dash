@@ -203,6 +203,15 @@
   .ch-row .v{font-size:19px;font-weight:800;color:var(--ink);margin-top:3px;letter-spacing:-.2px;}
   .ch-row .v.hi{color:var(--up);}
   .ch-src{font-size:11px;color:var(--muted);margin-top:10px;line-height:1.45;}
+  .pill{display:inline-block;padding:3px 10px;border-radius:999px;font-size:11px;font-weight:800;letter-spacing:.3px;white-space:nowrap;}
+  .p-look{background:#e3edff;color:#2a51a8;} .p-rmkt{background:#e4f6ea;color:#1d8a4f;} .p-topo{background:#efe7fb;color:#6a3fb0;}
+  .p-keep{background:#e4f6ea;color:#1d8a4f;} .p-move{background:#fde8e1;color:#b5471f;} .p-test{background:#fff1d9;color:#a85d12;}
+  .ask{border-radius:16px;padding:20px 20px 18px;}
+  .ask-move{background:#fdf1ec;border:1.5px solid #f3cfc0;} .ask-keep{background:#eef8f1;border:1.5px solid #c9e6d4;} .ask-test{background:#fff8ef;border:1.5px solid #f3dcc4;}
+  .ask .tag{display:inline-block;font-size:11px;font-weight:800;letter-spacing:.6px;text-transform:uppercase;padding:4px 10px;border-radius:999px;margin-bottom:12px;}
+  .tag-move{color:#b5471f;background:#fadfd4;} .tag-keep{color:#1d8a4f;background:#d3edda;} .tag-test{color:#a85d12;background:#fae8d3;}
+  .ask h3{font-family:'Fraunces',serif;font-size:17px;font-weight:600;color:#22332b;margin-bottom:8px;line-height:1.25;}
+  .ask p{font-size:14px;color:#46564e;line-height:1.55;} .ask p b{color:#22332b;}
   .act{
     margin-top:22px;padding:20px 22px;border-radius:14px;
     background:var(--green-deep);color:#eaf5ee;font-size:14.5px;line-height:1.6;
@@ -430,9 +439,43 @@
         <span class="num">04</span>
         <span class="etitle">Plano de ação</span>
       </div>
-      <p class="edesc">Duas frentes pra sustentar o resultado e destravar o volume do Francês nos próximos meses.</p>
-      <div class="sug"><span class="tag">Sugestão 1</span><br><b>Reforçar o topo de funil do Francês.</b> A audiência encolheu (usuários ▼39%, institucional ▼75% das visualizações). Quem fica está mais engajado e converte bem, o problema não é qualidade, é volume de descoberta: falta gente nova chegando. Vale realimentar o topo (institucional, conteúdo e prospecção) pra levar mais gente ao funil que já converte.</div>
-      <div class="sug"><span class="tag">Sugestão 2</span><br><b>Otimizar a retenção no site.</b> O maior ponto de fuga é o motor de reservas, e a home perdeu tempo de permanência. São ajustes de site (motor e home) pra blindar a conversão, que hoje está boa.</div>
+      <p class="edesc">Trocar o destino só de quem chega frio, e blindar quem já vende. Base: os públicos do Meta que vão ao motor em junho.</p>
+
+      <div class="uname" style="margin-bottom:12px;">Públicos do Meta que vão ao motor (e se já vendem)</div>
+      <div class="src"><b>Fonte:</b> Meta Ads, contas Maceió (act 299642416227987) e Francês (act 317304155022732), campanhas de objetivo Vendas/Site. Verba, compras e ROAS de compras, junho 2026. Atribuição 7 dias clique + 1 dia visualização.</div>
+      <div class="tbl-wrap">
+        <table style="min-width:660px;">
+          <thead><tr><th style="width:11%;">Conta</th><th style="width:27%;">Público (conjunto)</th><th>Tipo</th><th class="r">Verba jun</th><th class="r">Compras</th><th class="r">ROAS</th><th>Destino ideal</th></tr></thead>
+          <tbody>
+            <tr><td>Maceió</td><td>Semelhantes 1% (NE)</td><td><span class="pill p-look">Lookalike</span></td><td class="r">R$ 1.756</td><td class="r">6</td><td class="r">4,2</td><td><span class="pill p-move">Página de preparação</span></td></tr>
+            <tr><td>Maceió</td><td>Semelhante 2% Compradores 60D</td><td><span class="pill p-look">Lookalike</span></td><td class="r">R$ 628</td><td class="r">0</td><td class="r">—</td><td><span class="pill p-move">Página de preparação</span></td></tr>
+            <tr><td>Maceió</td><td>Abandono Carrinho (Site) 30D</td><td><span class="pill p-rmkt">Remarketing</span></td><td class="r">R$ 713</td><td class="r">8</td><td class="r"><b>33,5</b></td><td><span class="pill p-keep">Manter no motor</span></td></tr>
+            <tr><td>Maceió</td><td>Base Last Minute</td><td><span class="pill p-rmkt">Remarketing</span></td><td class="r">R$ 642</td><td class="r">2</td><td class="r"><b>9,7</b></td><td><span class="pill p-keep">Manter no motor</span></td></tr>
+            <tr><td>Francês</td><td>Carrinho Abandonado 180D</td><td><span class="pill p-rmkt">Remarketing</span></td><td class="r">R$ 1.487</td><td class="r">9</td><td class="r"><b>7,4</b></td><td><span class="pill p-keep">Manter no motor</span></td></tr>
+            <tr><td>Francês</td><td>Base Last Minute</td><td><span class="pill p-rmkt">Remarketing</span></td><td class="r">R$ 881</td><td class="r">3</td><td class="r"><b>10,4</b></td><td><span class="pill p-keep">Manter no motor</span></td></tr>
+            <tr><td>Francês</td><td>Redes Sociais 180D</td><td><span class="pill p-topo">Topo/engaj.</span></td><td class="r">R$ 274</td><td class="r">3</td><td class="r">87*</td><td><span class="pill p-test">Testar preparação</span></td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="watch-lead" style="margin:14px 0 24px;"><b>*ROAS de 87 vem de pouquíssimas vendas</b> (3 reservas, provavelmente uma de valor alto atribuída por visualização): ler como exceção, não padrão. Os públicos de remarketing (Abandono de Carrinho e Last Minute) já vendem com ROAS alto, por isso o plano separa prospecção de remarketing.</div>
+
+      <div class="grid-3">
+        <div class="ask ask-move">
+          <span class="tag tag-move">Trocar destino</span>
+          <h3>Prospecção fria → página de preparação</h3>
+          <p>Maceió (Semelhantes 1% e Semelhante 2% Compradores) e Francês (Redes Sociais 180D) passam a cair na <b>página do hotel</b> (/hoteis/maceio, /hoteis/praia-do-frances), com oferta e prova social, e só de lá ao motor. É a fatia que chega crua no checkout e converte pouco.</p>
+        </div>
+        <div class="ask ask-keep">
+          <span class="tag tag-keep">Manter no motor</span>
+          <h3>Remarketing quente continua direto</h3>
+          <p>Abandono de Carrinho e Last Minute <b>seguem indo ao motor</b>: já têm venda registrada e ROAS alto (33, 10, 7, 10). Quem abandonou o carrinho volta ao checkout, não a uma página institucional. Mudar aqui derrubaria resultado.</p>
+        </div>
+        <div class="ask ask-test">
+          <span class="tag tag-test">Testar e medir</span>
+          <h3>Teste A/B medido</h3>
+          <p>Rodar o "Trocar destino" como <b>teste de 15 dias</b> (motor vs página de preparação), medindo conversão e receita real em GA4 e Meta antes de escalar.</p>
+        </div>
+      </div>
 
     </section>
 
