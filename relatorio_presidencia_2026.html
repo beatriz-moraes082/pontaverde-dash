@@ -1,0 +1,779 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Hotel Ponta Verde · Canal Direto 2026 · Trilha</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<script>document.documentElement.className+=' js';</script>
+<style>
+  :root {
+    --verde:#0F6E56; --verde-soft:#E1F5EE; --escuro:#1E3A2B; --escuro-soft:#2c503d;
+    --bg:#FAF8F2; --creme:#F5F1E8; --card:#FFFFFF; --border:#E7E3D8;
+    --text:#232323; --text-soft:#5d675f; --text-mute:#98a09a;
+    --ok:#0F6E56; --ok-bg:#E1F5EE; --warn:#854F0B; --warn-bg:#FAEEDA; --agir:#A32D2D; --agir-bg:#FCEBEB;
+    --gold:#C9A227;
+  }
+  * { box-sizing:border-box; }
+  html { scroll-behavior:smooth; scroll-padding-top:74px; }
+  body { margin:0; font-family:'Inter',-apple-system,BlinkMacSystemFont,sans-serif;
+    background:var(--bg); color:var(--text); line-height:1.5; }
+  .wrap { max-width:1180px; margin:0 auto; padding:0 32px 64px; }
+  a { color:inherit; }
+
+  .progress { position:fixed; top:0; left:0; height:3px; background:var(--verde); width:0; z-index:60; transition:width .1s linear; }
+
+  .nav { position:sticky; top:0; z-index:50; background:rgba(250,248,242,.93);
+    backdrop-filter:blur(8px); border-bottom:1px solid var(--border);
+    display:flex; align-items:center; justify-content:center; gap:2px; padding:12px 28px; flex-wrap:wrap; margin:0 -32px; }
+  .nav .brand { display:inline-flex; align-items:center; gap:9px; font-family:'Playfair Display',serif;
+    font-weight:600; letter-spacing:2px; color:var(--escuro); margin-right:12px; font-size:15px; }
+  .nav a { font-size:10.5px; text-transform:uppercase; letter-spacing:.4px; color:var(--text-soft);
+    text-decoration:none; padding:6px 8px; border-radius:7px; font-weight:600; transition:.15s; white-space:nowrap; }
+  .nav a:hover, .nav a.active { background:var(--verde-soft); color:var(--escuro); }
+
+  .hero { background:linear-gradient(135deg,var(--escuro) 0%,#14432f 55%,#0F6E56 130%); color:#fff;
+    padding:46px 52px; border-radius:20px; margin:28px 0 24px; position:relative; overflow:hidden; }
+  .hero::after { content:''; position:absolute; right:-80px; top:-80px; width:340px; height:340px;
+    background:radial-gradient(circle,rgba(225,245,238,.14) 0%,transparent 70%); border-radius:50%; }
+  .hero-top { display:flex; align-items:center; gap:14px; margin-bottom:26px; }
+  .logo-badge { width:48px; height:48px; border:1.5px solid #9fd8c5; border-radius:12px; display:flex;
+    align-items:center; justify-content:center; font-family:'Playfair Display',serif;
+    font-size:20px; font-weight:600; color:#c9eade; }
+  .logo-text { font-family:'Playfair Display',serif; font-size:21px; font-weight:600; letter-spacing:3px; }
+  .logo-sub { font-size:9px; letter-spacing:3px; color:#9fd8c5; text-transform:uppercase; margin-top:2px; }
+  .hero h1 { font-family:'Playfair Display',serif; font-weight:600; font-size:41px; line-height:1.12; margin:0 0 12px; max-width:820px; }
+  .hero h1 em { color:#8fe0c3; font-style:italic; font-weight:400; }
+  .hero p { color:#cfe0d5; font-size:15px; margin:0; max-width:760px; }
+  .hero .updated { margin-top:18px; font-size:11px; color:#93ac9d; letter-spacing:1px; text-transform:uppercase; }
+
+  .exec { background:var(--card); border:1px solid var(--border); border-left:4px solid var(--verde);
+    border-radius:14px; padding:24px 28px; margin-bottom:28px; }
+  .exec h3 { margin:0 0 10px; font-size:11px; letter-spacing:1.8px; text-transform:uppercase; color:var(--text-mute); }
+  .exec p { margin:0 0 8px; font-size:15px; color:#3c4a40; line-height:1.68; }
+  .exec p:last-child { margin-bottom:0; }
+  .exec strong { color:var(--escuro); }
+
+  /* listas com marcador (mesmo texto, leitura guiada) */
+  .exec ul { margin:0; padding:0; list-style:none; display:grid; gap:11px; }
+  .exec ul li { position:relative; padding-left:24px; font-size:15px; color:#3c4a40; line-height:1.68; }
+  .exec ul li::before { content:''; position:absolute; left:2px; top:9px; width:9px; height:9px; border-radius:3px; background:var(--verde); }
+  .lead-list { margin:-8px 0 22px; padding:0; list-style:none; display:grid; gap:9px; }
+  .lead-list li { position:relative; padding-left:20px; font-size:14.5px; color:#3c4a40; line-height:1.65; max-width:900px; }
+  .lead-list li::before { content:'▸'; position:absolute; left:2px; color:var(--verde); font-weight:700; }
+  .insight ul { margin:9px 0 0; padding:0; list-style:none; display:grid; gap:8px; }
+  .insight ul li { position:relative; padding-left:18px; }
+  .insight ul li::before { content:'▸'; position:absolute; left:0; color:var(--verde); }
+
+  /* mini comparativos de barra */
+  .kmini { margin-top:13px; display:grid; gap:5px; }
+  .krow { display:flex; align-items:center; gap:7px; }
+  .krow .kl { font-size:9px; color:var(--text-mute); width:27px; letter-spacing:.5px; font-weight:700; text-transform:uppercase; flex:0 0 auto; }
+  .krow .ktrack { flex:1; background:#F0EDE4; height:7px; border-radius:4px; overflow:hidden; }
+  .krow .kb { display:block; height:100%; border-radius:4px; background:#d8d2c2; }
+  .krow .kb.now { background:linear-gradient(90deg,#15866a,var(--verde)); }
+  .mbar { background:#F0EDE4; height:5px; border-radius:4px; overflow:hidden; margin:6px 0 0 auto; max-width:150px; }
+  .mbar i { display:block; height:100%; border-radius:4px; }
+  .mbar i.ok { background:var(--verde); } .mbar i.w { background:var(--gold); } .mbar i.n { background:#9fc5b5; }
+
+  .kpi-grid { display:grid; grid-template-columns:repeat(5,1fr); gap:14px; margin-bottom:40px; }
+  .kpi { background:var(--card); border:1px solid var(--border); border-radius:14px; padding:24px 22px; }
+  .kpi-accent { height:3px; width:30px; background:var(--verde); margin-bottom:16px; border-radius:2px; }
+  .kpi-label { font-size:10.5px; text-transform:uppercase; letter-spacing:1.4px; color:var(--text-mute); font-weight:600; margin-bottom:12px; }
+  .kpi-value { font-family:'Playfair Display',serif; font-size:33px; font-weight:600; color:var(--escuro); line-height:1; letter-spacing:-.5px; }
+  .kpi-value small { font-size:16px; color:var(--text-soft); font-weight:400; }
+  .kpi-meta { font-size:12px; color:var(--text-soft); margin-top:9px; line-height:1.45; }
+  .kpi-delta { display:flex; align-items:center; gap:5px; font-size:11.5px; font-weight:700; margin-top:9px; }
+  .kpi-delta span { color:var(--text-mute); font-weight:500; }
+  .kpi-delta.up { color:var(--ok); }
+
+  section { background:var(--card); border:1px solid var(--border); border-radius:16px;
+    padding:34px 38px; margin-bottom:22px; scroll-margin-top:74px; }
+  .section-head { display:flex; align-items:baseline; justify-content:space-between; margin-bottom:22px;
+    padding-bottom:16px; border-bottom:1px solid var(--border); gap:12px; flex-wrap:wrap; }
+  .section-head h2 { font-family:'Playfair Display',serif; font-weight:600; font-size:25px; color:var(--escuro); margin:0; }
+  .section-head .meta { font-size:11px; color:var(--text-mute); letter-spacing:1.3px; text-transform:uppercase; text-align:right; }
+  .lead { font-size:14.5px; color:#3c4a40; line-height:1.7; margin:0 0 22px; max-width:900px; }
+  .lead strong { color:var(--escuro); }
+
+  table { width:100%; border-collapse:collapse; }
+  thead th { text-align:left; font-size:10px; text-transform:uppercase; letter-spacing:1.3px;
+    color:var(--text-mute); font-weight:600; padding:11px 12px; border-bottom:1px solid var(--border); }
+  thead th.num, td.num { text-align:right; }
+  tbody td { padding:13px 12px; border-bottom:1px solid #F0EDE4; font-size:14px; vertical-align:middle; }
+  tbody tr:last-child td { border-bottom:none; }
+  tbody tr:hover { background:#fbfaf6; }
+  tfoot td { padding:13px 12px; font-size:13px; font-weight:600; color:var(--escuro);
+    border-top:2px solid var(--border); background:#fbfaf6; }
+  tfoot td.num { text-align:right; }
+  .strong { font-weight:600; color:var(--escuro); }
+  .num-big { font-family:'Playfair Display',serif; font-size:17px; font-weight:600; color:var(--escuro); }
+  .sub { font-size:11px; color:var(--text-mute); margin-top:2px; }
+  .table-scroll { overflow-x:auto; }
+
+  .pill { display:inline-block; padding:3px 10px; border-radius:100px; font-size:10px; font-weight:700;
+    letter-spacing:.5px; text-transform:uppercase; white-space:nowrap; }
+  .pill.ok { background:var(--ok-bg); color:var(--ok); }
+  .pill.warn { background:var(--warn-bg); color:var(--warn); }
+  .pill.agir { background:var(--agir-bg); color:var(--agir); }
+  .pill.muted { background:#f1efe8; color:#87907f; }
+
+  .unit-title { font-size:11px; letter-spacing:1.6px; text-transform:uppercase; color:var(--verde);
+    font-weight:700; margin:26px 0 10px; }
+  .unit-title:first-of-type { margin-top:0; }
+
+  /* gráfico de barras mês a mês */
+  .chart { margin:8px 0 6px; }
+  .chart-grid { display:grid; grid-template-columns:repeat(7,1fr); gap:14px; align-items:end; height:230px; }
+  .cmonth { display:flex; align-items:flex-end; justify-content:center; gap:6px; height:100%; }
+  .cbar { width:34px; border-radius:6px 6px 0 0; position:relative; min-height:8px; }
+  .cbar.b25 { background:#d8d2c2; }
+  .cbar.b26 { background:linear-gradient(180deg,#15866a,var(--verde)); }
+  .cbar.b26.partial { background:repeating-linear-gradient(45deg,#15866a,#15866a 6px,#4aa98d 6px,#4aa98d 12px); }
+  .cbar .cv { position:absolute; top:-20px; left:50%; transform:translateX(-50%); font-size:10.5px;
+    font-weight:700; color:var(--escuro); white-space:nowrap; }
+  .cbar.b25 .cv { color:var(--text-mute); font-weight:600; }
+  .chart-x { display:grid; grid-template-columns:repeat(7,1fr); gap:14px; margin-top:10px; }
+  .chart-x div { text-align:center; font-size:11px; color:var(--text-soft); font-weight:600; text-transform:uppercase; letter-spacing:.8px; }
+  .chart-legend { display:flex; gap:18px; margin-top:16px; font-size:11.5px; color:var(--text-soft); flex-wrap:wrap; }
+  .chart-legend i { display:inline-block; width:12px; height:12px; border-radius:3px; margin-right:6px; vertical-align:-1px; }
+
+  /* cards de ação */
+  .cards { display:grid; grid-template-columns:repeat(3,1fr); gap:14px; }
+  .acard { position:relative; overflow:hidden; background:#fdfcf9; border:1px solid var(--border);
+    border-radius:14px; padding:20px 22px; transition:transform .18s ease, box-shadow .18s ease; }
+  .acard::after { content:''; position:absolute; top:0; left:0; right:0; height:3px; background:var(--verde); }
+  .acard:hover { transform:translateY(-3px); box-shadow:0 12px 30px rgba(30,58,43,.10); }
+  .acard.gold::after { background:var(--gold); }
+  .acard .ic { width:34px; height:34px; border-radius:10px; display:flex; align-items:center; justify-content:center;
+    background:var(--verde-soft); color:var(--verde); margin-bottom:13px; font-size:16px; }
+  .acard.gold .ic { background:#f7eccd; color:#9a7d18; }
+  .acard h4 { margin:0 0 7px; font-size:14.5px; color:var(--escuro); font-family:'Playfair Display',serif; font-weight:700; }
+  .acard p { margin:0; font-size:12.8px; color:var(--text-soft); line-height:1.55; }
+  .acard p strong { color:var(--escuro); }
+
+  .statrow { display:grid; grid-template-columns:repeat(4,1fr); gap:14px; margin:4px 0 24px; }
+  .stat { border:1px solid var(--border); border-radius:12px; padding:18px 16px; background:linear-gradient(180deg,#fdfcf9,var(--card)); }
+  .stat b { font-family:'Playfair Display',serif; font-size:27px; color:var(--escuro); display:block; line-height:1.05; letter-spacing:-.5px; }
+  .stat b small { font-size:14px; color:var(--text-soft); font-weight:400; }
+  .stat span { font-size:11px; color:var(--text-soft); margin-top:8px; display:block; line-height:1.45; }
+  .stat.destacado { border-color:#bfe4d6; background:linear-gradient(180deg,#f2fbf7,var(--card)); }
+
+  /* saldo vs meta por unidade */
+  .saldo-grid { display:grid; grid-template-columns:1fr 1fr; gap:14px; }
+  .saldo-card { border:1px solid var(--border); border-radius:12px; padding:18px 18px 14px;
+    background:linear-gradient(180deg,#fdfcf9,var(--card)); }
+  .saldo-head { display:flex; justify-content:space-between; align-items:baseline; margin-bottom:14px; gap:10px; flex-wrap:wrap; }
+  .saldo-head .u { font-size:11px; letter-spacing:1.4px; text-transform:uppercase; color:var(--verde); font-weight:700; }
+  .saldo-head .tot { font-family:'Playfair Display',serif; font-size:22px; color:var(--escuro); font-weight:600; }
+  .sc-grid { display:grid; grid-template-columns:repeat(7,1fr); gap:6px; }
+  .sc-col { display:flex; flex-direction:column; align-items:center; }
+  .sc-va { font-size:10px; font-weight:700; margin-bottom:4px; white-space:nowrap; }
+  .sc-va.pos { color:var(--ok); } .sc-va.neg { color:var(--agir); } .sc-va.na { color:var(--text-mute); font-weight:600; }
+  .sc-up { height:92px; display:flex; align-items:flex-end; width:100%; justify-content:center; }
+  .sc-down { height:92px; display:flex; align-items:flex-start; width:100%; justify-content:center; }
+  .sc-bar { width:62%; }
+  .sc-bar.pos { background:linear-gradient(180deg,#15866a,var(--verde)); border-radius:4px 4px 0 0; }
+  .sc-bar.neg { background:#C56A6A; border-radius:0 0 4px 4px; }
+  .sc-bar.pos.aberto { background:repeating-linear-gradient(45deg,#15866a,#15866a 5px,#4aa98d 5px,#4aa98d 10px); }
+  .sc-bar.neg.aberto { background:repeating-linear-gradient(45deg,#C56A6A,#C56A6A 5px,#dca3a3 5px,#dca3a3 10px); }
+  .sc-bar.na { height:4px; background:#d8d2c2; border-radius:2px; align-self:flex-end; }
+  .sc-zero { height:2px; background:var(--border); width:100%; }
+  .sc-m { font-size:10px; color:var(--text-mute); margin-top:5px; font-weight:600; text-transform:uppercase; letter-spacing:.5px; }
+  .saldo-note { font-size:11px; color:var(--text-soft); margin-top:12px; line-height:1.5; }
+  @media (max-width:960px) { .saldo-grid { grid-template-columns:1fr; } }
+
+  .insight { background:var(--creme); border-radius:12px; padding:16px 20px; font-size:13.5px;
+    color:#4a5348; line-height:1.6; margin-top:20px; }
+  .insight strong { color:var(--escuro); }
+  .insight.ok { background:var(--ok-bg); }
+
+  .bar-wrap { background:#F0EDE4; height:6px; border-radius:4px; overflow:hidden; margin-top:6px; }
+  .bar { height:100%; background:var(--verde); border-radius:4px; }
+  .bar.gold { background:var(--gold); }
+
+  /* ficha técnica */
+  .ficha dt { font-weight:700; color:var(--escuro); font-size:12.5px; margin-top:14px; }
+  .ficha dd { margin:3px 0 0; font-size:12.5px; color:var(--text-soft); line-height:1.6; }
+  .notas { counter-reset:nota; margin:0; padding:0; list-style:none; }
+  .notas li { counter-increment:nota; position:relative; padding:12px 0 12px 40px; border-bottom:1px dashed var(--border);
+    font-size:13px; color:var(--text-soft); line-height:1.6; }
+  .notas li:last-child { border-bottom:none; }
+  .notas li::before { content:counter(nota); position:absolute; left:0; top:12px; width:26px; height:26px;
+    border-radius:50%; background:var(--verde-soft); color:var(--verde); font-weight:700; font-size:12px;
+    display:flex; align-items:center; justify-content:center; }
+  .notas strong { color:var(--escuro); }
+
+  .glossary dl { display:grid; grid-template-columns:110px 1fr; gap:8px 18px; margin:0; }
+  .glossary dt { font-weight:700; color:var(--escuro); font-size:13px; }
+  .glossary dd { margin:0; font-size:13px; color:var(--text-soft); line-height:1.55; }
+
+  .credit { text-align:center; padding:34px 0 8px; }
+  .credit .by { font-size:10px; letter-spacing:2.4px; text-transform:uppercase; color:var(--text-mute); margin-bottom:10px; }
+  .credit img { height:54px; width:auto; opacity:.92; }
+  .credit .tag { font-size:11px; color:var(--text-mute); margin-top:8px; }
+
+  .totop { position:fixed; right:26px; bottom:26px; width:42px; height:42px; border-radius:50%;
+    border:1px solid var(--border); background:var(--card); color:var(--escuro); font-size:17px;
+    cursor:pointer; opacity:0; pointer-events:none; transition:.2s; box-shadow:0 6px 18px rgba(30,58,43,.12); z-index:40; }
+  .totop.show { opacity:1; pointer-events:auto; }
+
+  /* polish visual */
+  .cards { counter-reset: card; }
+  .acard { counter-increment: card; }
+  .acard::before { content: counter(card, decimal-leading-zero); position:absolute; top:12px; right:16px;
+    font-family:'Playfair Display',serif; font-size:24px; font-weight:700; color:var(--verde); opacity:.16; }
+  .acard.gold::before { color:var(--gold); opacity:.22; }
+  .kpi { transition:transform .18s ease, box-shadow .18s ease; }
+  .kpi:hover { transform:translateY(-3px); box-shadow:0 12px 30px rgba(30,58,43,.10); }
+  .insight { border-left:3px solid #d8cfb8; }
+  .insight.ok { border-left-color:var(--verde); }
+  .unit-title::before { content:''; display:inline-block; width:18px; height:3px; background:var(--verde);
+    border-radius:2px; margin-right:8px; vertical-align:middle; }
+  tbody tr:nth-child(even) td { background:#fcfbf7; }
+  tbody tr:hover td { background:#f7f5ec; }
+
+  @media print {
+    .nav, .totop, .progress { display:none !important; }
+    body { background:#fff; }
+    section, .hero, .exec, .kpi, .acard, .saldo-card { break-inside:avoid; box-shadow:none !important; }
+    .js .reveal { opacity:1 !important; transform:none !important; }
+  }
+
+  .js .reveal { opacity:0; transform:translateY(14px); transition:opacity .5s ease, transform .5s ease; }
+  .js .reveal.in { opacity:1; transform:none; }
+
+  @media (max-width:960px) {
+    .kpi-grid { grid-template-columns:repeat(2,1fr); }
+    .cards { grid-template-columns:1fr 1fr; }
+    .statrow { grid-template-columns:repeat(2,1fr); }
+    .hero { padding:34px 28px; } .hero h1 { font-size:31px; }
+    section { padding:26px 22px; }
+    .cbar { width:22px; }
+  }
+  @media (max-width:600px) {
+    .wrap { padding:0 16px 48px; }
+    .nav { margin:0 -16px; }
+    .kpi-grid, .cards, .statrow { grid-template-columns:1fr; }
+    .chart-grid { gap:6px; } .cmonth { gap:3px; } .cbar { width:14px; }
+    .cbar .cv { display:none; }
+    .glossary dl { grid-template-columns:1fr; }
+  }
+</style>
+</head>
+<body>
+<div class="progress" id="progress"></div>
+
+<nav class="nav">
+  <span class="brand">PONTA VERDE · 2026</span>
+  <a href="#resumo">Resumo</a>
+  <a href="#ano">O ano até aqui</a>
+  <a href="#site">Site mês a mês</a>
+  <a href="#central">Central de vendas</a>
+  <a href="#eficiencia">Eficiência</a>
+  <a href="#fizemos">O que já fizemos</a>
+  <a href="#fazendo">O que estamos fazendo</a>
+  <a href="#proximos">O que vem agora</a>
+  <a href="#fontes">Fontes</a>
+</nav>
+
+<div class="wrap">
+
+  <header class="hero">
+    <div class="hero-top">
+      <div class="logo-badge">PV</div>
+      <div>
+        <div class="logo-text">HOTEL PONTA VERDE</div>
+        <div class="logo-sub">Maceió · Praia do Francês</div>
+      </div>
+    </div>
+    <h1>O site do Ponta Verde vende <em>67% mais</em> que em 2025.</h1>
+    <p>Resultado da operação digital de janeiro a julho de 2026: o que o site e a central de vendas
+      já entregaram, o que construímos pra chegar aqui e o que vem no segundo semestre.</p>
+    <div class="updated">Dados até 19 de julho de 2026 · Preparado pela Trilha Performance Digital</div>
+  </header>
+
+  <div class="exec reveal" id="resumo">
+    <h3>Resumo executivo</h3>
+    <ul>
+      <li>O site dos hotéis vendeu <strong>R$ 1,98 milhão no primeiro semestre</strong>, um crescimento de
+        <strong>67% sobre 2025</strong>. Somando julho em andamento, já são <strong>R$ 2,27 milhões em 2026</strong>.</li>
+      <li>A central de vendas gerou <strong>R$ 5,97 milhões</strong>, 25% acima do ano passado. O que ainda persegue a meta
+        é a receita de emissão por unidade, e é aí que está o foco do segundo semestre.</li>
+      <li><strong>Junho foi o mês da virada</strong>: as duas unidades bateram a meta do site com folga
+        (Maceió 47% acima, Francês 39% acima) e Maceió fez seu melhor mês do ano, R$ 212,5 mil. E julho caminha bem:
+        <strong>o Francês já passou a meta do mês faltando quase duas semanas</strong> pro fechamento.</li>
+      <li>Tudo isso com o investimento trabalhando cada vez melhor: em julho, <strong>cada R$ 1 aplicado em anúncios
+        do Francês voltou como R$ 108 em reservas</strong> no canal direto, e o custo pra conquistar cada reserva vem caindo nas duas unidades.</li>
+    </ul>
+  </div>
+
+  <div class="kpi-grid reveal">
+    <div class="kpi">
+      <div class="kpi-accent"></div>
+      <div class="kpi-label">Vendas pelo site · jan a jun</div>
+      <div class="kpi-value">R$ 1,98<small> mi</small></div>
+      <div class="kpi-delta up">▲ +67% <span>vs 2025</span></div>
+      <div class="kpi-meta">R$ 2,27 mi somando julho até dia 19</div>
+      <div class="kmini">
+        <div class="krow"><span class="kl">2025</span><span class="ktrack"><span class="kb" style="width:60%"></span></span></div>
+        <div class="krow"><span class="kl">2026</span><span class="ktrack"><span class="kb now" style="width:100%"></span></span></div>
+      </div>
+    </div>
+    <div class="kpi">
+      <div class="kpi-accent"></div>
+      <div class="kpi-label">Vendas da central · jan a jun</div>
+      <div class="kpi-value">R$ 5,97<small> mi</small></div>
+      <div class="kpi-delta up">▲ +25% <span>vs 2025 ¹</span></div>
+      <div class="kpi-meta">2.054 reservas fechadas, 26% acima da meta de vendas</div>
+      <div class="kmini">
+        <div class="krow"><span class="kl">2025</span><span class="ktrack"><span class="kb" style="width:80%"></span></span></div>
+        <div class="krow"><span class="kl">2026</span><span class="ktrack"><span class="kb now" style="width:100%"></span></span></div>
+      </div>
+    </div>
+    <div class="kpi">
+      <div class="kpi-accent"></div>
+      <div class="kpi-label">Reservas feitas no site</div>
+      <div class="kpi-value">937</div>
+      <div class="kpi-delta"><span>jan a jun · Maceió + Francês</span></div>
+      <div class="kpi-meta">1.070 somando julho até dia 19</div>
+    </div>
+    <div class="kpi">
+      <div class="kpi-accent"></div>
+      <div class="kpi-label">Atendimentos na central</div>
+      <div class="kpi-value">39,7<small> mil</small></div>
+      <div class="kpi-delta up">▲ +22% <span>acima da meta</span></div>
+      <div class="kpi-meta">+47% vs 2025 · jan a jun</div>
+      <div class="kmini">
+        <div class="krow"><span class="kl">2025</span><span class="ktrack"><span class="kb" style="width:68%"></span></span></div>
+        <div class="krow"><span class="kl">2026</span><span class="ktrack"><span class="kb now" style="width:100%"></span></span></div>
+      </div>
+    </div>
+    <div class="kpi">
+      <div class="kpi-accent"></div>
+      <div class="kpi-label">Retorno por R$ 1 investido</div>
+      <div class="kpi-value">R$ 108</div>
+      <div class="kpi-delta up">▲ meta: R$ 90 <span>· Francês, julho</span></div>
+      <div class="kpi-meta">Maceió: R$ 77 por R$ 1 (meta R$ 80) · canal direto</div>
+      <div class="kmini">
+        <div class="krow"><span class="kl">Meta</span><span class="ktrack"><span class="kb" style="width:83%"></span></span></div>
+        <div class="krow"><span class="kl">2026</span><span class="ktrack"><span class="kb now" style="width:100%"></span></span></div>
+      </div>
+    </div>
+  </div>
+
+  <section id="ano" class="reveal">
+    <div class="section-head">
+      <h2>O ano até aqui: crescimento mês após mês</h2>
+      <div class="meta">Vendas pelo site · Maceió + Francês · Fonte: Volux</div>
+    </div>
+    <p class="lead">A barra verde é 2026, a cinza é o mesmo mês de 2025. Em <strong>todos os meses do ano o site
+      vendeu mais que no ano anterior</strong>, e a distância vem aumentando: junho de 2026 fez mais que o dobro
+      de junho de 2025, e julho, com dados só até o dia 19, já superou o mês cheio de julho do ano passado.</p>
+    <div class="chart">
+      <div class="chart-grid">
+        <div class="cmonth"><div class="cbar b25" style="height:49%"><span class="cv">201°</span></div><div class="cbar b26" style="height:100%"><span class="cv">408</span></div></div>
+        <div class="cmonth"><div class="cbar b25" style="height:41%"><span class="cv">166</span></div><div class="cbar b26" style="height:58%"><span class="cv">238</span></div></div>
+        <div class="cmonth"><div class="cbar b25" style="height:59%"><span class="cv">241</span></div><div class="cbar b26" style="height:78%"><span class="cv">317</span></div></div>
+        <div class="cmonth"><div class="cbar b25" style="height:43%"><span class="cv">177</span></div><div class="cbar b26" style="height:72%"><span class="cv">292</span></div></div>
+        <div class="cmonth"><div class="cbar b25" style="height:55%"><span class="cv">226</span></div><div class="cbar b26" style="height:83%"><span class="cv">338</span></div></div>
+        <div class="cmonth"><div class="cbar b25" style="height:42%"><span class="cv">171</span></div><div class="cbar b26" style="height:94%"><span class="cv">386</span></div></div>
+        <div class="cmonth"><div class="cbar b25" style="height:52%"><span class="cv">212</span></div><div class="cbar b26 partial" style="height:70%"><span class="cv">288*</span></div></div>
+      </div>
+      <div class="chart-x">
+        <div>Jan</div><div>Fev</div><div>Mar</div><div>Abr</div><div>Mai</div><div>Jun</div><div>Jul</div>
+      </div>
+      <div class="chart-legend">
+        <span><i style="background:#d8d2c2"></i>2025 (mês cheio)</span>
+        <span><i style="background:#0F6E56"></i>2026 (mês cheio)</span>
+        <span><i style="background:repeating-linear-gradient(45deg,#15866a,#15866a 6px,#4aa98d 6px,#4aa98d 12px)"></i>2026 em andamento (até 19/07)</span>
+        <span>Valores em R$ mil · ° jan/2025 sem as vendas de Maceió (nota 2)</span>
+      </div>
+    </div>
+    <div class="insight ok">
+      <strong>A história em uma frase:</strong> o site vendeu mais que 2025 em todos os meses, mas nem todo mês
+      bateu a meta: de março a maio ficamos abaixo dela, principalmente no Francês.
+      A virada veio em junho, 43% acima da meta somando as duas unidades, e julho corre acima do ano passado,
+      com o Francês já além da meta do mês.
+    </div>
+
+    <div class="unit-title" style="margin-top:30px">Os meses abaixo da meta já foram compensados?</div>
+    <p class="lead" style="margin-bottom:14px">Sim. Somando, mês a mês, a diferença entre o que o site vendeu e a
+      meta (nos meses com meta registrada ³), as duas unidades entram na segunda quinzena de julho com o
+      acumulado do ano no azul:</p>
+    <div class="saldo-grid">
+      <div class="saldo-card">
+        <div class="saldo-head"><span class="u">Ponta Verde Maceió</span><span class="tot">+R$ 84,7 mil <small style="font-size:12px;color:var(--text-soft);font-family:'Inter',sans-serif;">jan a jun</small></span></div>
+        <div class="sc-grid">
+          <div class="sc-col"><span class="sc-va neg">-12,0</span><div class="sc-up"></div><div class="sc-zero"></div><div class="sc-down"><div class="sc-bar neg" style="height:16px"></div></div><span class="sc-m">Jan</span></div>
+          <div class="sc-col"><span class="sc-va na">n/d ³</span><div class="sc-up"><div class="sc-bar na"></div></div><div class="sc-zero"></div><div class="sc-down"></div><span class="sc-m">Fev</span></div>
+          <div class="sc-col"><span class="sc-va neg">-5,7</span><div class="sc-up"></div><div class="sc-zero"></div><div class="sc-down"><div class="sc-bar neg" style="height:8px"></div></div><span class="sc-m">Mar</span></div>
+          <div class="sc-col"><span class="sc-va pos">+18,4</span><div class="sc-up"><div class="sc-bar pos" style="height:24px"></div></div><div class="sc-zero"></div><div class="sc-down"></div><span class="sc-m">Abr</span></div>
+          <div class="sc-col"><span class="sc-va pos">+16,4</span><div class="sc-up"><div class="sc-bar pos" style="height:22px"></div></div><div class="sc-zero"></div><div class="sc-down"></div><span class="sc-m">Mai</span></div>
+          <div class="sc-col"><span class="sc-va pos">+67,5</span><div class="sc-up"><div class="sc-bar pos" style="height:90px"></div></div><div class="sc-zero"></div><div class="sc-down"></div><span class="sc-m">Jun</span></div>
+          <div class="sc-col"><span class="sc-va neg">-23,1 ⁴</span><div class="sc-up"></div><div class="sc-zero"></div><div class="sc-down"><div class="sc-bar neg aberto" style="height:31px"></div></div><span class="sc-m">Jul</span></div>
+        </div>
+        <div class="saldo-note">Janeiro e março deixaram R$ 17,7 mil de déficit; abril, maio e junho devolveram
+          R$ 102,3 mil. Julho em aberto ⁴: faltam R$ 23,1 mil pra meta do mês, coberto pela folga acumulada.</div>
+      </div>
+      <div class="saldo-card">
+        <div class="saldo-head"><span class="u">Ponta Verde Praia do Francês</span><span class="tot">+R$ 8,1 mil <small style="font-size:12px;color:var(--text-soft);font-family:'Inter',sans-serif;">ano, até 18/07</small></span></div>
+        <div class="sc-grid">
+          <div class="sc-col"><span class="sc-va pos">+51,0</span><div class="sc-up"><div class="sc-bar pos" style="height:68px"></div></div><div class="sc-zero"></div><div class="sc-down"></div><span class="sc-m">Jan</span></div>
+          <div class="sc-col"><span class="sc-va na">n/d ³</span><div class="sc-up"><div class="sc-bar na"></div></div><div class="sc-zero"></div><div class="sc-down"></div><span class="sc-m">Fev</span></div>
+          <div class="sc-col"><span class="sc-va neg">-63,3</span><div class="sc-up"></div><div class="sc-zero"></div><div class="sc-down"><div class="sc-bar neg" style="height:84px"></div></div><span class="sc-m">Mar</span></div>
+          <div class="sc-col"><span class="sc-va neg">-20,2</span><div class="sc-up"></div><div class="sc-zero"></div><div class="sc-down"><div class="sc-bar neg" style="height:27px"></div></div><span class="sc-m">Abr</span></div>
+          <div class="sc-col"><span class="sc-va neg">-18,1</span><div class="sc-up"></div><div class="sc-zero"></div><div class="sc-down"><div class="sc-bar neg" style="height:24px"></div></div><span class="sc-m">Mai</span></div>
+          <div class="sc-col"><span class="sc-va pos">+48,8</span><div class="sc-up"><div class="sc-bar pos" style="height:65px"></div></div><div class="sc-zero"></div><div class="sc-down"></div><span class="sc-m">Jun</span></div>
+          <div class="sc-col"><span class="sc-va pos">+9,9 ⁴</span><div class="sc-up"><div class="sc-bar pos aberto" style="height:13px"></div></div><div class="sc-zero"></div><div class="sc-down"></div><span class="sc-m">Jul</span></div>
+        </div>
+        <div class="saldo-note">Março a maio deixaram R$ 101,6 mil de déficit; janeiro e junho cobriram quase tudo
+          (faltava só R$ 1,8 mil) e a meta de julho, batida no dia 18 com R$ 9,9 mil de folga ⁴, virou o saldo do ano pro azul.</div>
+      </div>
+    </div>
+    <p class="sub" style="margin-top:10px">Saldos em R$ mil (vendido menos meta do site, mês a mês) · barras
+      hachuradas = julho em andamento ⁴ · fevereiro sem meta registrada nas duas unidades ³ · mesma escala nos dois gráficos.</p>
+  </section>
+
+  <section id="site" class="reveal">
+    <div class="section-head">
+      <h2>Site, mês a mês, por hotel</h2>
+      <div class="meta">Receita de reservas do site · Fonte: Volux · metas do planejamento 2026</div>
+    </div>
+    <p class="lead">Aqui está o detalhe do que cada hotel vendeu pelo site, comparado com a meta do mês e com 2025.</p>
+    <ul class="lead-list">
+      <li>Maceió engatou uma sequência de <strong>três meses seguidos batendo a meta</strong> (abril, maio e junho).</li>
+      <li>O Francês ficou abaixo da meta de março a maio e virou o jogo: <strong>fechou junho 39% acima
+        da meta e já bateu a meta de julho no dia 18</strong>.</li>
+    </ul>
+
+    <div class="unit-title">Ponta Verde Maceió</div>
+    <div class="table-scroll">
+    <table>
+      <thead><tr><th>Mês</th><th class="num">Vendas 2026</th><th class="num">Meta do mês</th><th>Situação</th><th class="num">Mesmo mês em 2025</th><th class="num">Crescimento</th></tr></thead>
+      <tbody>
+        <tr><td class="strong">Janeiro</td><td class="num num-big">R$ 149.960<div class="mbar"><i class="w" style="width:93%"></i></div></td><td class="num">R$ 161.981</td><td><span class="pill warn">7% abaixo</span></td><td class="num">R$ 5.930 ²</td><td class="num">n/c ²</td></tr>
+        <tr><td class="strong">Fevereiro</td><td class="num num-big">R$ 91.260</td><td class="num">n/d ³</td><td><span class="pill muted">meta n/d ³</span></td><td class="num">R$ 58.052</td><td class="num strong">+57%</td></tr>
+        <tr><td class="strong">Março</td><td class="num num-big">R$ 169.584<div class="mbar"><i class="w" style="width:97%"></i></div></td><td class="num">R$ 175.250</td><td><span class="pill warn">3% abaixo</span></td><td class="num">R$ 65.309</td><td class="num strong">+160%</td></tr>
+        <tr><td class="strong">Abril</td><td class="num num-big">R$ 156.056<div class="mbar"><i class="ok" style="width:100%"></i></div></td><td class="num">R$ 137.677</td><td><span class="pill ok">meta batida · +13%</span></td><td class="num">R$ 46.679</td><td class="num strong">+234%</td></tr>
+        <tr><td class="strong">Maio</td><td class="num num-big">R$ 174.212<div class="mbar"><i class="ok" style="width:100%"></i></div></td><td class="num">R$ 157.795</td><td><span class="pill ok">meta batida · +10%</span></td><td class="num">R$ 74.554</td><td class="num strong">+134%</td></tr>
+        <tr><td class="strong">Junho</td><td class="num num-big">R$ 212.532<div class="mbar"><i class="ok" style="width:100%"></i></div></td><td class="num">R$ 144.987</td><td><span class="pill ok">meta batida · +47%</span></td><td class="num">R$ 67.834</td><td class="num strong">+213%</td></tr>
+        <tr><td class="strong">Julho <span class="sub">até 19/07</span></td><td class="num num-big">R$ 112.674<div class="mbar"><i class="w" style="width:83%"></i></div></td><td class="num">R$ 135.728</td><td><span class="pill warn">83% da meta · em andamento ⁴</span></td><td class="num">R$ 74.763</td><td class="num strong">+51% ⁴</td></tr>
+      </tbody>
+      <tfoot><tr><td>Jan a jun</td><td class="num">R$ 953.604</td><td class="num"></td><td></td><td class="num">R$ 318.358 ²</td><td class="num">+180% de mar a jun ²</td></tr></tfoot>
+    </table>
+    </div>
+
+    <div class="unit-title">Ponta Verde Praia do Francês</div>
+    <div class="table-scroll">
+    <table>
+      <thead><tr><th>Mês</th><th class="num">Vendas 2026</th><th class="num">Meta do mês</th><th>Situação</th><th class="num">Mesmo mês em 2025</th><th class="num">Crescimento</th></tr></thead>
+      <tbody>
+        <tr><td class="strong">Janeiro</td><td class="num num-big">R$ 258.173<div class="mbar"><i class="ok" style="width:100%"></i></div></td><td class="num">R$ 207.195</td><td><span class="pill ok">meta batida · +25%</span></td><td class="num">R$ 195.136</td><td class="num strong">+32%</td></tr>
+        <tr><td class="strong">Fevereiro</td><td class="num num-big">R$ 146.281</td><td class="num">n/d ³</td><td><span class="pill muted">meta n/d ³</span></td><td class="num">R$ 107.825</td><td class="num strong">+36%</td></tr>
+        <tr><td class="strong">Março</td><td class="num num-big">R$ 147.513<div class="mbar"><i class="w" style="width:70%"></i></div></td><td class="num">R$ 210.856</td><td><span class="pill agir">30% abaixo</span></td><td class="num">R$ 175.713</td><td class="num">-16%</td></tr>
+        <tr><td class="strong">Abril</td><td class="num num-big">R$ 135.955<div class="mbar"><i class="w" style="width:87%"></i></div></td><td class="num">R$ 156.147</td><td><span class="pill warn">13% abaixo</span></td><td class="num">R$ 130.123</td><td class="num">+4%</td></tr>
+        <tr><td class="strong">Maio</td><td class="num num-big">R$ 163.878<div class="mbar"><i class="w" style="width:90%"></i></div></td><td class="num">R$ 181.944</td><td><span class="pill warn">10% abaixo</span></td><td class="num">R$ 151.620</td><td class="num">+8%</td></tr>
+        <tr><td class="strong">Junho</td><td class="num num-big">R$ 173.150<div class="mbar"><i class="ok" style="width:100%"></i></div></td><td class="num">R$ 124.355</td><td><span class="pill ok">meta batida · +39%</span></td><td class="num">R$ 103.629</td><td class="num strong">+67%</td></tr>
+        <tr><td class="strong">Julho <span class="sub">até 18/07</span></td><td class="num num-big">R$ 174.916<div class="mbar"><i class="ok" style="width:100%"></i></div></td><td class="num">R$ 165.035</td><td><span class="pill ok">meta já batida · +6% ⁴</span></td><td class="num">R$ 137.529</td><td class="num strong">+27% ⁴</td></tr>
+      </tbody>
+      <tfoot><tr><td>Jan a jun</td><td class="num">R$ 1.024.950</td><td class="num"></td><td></td><td class="num">R$ 864.046</td><td class="num">+19%</td></tr></tfoot>
+    </table>
+    </div>
+
+  </section>
+
+  <section id="central" class="reveal">
+    <div class="section-head">
+      <h2>Central de vendas: mais procura, mais venda</h2>
+      <div class="meta">Geração de demanda · jan a jun 2026 · Fonte: painel da central</div>
+    </div>
+    <p class="lead">A central é abastecida pelas campanhas de WhatsApp que a operação digital mantém no ar.
+      O resultado do semestre:</p>
+    <ul class="lead-list">
+      <li><strong>mais gente procurando os hotéis</strong>,</li>
+      <li><strong>mais reservas fechadas</strong>,</li>
+      <li><strong>e receita 25% acima do ano passado</strong>.</li>
+    </ul>
+    <div class="statrow">
+      <div class="stat destacado"><b>39.676</b><span>atendimentos de jan a jun · 22% acima da meta · 47% a mais que 2025</span></div>
+      <div class="stat destacado"><b>2.054</b><span>vendas fechadas pela central · 26% acima da meta de vendas do período</span></div>
+      <div class="stat destacado"><b>R$ 5,97 <small>mi</small></b><span>de receita no semestre · 25% a mais que 2025 ¹</span></div>
+      <div class="stat"><b>R$ 1,69</b><span>é o custo pra trazer cada novo contato até a central em julho (era R$ 2,44 em junho)</span></div>
+    </div>
+
+    <div class="unit-title" style="margin-top:26px">As metas de volume vêm sendo batidas, mês após mês</div>
+    <div class="table-scroll">
+    <table>
+      <thead><tr><th>Mês</th><th>Atendimentos</th><th>Oportunidades</th><th>Vendas fechadas</th><th>Vendas por dia</th></tr></thead>
+      <tbody>
+        <tr><td class="strong">Janeiro</td><td><span class="pill ok">+11%</span></td><td><span class="pill ok">+8%</span></td><td><span class="pill ok">+29%</span></td><td><span class="pill ok">+20%</span></td></tr>
+        <tr><td class="strong">Fevereiro</td><td><span class="pill ok">+29%</span></td><td><span class="pill ok">+38%</span></td><td><span class="pill ok">+24%</span></td><td><span class="pill ok">+25%</span></td></tr>
+        <tr><td class="strong">Março</td><td><span class="pill ok">+10%</span></td><td><span class="pill warn">1% abaixo</span></td><td><span class="pill ok">+14%</span></td><td><span class="pill muted">na meta</span></td></tr>
+        <tr><td class="strong">Abril</td><td><span class="pill ok">+9%</span></td><td><span class="pill ok">+8%</span></td><td><span class="pill ok">+26%</span></td><td><span class="pill ok">+20%</span></td></tr>
+        <tr><td class="strong">Maio</td><td><span class="pill ok">+33%</span></td><td><span class="pill ok">+36%</span></td><td><span class="pill ok">+26%</span></td><td><span class="pill ok">+25%</span></td></tr>
+        <tr><td class="strong">Junho</td><td><span class="pill ok">+58%</span></td><td><span class="pill ok">+42%</span></td><td><span class="pill ok">+42%</span></td><td><span class="pill ok">+50%</span></td></tr>
+      </tbody>
+      <tfoot><tr><td>Jan a jun</td><td>+22%</td><td>+18%</td><td>+26%</td><td>+26%</td></tr></tfoot>
+    </table>
+    </div>
+    <p class="sub" style="margin-top:6px">Percentuais = realizado 2026 vs meta do mês (contagens do bloco Geração de
+      Demanda Central). Julho em andamento fora da tabela ⁴.</p>
+
+    <div class="unit-title" style="margin-top:26px">A emissão por unidade ainda não acompanha</div>
+    <div class="table-scroll">
+    <table>
+      <thead><tr><th>Mês</th><th class="num">Maceió · emissão</th><th>vs meta</th><th class="num">Francês · emissão</th><th>vs meta</th></tr></thead>
+      <tbody>
+        <tr><td class="strong">Fevereiro</td><td class="num num-big">R$ 430.372<div class="mbar"><i class="n" style="width:62%"></i></div></td><td><span class="pill muted">meta n/d</span></td><td class="num num-big">R$ 693.954<div class="mbar"><i class="n" style="width:100%"></i></div></td><td><span class="pill muted">meta n/d</span></td></tr>
+        <tr><td class="strong">Maio</td><td class="num num-big">R$ 467.076<div class="mbar"><i class="n" style="width:67%"></i></div></td><td><span class="pill agir">38% abaixo</span></td><td class="num num-big">R$ 514.656<div class="mbar"><i class="n" style="width:74%"></i></div></td><td><span class="pill agir">32% abaixo</span></td></tr>
+        <tr><td class="strong">Junho</td><td class="num num-big">R$ 500.130<div class="mbar"><i class="n" style="width:72%"></i></div></td><td><span class="pill ok">meta batida · +7%</span></td><td class="num num-big">R$ 470.979<div class="mbar"><i class="n" style="width:68%"></i></div></td><td><span class="pill agir">36% abaixo</span></td></tr>
+      </tbody>
+    </table>
+    </div>
+    <p class="sub" style="margin-top:6px">Maio e junho: dash mensal (bloco de emissão por unidade), que registra a
+      meta de emissão a partir de maio. Fevereiro: planilha Investimento x Retorno (sem meta de emissão registrada).
+      Julho em andamento ⁴: emissão parcial ainda abaixo do ritmo da meta nas duas unidades, com quase duas
+      semanas de vendas pela frente.</p>
+
+    <div class="insight">
+      <strong>Onde ainda estamos devendo: a meta de emissão por unidade.</strong>
+      <ul>
+        <li>Em junho, Maceió fechou 7% acima da meta de emissão, mas o Francês ficou 36% abaixo,
+          mesmo vendendo 67% mais que 2025 pelo site.</li>
+        <li>Com o volume de procura e de vendas já acima da meta, o caminho pra fechar esse gap não é mais contato,
+          é valor: recuperar o valor médio das reservas. É a prioridade número 1 do segundo semestre, em conjunto com o comercial.</li>
+      </ul>
+    </div>
+    <div class="insight ok">
+      <strong>Julho em andamento:</strong> a central está vendendo em média <strong>R$ 44,2 mil por dia</strong>,
+      25% acima do ritmo diário necessário pra bater a meta de vendas do mês.
+    </div>
+  </section>
+
+  <section id="eficiencia" class="reveal">
+    <div class="section-head">
+      <h2>Cada real investido trabalhando mais</h2>
+      <div class="meta">Site + canal direto · comparações vs mesmo mês de 2025</div>
+    </div>
+    <p class="lead"><strong>Crescer melhorando o aproveitamento de cada real.</strong> Três provas disso:</p>
+    <div class="statrow" style="grid-template-columns:repeat(3,1fr);">
+      <div class="stat"><b>-75%</b><span>no custo pra conquistar cada reserva do Francês em julho: de R$ 193 (2025) pra R$ 48</span>
+        <div class="kmini">
+          <div class="krow"><span class="kl">2025</span><span class="ktrack"><span class="kb" style="width:100%"></span></span></div>
+          <div class="krow"><span class="kl">2026</span><span class="ktrack"><span class="kb now" style="width:25%"></span></span></div>
+        </div></div>
+      <div class="stat"><b>R$ 108</b><span>voltam em reservas no canal direto do Francês pra cada R$ 1 investido em julho (meta: R$ 90) · Maceió: R$ 77 (meta: R$ 80)</span>
+        <div class="kmini">
+          <div class="krow"><span class="kl">Meta</span><span class="ktrack"><span class="kb" style="width:83%"></span></span></div>
+          <div class="krow"><span class="kl">2026</span><span class="ktrack"><span class="kb now" style="width:100%"></span></span></div>
+        </div></div>
+      <div class="stat"><b>R$ 25</b><span>de venda no site pra cada R$ 1 investido em junho, nas duas unidades (Maceió R$ 24,69 · Francês R$ 25,87)</span></div>
+    </div>
+  </section>
+
+  <section id="fizemos" class="reveal">
+    <div class="section-head">
+      <h2>O que já fizemos em 2026</h2>
+      <div class="meta">Principais entregas · jan a jun</div>
+    </div>
+    <div class="cards">
+      <div class="acard">
+        <div class="ic">🛒</div>
+        <h4>Resgate de reservas quase perdidas</h4>
+        <p>Quem chega perto de fechar e desiste agora recebe automaticamente uma mensagem com foto e avaliações
+          de outros hóspedes, convidando a concluir a reserva. Dinheiro que antes ia embora.</p>
+      </div>
+      <div class="acard">
+        <div class="ic">📏</div>
+        <h4>Medição reconstruída do zero</h4>
+        <p>Em maio refizemos toda a medição do site pra eliminar inconsistências. <strong>Decisão boa começa com
+          número confiável</strong>, e este relatório é feito sobre essa base.</p>
+      </div>
+      <div class="acard">
+        <div class="ic">⚖️</div>
+        <h4>Verba reequilibrada entre site e central</h4>
+        <p>Investimento dividido de forma equilibrada entre o site e a central de vendas, acompanhando onde
+          cada real rende mais em cada momento do mês.</p>
+      </div>
+      <div class="acard">
+        <div class="ic">🗓️</div>
+        <h4>Campanhas pra cada momento do ano</h4>
+        <p>São João, ofertas de última hora, compra antecipada e a reabertura da piscina do Francês:
+          o calendário comercial virou calendário de campanha.</p>
+      </div>
+      <div class="acard">
+        <div class="ic">✈️</div>
+        <h4>Novos públicos, novos mercados</h4>
+        <p>Passamos a anunciar pra cidades com voo direto pra Maceió (como Rio Preto e Ribeirão Preto),
+          públicos regionais e perfis parecidos com quem já comprou no site.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="fazendo" class="reveal">
+    <div class="section-head">
+      <h2>O que estamos fazendo agora</h2>
+      <div class="meta">Julho · ações em curso</div>
+    </div>
+    <div class="cards">
+      <div class="acard">
+        <div class="ic">🎯</div>
+        <h4>Verba concentrada no que funciona</h4>
+        <p>Desligamos os anúncios mais caros e concentramos o orçamento nos que trazem conversas pra central
+          por <strong>R$ 7 a R$ 8,50 cada</strong>. Menos desperdício, mais volume.</p>
+      </div>
+      <div class="acard">
+        <div class="ic">📅</div>
+        <h4>Outubro já está à venda</h4>
+        <p>Campanha de outubro no ar nas duas unidades, garantindo ocupação futura enquanto as ofertas de
+          última hora preenchem as próximas semanas.</p>
+      </div>
+      <div class="acard">
+        <div class="ic">🏄</div>
+        <h4>Novos motivos pra vir ao Francês</h4>
+        <p>Campanha dedicada ao público surfista e criativos novos de última hora nas duas unidades,
+          falando com quem decide a viagem em cima da hora.</p>
+      </div>
+    </div>
+    <div class="insight">
+      <strong>Foco do fechamento de julho:</strong> o Francês já bateu a meta; em Maceió faltam R$ 23 mil
+      (17% da meta) com quase duas semanas pela frente, e o acompanhamento é diário.
+    </div>
+  </section>
+
+  <section id="proximos" class="reveal">
+    <div class="section-head">
+      <h2>O que vem agora</h2>
+      <div class="meta">Agosto em diante</div>
+    </div>
+    <div class="cards">
+      <div class="acard gold">
+        <div class="ic">🌞</div>
+        <h4>Preparar a alta temporada</h4>
+        <p>Campanhas de fim de ano e verão planejadas com antecedência pra chegar em novembro, dezembro e
+          janeiro com os hotéis vendidos pelo canal direto, não pelas agências.</p>
+      </div>
+      <div class="acard gold">
+        <div class="ic">🤝</div>
+        <h4>Fazer o hóspede voltar direto</h4>
+        <p>Crescer a base própria de clientes: quem já se hospedou volta a comprar pelo site ou pela central,
+          sem custo de mídia e sem comissão. É a receita mais barata que existe.</p>
+      </div>
+      <div class="acard gold">
+        <div class="ic">🔬</div>
+        <h4>Investir com ainda mais precisão</h4>
+        <p>Testes pra medir quanto cada canal realmente adiciona de venda, e trabalho junto ao comercial
+          sobre valor médio da reserva e política de descontos. O objetivo: cada real no lugar de maior retorno.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="fontes" class="reveal">
+    <div class="section-head">
+      <h2>De onde vêm esses números</h2>
+      <div class="meta">Ficha técnica · transparência total</div>
+    </div>
+    <p class="lead">Todos os números deste relatório podem ser conferidos na origem. Nenhum dado foi estimado:
+      o que é parcial ou tem limitação está marcado com nota.</p>
+    <dl class="ficha">
+      <dt>Vendas e reservas do site</dt>
+      <dd>Volux (motor de reservas), planilha "Dashboard Site e Geração de Demandas 2026", aba do mês, bloco
+        "Emissão site por dia", separado por unidade. Janeiro tem fonte Omnibees (motor usado à época).
+        Totais recalculados dia a dia e conferidos com o fechamento de cada aba.</dd>
+      <dt>Metas mensais</dt>
+      <dd>Planejamento 2026 do grupo, registrado na mesma planilha (bloco "Meta Emissões"), por unidade e por mês.</dd>
+      <dt>Central de vendas (atendimentos, vendas, receita)</dt>
+      <dd>Painel da central na mesma planilha, bloco "Geração de Demanda Central": atendimentos, oportunidades,
+        vendas e receita, comparados com meta 2026 e com o realizado 2025.</dd>
+      <dt>Visitantes e visitantes qualificados do site</dt>
+      <dd>Bloco "Performance Site" da planilha (base Volux/GA4). Estudos de tráfego por página: Google Analytics 4,
+        propriedade "hotel ponta verde – GA4" (ID 343824638), publicados mensalmente no painel online do hotel.</dd>
+      <dt>Retorno por R$ 1 investido e custo por reserva</dt>
+      <dd>Investimento das contas de anúncio Meta (Maceió act 299642416227987 · Francês act 317304155022732) e
+        Google Ads, dividido pela receita Volux do canal correspondente, conforme calculado na planilha.
+        No jargão do mercado: ROAS e CAC.</dd>
+    </dl>
+  </section>
+
+  <section class="reveal">
+    <div class="section-head">
+      <h2>Notas de leitura</h2>
+      <div class="meta">o que cada marcação significa</div>
+    </div>
+    <ol class="notas">
+      <li><strong>Central, maio/26:</strong> o bloco financeiro de maio na planilha da central repete os valores de
+        referência de junho (meta e base 2025), o que sugere duplicação na planilha de origem. Os totais do semestre
+        que usam esses valores estão marcados com ¹ e valem conferência na planilha mãe antes de qualquer decisão fina.
+        Os demais meses conferem individualmente.</li>
+      <li><strong>Maceió, jan e fev de 2025:</strong> o motor de reservas da época teve problema e não registrou as vendas
+        do site. O crescimento de Maceió nesses meses não é comparável; por isso o total usa a comparação limpa de
+        março a junho: +180%.</li>
+      <li><strong>Fevereiro/26:</strong> a meta do mês não está registrada na planilha (célula com erro).
+        As comparações contra meta em fevereiro foram omitidas em vez de estimadas.</li>
+      <li><strong>Julho/26:</strong> mês em andamento, com dados até 19/07 (Maceió) e 18/07 (Francês).
+        As comparações de julho usam o mês cheio de 2025, ou seja, o número final de 2026 tende a ficar ainda melhor.</li>
+    </ol>
+  </section>
+
+  <section class="glossary reveal">
+    <div class="section-head">
+      <h2>Como ler este painel</h2>
+      <div class="meta">Glossário rápido</div>
+    </div>
+    <dl>
+      <dt>Canal direto</dt><dd>Vendas que entram pelo site oficial ou pela central de vendas do hotel, sem comissão de agências online.</dd>
+      <dt>Site</dt><dd>Reservas concluídas pelo hóspede no motor de reservas do site oficial.</dd>
+      <dt>Central</dt><dd>Reservas fechadas pela equipe da central de atendimento (WhatsApp e telefone), abastecida pelas campanhas digitais.</dd>
+      <dt>Meta</dt><dd>Objetivo de venda definido no planejamento 2026 do grupo, mês a mês e por unidade.</dd>
+      <dt>Emissão</dt><dd>Receita efetivamente gerada pelas reservas, medida por unidade (Maceió e Francês). Tem meta própria, mais alta que a meta de vendas da central: a central pode bater a meta de vendas e ainda ficar devendo na de emissão.</dd>
+      <dt>Em andamento</dt><dd>Mês ainda aberto: o número mostrado é parcial e só cresce até o fechamento.</dd>
+    </dl>
+  </section>
+
+  <div class="credit">
+    <div class="by">Desenvolvido por</div>
+    <img src="data:image/png;base64,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" alt="Trilha Performance Digital">
+    <div class="tag">Trilha Performance Digital · Inteligência de dados em marketing</div>
+  </div>
+</div>
+
+<button class="totop" id="totop" aria-label="Voltar ao topo" title="Voltar ao topo">&uarr;</button>
+<script>
+(function(){
+  var p = document.getElementById('progress');
+  var totop = document.getElementById('totop');
+  function onScroll(){
+    var h = document.documentElement;
+    var max = h.scrollHeight - h.clientHeight;
+    p.style.width = (max > 0 ? (h.scrollTop / max) * 100 : 0) + '%';
+    totop.classList.toggle('show', h.scrollTop > 600);
+    var links = document.querySelectorAll('.nav a');
+    var current = '';
+    document.querySelectorAll('section[id], .exec[id]').forEach(function(s){
+      if (h.scrollTop + 120 >= s.offsetTop) current = s.id;
+    });
+    links.forEach(function(a){ a.classList.toggle('active', a.getAttribute('href') === '#' + current); });
+  }
+  window.addEventListener('scroll', onScroll, {passive:true}); onScroll();
+  totop.addEventListener('click', function(){ window.scrollTo({top:0, behavior:'smooth'}); });
+
+  if ('IntersectionObserver' in window) {
+    var io = new IntersectionObserver(function(entries){
+      entries.forEach(function(e){ if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } });
+    }, {threshold:.08});
+    document.querySelectorAll('.reveal').forEach(function(el){ io.observe(el); });
+  }
+  // garantia: nada fica invisível (impressão, snapshot, browsers antigos)
+  setTimeout(function(){
+    document.querySelectorAll('.reveal').forEach(function(el){ el.classList.add('in'); });
+  }, 900);
+  window.addEventListener('beforeprint', function(){
+    document.querySelectorAll('.reveal').forEach(function(el){ el.classList.add('in'); });
+  });
+})();
+</script>
+</body>
+</html>
