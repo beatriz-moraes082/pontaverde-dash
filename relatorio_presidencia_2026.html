@@ -176,6 +176,10 @@
   .acard p { margin:0; font-size:12.8px; color:var(--text2); line-height:1.6; }
   .acard p strong { color:var(--escuro); }
 
+  .statrow.cols5 { grid-template-columns:repeat(5,1fr); }
+  @media (max-width:960px) { .statrow.cols5 { grid-template-columns:repeat(2,1fr); } }
+  @media (max-width:600px) { .statrow.cols5 { grid-template-columns:1fr; } }
+
   .camp-chips { display:flex; flex-wrap:wrap; gap:8px; margin:8px 0 4px; }
   .camp-chips span { font-size:11px; font-weight:600; letter-spacing:.03em; color:var(--escuro);
     background:var(--surface); border:1px solid var(--line); border-radius:3px; padding:7px 12px; }
@@ -351,6 +355,7 @@
   <a href="#aquisicao">Aquisição de clientes</a>
   <a href="#resultados">Resultados do site</a>
   <a href="#central">Central de vendas</a>
+  <a href="#crm">CRM</a>
   <a href="#entregas">Entregas</a>
   <a href="#proximo">Próximo semestre</a>
   <a href="#fontes">Fontes</a>
@@ -361,6 +366,7 @@
   <a href="#aquisicao"><i></i><b>Aquisição de clientes</b></a>
   <a href="#resultados"><i></i><b>Resultados do site</b></a>
   <a href="#central"><i></i><b>Central de vendas</b></a>
+  <a href="#crm"><i></i><b>CRM</b></a>
   <a href="#entregas"><i></i><b>Entregas</b></a>
   <a href="#proximo"><i></i><b>Próximo semestre</b></a>
   <a href="#fontes"><i></i><b>Fontes</b></a>
@@ -789,7 +795,45 @@
     </div>
   </section>
 
-  <div class="part reveal" id="entregas"><span class="part-n">03</span><h2>Principais entregas do semestre</h2></div>
+  <div class="part reveal" id="crm"><span class="part-n">03</span><h2>Relacionamento com o cliente · CRM</h2></div>
+  <section id="crm-dados" class="reveal">
+    <div class="section-head">
+      <h2>A base de clientes virou canal de venda</h2>
+      <div class="meta">E-mail e automações · jan a jun 2026 · duas unidades somadas</div>
+    </div>
+    <p class="lead">O CRM fechou o semestre com <strong>1.097 vendas geradas e R$ 444,3 mil em receita
+      atribuída</strong> ⁷, e-mails abrindo bem acima do padrão de mercado e um detalhe estratégico:
+      os campeões de conversão são todos de antecipação.</p>
+    <div class="statrow cols5">
+      <div class="stat"><b>345 <small>mil</small></b><span>e-mails enviados no semestre · +56% ⁷</span></div>
+      <div class="stat"><b>47,3%</b><span>de taxa de abertura · +12% ⁷</span></div>
+      <div class="stat"><b>1.097</b><span>vendas geradas pelos fluxos de e-mail ⁷</span></div>
+      <div class="stat destacado"><b>R$ 444,3 <small>mil</small></b><span>em vendas atribuídas ao CRM no semestre ⁷</span></div>
+      <div class="stat"><b>3 <small>dias</small></b><span>de tempo médio entre o e-mail e o fechamento da reserva</span></div>
+    </div>
+
+    <div class="unit-title" style="margin-top:26px">Top e-mails em conversão</div>
+    <div class="table-scroll">
+    <table>
+      <thead><tr><th>E-mail</th><th class="num">Taxa de conversão</th></tr></thead>
+      <tbody>
+        <tr><td class="strong">Antecipação de 120 dias · Maceió</td><td class="num num-big">4,2%<div class="mbar"><i class="ok" style="width:100%"></i></div></td></tr>
+        <tr><td class="strong">Antecipação Réveillon · Francês</td><td class="num num-big">2,8%<div class="mbar"><i class="ok" style="width:67%"></i></div></td></tr>
+        <tr><td class="strong">Antecipação Agosto · Maceió</td><td class="num num-big">2,7%<div class="mbar"><i class="ok" style="width:64%"></i></div></td></tr>
+        <tr><td class="strong">Antecipação Réveillon · Maceió</td><td class="num num-big">2,2%<div class="mbar"><i class="ok" style="width:52%"></i></div></td></tr>
+        <tr><td class="strong">Antecipação Natal · Francês</td><td class="num num-big">2,0%<div class="mbar"><i class="ok" style="width:48%"></i></div></td></tr>
+        <tr><td class="strong">Antecipação Natal · Maceió</td><td class="num num-big">1,8%<div class="mbar"><i class="ok" style="width:43%"></i></div></td></tr>
+      </tbody>
+    </table>
+    </div>
+    <div class="insight ok">
+      <strong>Os seis e-mails que mais convertem são todos de antecipação:</strong> a base compra com meses de
+      antecedência quando é provocada na hora certa, e sem custo de mídia. É exatamente a direção das
+      prioridades do segundo semestre: mais antecipação do canal direto e um CRM ainda mais forte.
+    </div>
+  </section>
+
+  <div class="part reveal" id="entregas"><span class="part-n">04</span><h2>Principais entregas do semestre</h2></div>
   <section id="fizemos" class="reveal">
     <div class="section-head">
       <h2>O que já fizemos em 2026</h2>
@@ -829,7 +873,7 @@
     </div>
   </section>
 
-  <div class="part reveal" id="proximo"><span class="part-n">04</span><h2>Próximo semestre: projetos e prioridades</h2></div>
+  <div class="part reveal" id="proximo"><span class="part-n">05</span><h2>Próximo semestre: projetos e prioridades</h2></div>
   <section id="fazendo" class="reveal">
     <div class="section-head">
       <h2>O que estamos fazendo agora</h2>
@@ -918,6 +962,9 @@
       <dd>Google Analytics 4, propriedade "hotel ponta verde – GA4" (ID 343824638), relatório Aquisição de
         tráfego por grupo principal de canais da sessão, período 01/01 a 30/06/26, extraído em 21/07/26 com
         comparações vs 01/01 a 30/06/25 e vs 04/07 a 31/12/25.</dd>
+      <dt>CRM (e-mails, abertura, vendas geradas e receita)</dt>
+      <dd>Painel da ferramenta de CRM/e-mail do hotel, total das duas unidades, 1º semestre de 2026,
+        incluindo o ranking de e-mails por taxa de conversão.</dd>
     </dl>
   </section>
 
@@ -950,6 +997,10 @@
         de qualidade cresceram. A receita do GA4 segue a atribuição do próprio GA4 e não substitui a receita Volux.
         Comparações usadas: mesmo período de 2025 (01/01 a 30/06/25) e semestre imediatamente anterior
         (04/07 a 31/12/25).</li>
+      <li><strong>CRM:</strong> números do painel da ferramenta de CRM, duas unidades somadas, fornecidos em
+        21/07/26. A receita é atribuída pela própria ferramenta aos fluxos de e-mail e é uma régua independente:
+        não se soma à receita Volux nem à das plataformas de anúncio. Os percentuais de crescimento (+56% de
+        envios, +12% de abertura) seguem a comparação do próprio painel.</li>
     </ol>
   </section>
 
