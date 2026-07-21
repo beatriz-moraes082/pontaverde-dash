@@ -22,100 +22,100 @@
   body { margin:0; font-family:'Inter',-apple-system,BlinkMacSystemFont,sans-serif;
     background:var(--ground); color:var(--text); line-height:1.6; letter-spacing:-.008em;
     -webkit-font-smoothing:antialiased; overflow-x:hidden; }
-  .wrap { max-width:1120px; margin:0 auto; padding:0 28px 72px; }
+.wrap { max-width:1120px; margin:0 auto; padding:0 28px 72px; }
   a { color:inherit; }
-  .num, .kpi-value, .sc-va, .mval { font-variant-numeric:tabular-nums; }
+.num,.kpi-value,.sc-va,.mval { font-variant-numeric:tabular-nums; }
 
-  .progress { position:fixed; top:0; left:0; height:2px; background:var(--verde); width:0; z-index:60; transition:width .1s linear; }
+.progress { position:fixed; top:0; left:0; height:2px; background:var(--verde); width:0; z-index:60; transition:width.1s linear; }
 
-  .nav { position:sticky; top:0; z-index:50; background:color-mix(in srgb, var(--ground) 88%, transparent);
+.nav { position:sticky; top:0; z-index:50; background:color-mix(in srgb, var(--ground) 88%, transparent);
     backdrop-filter:blur(10px); border-bottom:1px solid var(--line);
     display:flex; align-items:center; justify-content:center; gap:2px; padding:11px 28px; flex-wrap:wrap; margin:0 -28px; }
-  .nav .brand { display:inline-flex; align-items:center; gap:9px; font-family:'Playfair Display',serif;
+.nav.brand { display:inline-flex; align-items:center; gap:9px; font-family:'Playfair Display',serif;
     font-weight:600; letter-spacing:2px; color:var(--escuro); margin-right:14px; font-size:14px; }
-  .nav a { font-size:10px; text-transform:uppercase; letter-spacing:.14em; color:var(--text2);
+.nav a { font-size:10px; text-transform:uppercase; letter-spacing:.14em; color:var(--text2);
     text-decoration:none; padding:6px 9px; border-radius:3px; font-weight:600; transition:.15s; white-space:nowrap; }
-  .nav a:hover, .nav a.active { background:var(--ok-bg); color:var(--escuro); }
+.nav a:hover,.nav a.active { background:var(--ok-bg); color:var(--escuro); }
 
-  .rail { position:fixed; left:0; top:0; bottom:0; width:72px; z-index:40;
+.rail { position:fixed; left:0; top:0; bottom:0; width:72px; z-index:40;
     display:flex; flex-direction:column; align-items:center; justify-content:center; pointer-events:none; }
-  .rail::before { content:''; position:absolute; top:14%; bottom:14%; width:1px; background:var(--line); }
-  .rail a { position:relative; pointer-events:auto; display:flex; align-items:center; justify-content:center;
+.rail::before { content:''; position:absolute; top:14%; bottom:14%; width:1px; background:var(--line); }
+.rail a { position:relative; pointer-events:auto; display:flex; align-items:center; justify-content:center;
     width:72px; height:46px; text-decoration:none; }
-  .rail a i { width:7px; height:7px; border-radius:50%; background:var(--line); display:block;
-    transition:transform .3s, background .3s; position:relative; z-index:2; }
-  .rail a b { position:absolute; left:50px; white-space:nowrap; font-size:9.5px; font-weight:700;
-    letter-spacing:.14em; text-transform:uppercase; color:var(--text2); opacity:0; transition:opacity .25s;
+.rail a i { width:7px; height:7px; border-radius:50%; background:var(--line); display:block;
+    transition:transform.3s, background.3s; position:relative; z-index:2; }
+.rail a b { position:absolute; left:50px; white-space:nowrap; font-size:9.5px; font-weight:700;
+    letter-spacing:.14em; text-transform:uppercase; color:var(--text2); opacity:0; transition:opacity.25s;
     background:var(--surface); border:1px solid var(--line); padding:4px 9px; border-radius:3px; pointer-events:none; }
-  .rail a:hover b, .rail a.active b { opacity:1; }
-  .rail a.active i { background:var(--verde); transform:scale(1.9); }
-  @media (max-width:1220px) { .rail { display:none; } }
+.rail a:hover b,.rail a.active b { opacity:1; }
+.rail a.active i { background:var(--verde); transform:scale(1.9); }
+  @media (max-width:1220px) {.rail { display:none; } }
 
-  .hero { background:var(--ink); color:#E9E8E4; position:relative; overflow:hidden;
+.hero { background:var(--ink); color:#E9E8E4; position:relative; overflow:hidden;
     margin:0 -28px; padding:min(13vh,120px) 52px 52px; min-height:82svh;
     display:flex; flex-direction:column; justify-content:center; border-radius:0; }
-  .hero::after { content:''; position:absolute; inset:0; pointer-events:none;
+.hero::after { content:''; position:absolute; inset:0; pointer-events:none;
     background:radial-gradient(880px 460px at 80% 4%, rgba(15,110,86,.5), transparent 64%),
                radial-gradient(520px 300px at 8% 96%, rgba(201,162,39,.12), transparent 70%); }
-  .hero > * { position:relative; z-index:1; max-width:1064px; margin-left:auto; margin-right:auto; width:100%; }
-  .hero-top { display:flex; align-items:center; gap:14px; margin-bottom:min(6vh,52px); }
-  .logo-badge { width:46px; height:46px; border:1px solid #7fbfa9; border-radius:3px; display:flex;
+.hero > * { position:relative; z-index:1; max-width:1064px; margin-left:auto; margin-right:auto; width:100%; }
+.hero-top { display:flex; align-items:center; gap:14px; margin-bottom:min(6vh,52px); }
+.logo-badge { width:46px; height:46px; border:1px solid #7fbfa9; border-radius:3px; display:flex;
     align-items:center; justify-content:center; font-family:'Playfair Display',serif;
     font-size:19px; font-weight:600; color:#c9eade; }
-  .logo-text { font-family:'Playfair Display',serif; font-size:20px; font-weight:600; letter-spacing:3px; }
-  .logo-sub { font-size:8.5px; letter-spacing:.4em; color:#7fbfa9; text-transform:uppercase; margin-top:4px; }
-  .hero h1 { font-family:'Playfair Display',serif; font-weight:600; letter-spacing:-.02em;
+.logo-text { font-family:'Playfair Display',serif; font-size:20px; font-weight:600; letter-spacing:3px; }
+.logo-sub { font-size:8.5px; letter-spacing:.4em; color:#7fbfa9; text-transform:uppercase; margin-top:4px; }
+.hero h1 { font-family:'Playfair Display',serif; font-weight:600; letter-spacing:-.02em;
     font-size:clamp(38px,5.6vw,68px); line-height:1.06; margin:0 0 22px; max-width:830px; text-wrap:balance; }
-  .hero h1 em { font-style:italic; font-weight:400; color:var(--verde-claro); }
-  .hero p { color:#b9c4ba; font-size:clamp(15px,1.6vw,19px); margin:0; max-width:62ch; line-height:1.6; }
-  .hero .updated { margin-top:min(9vh,72px); font-size:11px; color:#8d998f; letter-spacing:.16em;
+.hero h1 em { font-style:italic; font-weight:400; color:var(--verde-claro); }
+.hero p { color:#b9c4ba; font-size:clamp(15px,1.6vw,19px); margin:0; max-width:62ch; line-height:1.6; }
+.hero.updated { margin-top:min(9vh,72px); font-size:11px; color:#8d998f; letter-spacing:.16em;
     text-transform:uppercase; border-top:1px solid rgba(233,232,228,.16); padding-top:20px; }
 
-  .exec { background:var(--surface); border:1px solid var(--line); border-left:3px solid var(--verde);
+.exec { background:var(--surface); border:1px solid var(--line); border-left:3px solid var(--verde);
     border-radius:4px; padding:30px 34px; margin:64px 0 0; }
-  .exec h3 { margin:0 0 16px; font-size:10.5px; letter-spacing:.22em; text-transform:uppercase; color:var(--verde);
+.exec h3 { margin:0 0 16px; font-size:10.5px; letter-spacing:.22em; text-transform:uppercase; color:var(--verde);
     display:flex; align-items:center; gap:10px; }
-  .exec h3::after { content:''; height:1px; flex:1; background:var(--line); max-width:110px; }
-  .exec ul { margin:0; padding:0; list-style:none; display:grid; gap:12px; }
-  .exec ul li { position:relative; padding-left:24px; font-size:15px; color:#39423a; line-height:1.7; }
-  .exec ul li::before { content:''; position:absolute; left:2px; top:10px; width:8px; height:8px; border-radius:2px; background:var(--verde); }
-  .exec strong { color:var(--escuro); }
+.exec h3::after { content:''; height:1px; flex:1; background:var(--line); max-width:110px; }
+.exec ul { margin:0; padding:0; list-style:none; display:grid; gap:12px; }
+.exec ul li { position:relative; padding-left:24px; font-size:15px; color:#39423a; line-height:1.7; }
+.exec ul li::before { content:''; position:absolute; left:2px; top:10px; width:8px; height:8px; border-radius:2px; background:var(--verde); }
+.exec strong { color:var(--escuro); }
 
-  .kpi-grid { display:grid; grid-template-columns:repeat(5,1fr); gap:1px; background:#39463C;
+.kpi-grid { display:grid; grid-template-columns:repeat(5,1fr); gap:1px; background:#39463C;
     border:none; border-radius:6px; overflow:hidden; margin:18px 0 0;
     box-shadow:0 18px 44px rgba(22,33,26,.16); }
-  .kpi { background:var(--ink); padding:26px 22px; border:none; border-radius:0; position:relative; }
-  .kpi::before { content:''; position:absolute; inset:0; pointer-events:none;
+.kpi { background:var(--ink); padding:26px 22px; border:none; border-radius:0; position:relative; }
+.kpi::before { content:''; position:absolute; inset:0; pointer-events:none;
     background:radial-gradient(320px 150px at 85% -20%, rgba(15,110,86,.35), transparent 70%); }
-  .kpi > * { position:relative; }
-  .kpi-accent { display:none; }
-  .kpi-label { font-size:9.5px; text-transform:uppercase; letter-spacing:.16em; color:#93a496; font-weight:700; margin-bottom:14px; }
-  .kpi-value { font-family:'Playfair Display',serif; font-size:38px; font-weight:600; color:#EFEBE0; line-height:1; letter-spacing:-.02em; }
-  .kpi-value small { font-size:16px; color:#93a496; font-weight:400; }
-  .kpi-meta { font-size:11.5px; color:#a7b3a8; margin-top:10px; line-height:1.5; }
-  .kpi-delta { display:flex; align-items:center; gap:5px; font-size:11.5px; font-weight:700; margin-top:10px; }
-  .kpi-delta span { color:#7d8a7f; font-weight:500; }
-  .kpi-delta.up { color:#8fe0c3; }
-  .kpi-grid .krow .kl { color:#7d8a7f; }
-  .kpi-grid .krow .ktrack { background:rgba(233,232,228,.13); }
-  .kpi-grid .krow .kb { background:#6f8074; }
-  .kpi-grid .krow .kb.now { background:#8fe0c3; }
-  .kpi:hover { transform:none; box-shadow:none; }
+.kpi > * { position:relative; }
+.kpi-accent { display:none; }
+.kpi-label { font-size:9.5px; text-transform:uppercase; letter-spacing:.16em; color:#93a496; font-weight:700; margin-bottom:14px; }
+.kpi-value { font-family:'Playfair Display',serif; font-size:38px; font-weight:600; color:#EFEBE0; line-height:1; letter-spacing:-.02em; }
+.kpi-value small { font-size:16px; color:#93a496; font-weight:400; }
+.kpi-meta { font-size:11.5px; color:#a7b3a8; margin-top:10px; line-height:1.5; }
+.kpi-delta { display:flex; align-items:center; gap:5px; font-size:11.5px; font-weight:700; margin-top:10px; }
+.kpi-delta span { color:#7d8a7f; font-weight:500; }
+.kpi-delta.up { color:#8fe0c3; }
+.kpi-grid.krow.kl { color:#7d8a7f; }
+.kpi-grid.krow.ktrack { background:rgba(233,232,228,.13); }
+.kpi-grid.krow.kb { background:#6f8074; }
+.kpi-grid.krow.kb.now { background:#8fe0c3; }
+.kpi:hover { transform:none; box-shadow:none; }
 
   section { background:transparent; border:0; border-radius:0; padding:64px 0 10px; margin:34px 0 0;
     border-top:1px solid var(--line); scroll-margin-top:64px; }
-  .section-head { display:flex; flex-direction:column-reverse; align-items:flex-start; gap:12px;
+.section-head { display:flex; flex-direction:column-reverse; align-items:flex-start; gap:12px;
     margin-bottom:20px; padding-bottom:0; border-bottom:0; }
-  .section-head h2 { font-family:'Playfair Display',serif; font-weight:600; letter-spacing:-.015em;
+.section-head h2 { font-family:'Playfair Display',serif; font-weight:600; letter-spacing:-.015em;
     font-size:clamp(27px,3.4vw,42px); color:var(--escuro); margin:0; line-height:1.08; text-wrap:balance; }
-  .section-head .meta { font-size:10px; color:var(--verde); letter-spacing:.2em; text-transform:uppercase;
+.section-head.meta { font-size:10px; color:var(--verde); letter-spacing:.2em; text-transform:uppercase;
     font-weight:700; text-align:left; display:flex; align-items:center; gap:10px; }
-  .section-head .meta::after { content:''; height:1px; width:96px; background:var(--line); }
-  .lead { font-size:clamp(14.5px,1.4vw,16.5px); color:var(--text2); line-height:1.72; margin:0 0 26px; max-width:68ch; }
-  .lead strong { color:var(--escuro); font-weight:600; }
-  .lead-list { margin:-12px 0 26px; padding:0; list-style:none; display:grid; gap:10px; }
-  .lead-list li { position:relative; padding-left:20px; font-size:14.5px; color:#39423a; line-height:1.7; max-width:68ch; }
-  .lead-list li::before { content:'▸'; position:absolute; left:2px; color:var(--verde); font-weight:700; }
+.section-head.meta::after { content:''; height:1px; width:96px; background:var(--line); }
+.lead { font-size:clamp(14.5px,1.4vw,16.5px); color:var(--text2); line-height:1.72; margin:0 0 26px; max-width:68ch; }
+.lead strong { color:var(--escuro); font-weight:600; }
+.lead-list { margin:-12px 0 26px; padding:0; list-style:none; display:grid; gap:10px; }
+.lead-list li { position:relative; padding-left:20px; font-size:14.5px; color:#39423a; line-height:1.7; max-width:68ch; }
+.lead-list li::before { content:'▸'; position:absolute; left:2px; color:var(--verde); font-weight:700; }
 
   table { width:100%; border-collapse:collapse; }
   thead th { text-align:left; font-size:9.5px; text-transform:uppercase; letter-spacing:.14em;
@@ -127,222 +127,229 @@
   tfoot td { padding:14px 12px; font-size:13px; font-weight:600; color:var(--escuro);
     border-top:2px solid var(--escuro); background:transparent; }
   tfoot td.num { text-align:right; }
-  .strong { font-weight:600; color:var(--escuro); }
-  .num-big { font-family:'Playfair Display',serif; font-size:17.5px; font-weight:600; color:var(--escuro); }
-  .sub { font-size:11px; color:var(--text-mute); margin-top:2px; line-height:1.55; }
-  .table-scroll { overflow-x:auto; }
+.strong { font-weight:600; color:var(--escuro); }
+.num-big { font-family:'Playfair Display',serif; font-size:17.5px; font-weight:600; color:var(--escuro); }
+.sub { font-size:11px; color:var(--text-mute); margin-top:2px; line-height:1.55; }
+.table-scroll { overflow-x:auto; }
 
-  .pill { display:inline-block; padding:4px 10px; border-radius:3px; font-size:9.5px; font-weight:700;
+.pill { display:inline-block; padding:4px 10px; border-radius:3px; font-size:9.5px; font-weight:700;
     letter-spacing:.08em; text-transform:uppercase; white-space:nowrap; }
-  .pill.ok { background:var(--ok-bg); color:var(--ok); }
-  .pill.warn { background:var(--warn-bg); color:var(--warn); }
-  .pill.agir { background:var(--agir-bg); color:var(--agir); }
-  .pill.muted { background:var(--surface2); color:var(--text2); }
+.pill.ok { background:var(--ok-bg); color:var(--ok); }
+.pill.warn { background:var(--warn-bg); color:var(--warn); }
+.pill.agir { background:var(--agir-bg); color:var(--agir); }
+.pill.muted { background:var(--surface2); color:var(--text2); }
 
-  .unit-title { font-size:10px; letter-spacing:.2em; text-transform:uppercase; color:var(--verde);
+.unit-title { font-size:10px; letter-spacing:.2em; text-transform:uppercase; color:var(--verde);
     font-weight:700; margin:34px 0 12px; display:flex; align-items:center; gap:9px; }
-  .unit-title::before { content:''; display:inline-block; width:20px; height:2px; background:var(--verde); border-radius:0; margin:0; }
-  .unit-title:first-of-type { margin-top:8px; }
+.unit-title::before { content:''; display:inline-block; width:20px; height:2px; background:var(--verde); border-radius:0; margin:0; }
+.unit-title:first-of-type { margin-top:8px; }
 
-  .chart { margin:14px 0 6px; }
-  .chart-grid { display:grid; grid-template-columns:repeat(7,1fr); gap:16px; align-items:end; height:250px; }
-  .cmonth { display:flex; align-items:flex-end; justify-content:center; gap:6px; height:100%; }
-  .cbar { width:36px; border-radius:2px 2px 0 0; position:relative; min-height:8px; }
-  .cbar.b25 { background:var(--surface2); }
-  .cbar.b26 { background:var(--verde); }
-  .cbar.b26.partial { background:repeating-linear-gradient(45deg,#0F6E56,#0F6E56 6px,#57a68d 6px,#57a68d 12px); }
-  .cbar .cv { position:absolute; top:-22px; left:50%; transform:translateX(-50%); font-size:11px;
+.chart { margin:14px 0 6px; }
+.chart-grid { display:grid; grid-template-columns:repeat(7,1fr); gap:16px; align-items:end; height:250px; }
+.cmonth { display:flex; align-items:flex-end; justify-content:center; gap:6px; height:100%; }
+.cbar { width:36px; border-radius:2px 2px 0 0; position:relative; min-height:8px; }
+.cbar.b25 { background:var(--surface2); }
+.cbar.b26 { background:var(--verde); }
+.cbar.b26.partial { background:repeating-linear-gradient(45deg,#0F6E56,#0F6E56 6px,#57a68d 6px,#57a68d 12px); }
+.cbar.cv { position:absolute; top:-22px; left:50%; transform:translateX(-50%); font-size:11px;
     font-weight:700; color:var(--escuro); white-space:nowrap; font-variant-numeric:tabular-nums; }
-  .cbar.b25 .cv { color:var(--text-mute); font-weight:600; }
-  .chart-x { display:grid; grid-template-columns:repeat(7,1fr); gap:16px; margin-top:12px;
+.cbar.b25.cv { color:var(--text-mute); font-weight:600; }
+.chart-x { display:grid; grid-template-columns:repeat(7,1fr); gap:16px; margin-top:12px;
     border-top:1px solid var(--line); padding-top:10px; }
-  .chart-x div { text-align:center; font-size:10px; color:var(--text2); font-weight:700; text-transform:uppercase; letter-spacing:.12em; }
-  .chart-legend { display:flex; gap:18px; margin-top:14px; font-size:11.5px; color:var(--text2); flex-wrap:wrap; }
-  .chart-legend i { display:inline-block; width:12px; height:12px; border-radius:2px; margin-right:6px; vertical-align:-1px; }
+.chart-x div { text-align:center; font-size:10px; color:var(--text2); font-weight:700; text-transform:uppercase; letter-spacing:.12em; }
+.chart-legend { display:flex; gap:18px; margin-top:14px; font-size:11.5px; color:var(--text2); flex-wrap:wrap; }
+.chart-legend i { display:inline-block; width:12px; height:12px; border-radius:2px; margin-right:6px; vertical-align:-1px; }
 
-  .cards { display:grid; grid-template-columns:repeat(3,1fr); gap:14px; counter-reset:card; }
-  .acard { position:relative; overflow:hidden; background:var(--surface); border:1px solid var(--line);
-    border-radius:4px; padding:22px 24px; transition:transform .18s ease, box-shadow .18s ease; counter-increment:card; }
-  .acard::after { content:''; position:absolute; top:0; left:0; right:0; height:2px; background:var(--verde); }
-  .acard:hover { transform:translateY(-3px); box-shadow:0 14px 34px rgba(22,33,26,.10); }
-  .acard.gold::after { background:var(--gold); }
-  .acard::before { content:counter(card, decimal-leading-zero); position:absolute; top:12px; right:16px;
+.cards { display:grid; grid-template-columns:repeat(3,1fr); gap:14px; counter-reset:card; }
+.acard { position:relative; overflow:hidden; background:var(--surface); border:1px solid var(--line);
+    border-radius:4px; padding:22px 24px; transition:transform.18s ease, box-shadow.18s ease; counter-increment:card; }
+.acard::after { content:''; position:absolute; top:0; left:0; right:0; height:2px; background:var(--verde); }
+.acard:hover { transform:translateY(-3px); box-shadow:0 14px 34px rgba(22,33,26,.10); }
+.acard.gold::after { background:var(--gold); }
+.acard::before { content:counter(card, decimal-leading-zero); position:absolute; top:12px; right:16px;
     font-family:'Playfair Display',serif; font-size:26px; font-weight:700; color:var(--verde); opacity:.16; }
-  .acard.gold::before { color:var(--gold); opacity:.22; }
-  .acard .ic { width:34px; height:34px; border-radius:3px; display:flex; align-items:center; justify-content:center;
+.acard.gold::before { color:var(--gold); opacity:.22; }
+.acard.ic { width:34px; height:34px; border-radius:3px; display:flex; align-items:center; justify-content:center;
     background:var(--ok-bg); color:var(--verde); margin-bottom:14px; font-size:16px; }
-  .acard.gold .ic { background:#EDE3C4; color:#8a6f1c; }
-  .acard h4 { margin:0 0 8px; font-size:15.5px; color:var(--escuro); font-family:'Playfair Display',serif; font-weight:700; letter-spacing:-.01em; }
-  .acard p { margin:0; font-size:12.8px; color:var(--text2); line-height:1.6; }
-  .acard p strong { color:var(--escuro); }
+.acard.gold.ic { background:#EDE3C4; color:#8a6f1c; }
+.acard h4 { margin:0 0 8px; font-size:15.5px; color:var(--escuro); font-family:'Playfair Display',serif; font-weight:700; letter-spacing:-.01em; }
+.acard p { margin:0; font-size:12.8px; color:var(--text2); line-height:1.6; }
+.acard p strong { color:var(--escuro); }
+.cards.c4 { grid-template-columns:repeat(4,1fr); }
+  @media (max-width:960px){.cards.c4 { grid-template-columns:1fr 1fr; } }
+  @media (max-width:600px){.cards.c4 { grid-template-columns:1fr; } }
+.entregas-list { margin:8px 0 0; padding:0; list-style:none; display:grid; gap:7px; }
+.entregas-list li { position:relative; padding-left:16px; font-size:12.8px; color:var(--text2); line-height:1.4; }
+.entregas-list li::before { content:''; position:absolute; left:0; top:7px; width:6px; height:6px; border-radius:2px; background:var(--verde); }
+.entregas-list li.hi { color:var(--escuro); font-weight:600; }
 
-  .statrow.cols5 { grid-template-columns:repeat(5,1fr); }
-  @media (max-width:960px) { .statrow.cols5 { grid-template-columns:repeat(2,1fr); } }
-  @media (max-width:600px) { .statrow.cols5 { grid-template-columns:1fr; } }
+.statrow.cols5 { grid-template-columns:repeat(5,1fr); }
+  @media (max-width:960px) {.statrow.cols5 { grid-template-columns:repeat(2,1fr); } }
+  @media (max-width:600px) {.statrow.cols5 { grid-template-columns:1fr; } }
 
-  .camp-chips { display:flex; flex-wrap:wrap; gap:8px; margin:8px 0 4px; }
-  .camp-chips span { font-size:11px; font-weight:600; letter-spacing:.03em; color:var(--escuro);
+.camp-chips { display:flex; flex-wrap:wrap; gap:8px; margin:8px 0 4px; }
+.camp-chips span { font-size:11px; font-weight:600; letter-spacing:.03em; color:var(--escuro);
     background:var(--surface); border:1px solid var(--line); border-radius:3px; padding:7px 12px; }
 
-  .pecas-grid { display:grid; grid-template-columns:repeat(6,1fr); gap:12px; margin-top:10px; }
-  .pecas-grid figure { margin:0; }
-  .pecas-grid img { width:100%; display:block; border-radius:4px; border:1px solid var(--line); }
-  .pecas-grid figcaption { font-size:9.5px; color:var(--text2); margin-top:7px; font-weight:700;
+.pecas-grid { display:grid; grid-template-columns:repeat(6,1fr); gap:12px; margin-top:10px; }
+.pecas-grid figure { margin:0; }
+.pecas-grid img { width:100%; display:block; border-radius:4px; border:1px solid var(--line); }
+.pecas-grid figcaption { font-size:9.5px; color:var(--text2); margin-top:7px; font-weight:700;
     letter-spacing:.08em; text-transform:uppercase; line-height:1.4; }
-  @media (max-width:960px) { .pecas-grid { grid-template-columns:repeat(3,1fr); } }
-  @media (max-width:600px) { .pecas-grid { grid-template-columns:repeat(2,1fr); } }
+  @media (max-width:960px) {.pecas-grid { grid-template-columns:repeat(3,1fr); } }
+  @media (max-width:600px) {.pecas-grid { grid-template-columns:repeat(2,1fr); } }
 
-  .origem { display:grid; gap:9px; margin-top:10px; max-width:760px; }
-  .orow { display:grid; grid-template-columns:150px 1fr 150px; gap:12px; align-items:center; font-size:12px; }
-  .orow .on_ { font-weight:600; color:var(--escuro); }
-  .orow .otrack { background:var(--surface2); height:15px; border-radius:2px; overflow:hidden; }
-  .orow .obar { height:100%; background:var(--verde); display:block; }
-  .orow .ov { color:var(--text2); font-variant-numeric:tabular-nums; white-space:nowrap; }
-  .orow .ov b { color:var(--escuro); }
-  @media (max-width:600px) { .orow { grid-template-columns:96px 1fr; } .orow .ov { grid-column:1/-1; margin-top:-4px; } }
+.origem { display:grid; gap:9px; margin-top:10px; max-width:760px; }
+.orow { display:grid; grid-template-columns:150px 1fr 150px; gap:12px; align-items:center; font-size:12px; }
+.orow.on_ { font-weight:600; color:var(--escuro); }
+.orow.otrack { background:var(--surface2); height:15px; border-radius:2px; overflow:hidden; }
+.orow.obar { height:100%; background:var(--verde); display:block; }
+.orow.ov { color:var(--text2); font-variant-numeric:tabular-nums; white-space:nowrap; }
+.orow.ov b { color:var(--escuro); }
+  @media (max-width:600px) {.orow { grid-template-columns:96px 1fr; }.orow.ov { grid-column:1/-1; margin-top:-4px; } }
 
-  .statrow { display:grid; grid-template-columns:repeat(4,1fr); gap:1px; background:#39463C;
+.statrow { display:grid; grid-template-columns:repeat(4,1fr); gap:1px; background:#39463C;
     border:none; border-radius:6px; overflow:hidden; margin:4px 0 26px;
     box-shadow:0 18px 44px rgba(22,33,26,.16); }
-  .stat { border:none; border-radius:0; padding:22px 18px; background:var(--ink); position:relative; }
-  .stat::before { content:''; position:absolute; inset:0; pointer-events:none;
+.stat { border:none; border-radius:0; padding:22px 18px; background:var(--ink); position:relative; }
+.stat::before { content:''; position:absolute; inset:0; pointer-events:none;
     background:radial-gradient(320px 150px at 85% -20%, rgba(15,110,86,.35), transparent 70%); }
-  .stat > * { position:relative; }
-  .stat b { font-family:'Playfair Display',serif; font-size:30px; color:#EFEBE0; display:block; line-height:1.05; letter-spacing:-.02em; }
-  .stat b small { font-size:14px; color:#93a496; font-weight:400; }
-  .stat span { font-size:11px; color:#a7b3a8; margin-top:9px; display:block; line-height:1.5; }
-  .stat.destacado b { color:#8fe0c3; }
-  .statrow .krow .kl { color:#7d8a7f; }
-  .statrow .krow .ktrack { background:rgba(233,232,228,.13); }
-  .statrow .krow .kb { background:#6f8074; }
-  .statrow .krow .kb.now { background:#8fe0c3; }
+.stat > * { position:relative; }
+.stat b { font-family:'Playfair Display',serif; font-size:30px; color:#EFEBE0; display:block; line-height:1.05; letter-spacing:-.02em; }
+.stat b small { font-size:14px; color:#93a496; font-weight:400; }
+.stat span { font-size:11px; color:#a7b3a8; margin-top:9px; display:block; line-height:1.5; }
+.stat.destacado b { color:#8fe0c3; }
+.statrow.krow.kl { color:#7d8a7f; }
+.statrow.krow.ktrack { background:rgba(233,232,228,.13); }
+.statrow.krow.kb { background:#6f8074; }
+.statrow.krow.kb.now { background:#8fe0c3; }
 
-  .insight { background:var(--surface); border:1px solid var(--line); border-left:3px solid var(--gold);
+.insight { background:var(--surface); border:1px solid var(--line); border-left:3px solid var(--gold);
     border-radius:4px; padding:18px 22px; font-size:13.5px; color:#454f47; line-height:1.65; margin-top:24px; }
-  .insight strong { color:var(--escuro); }
-  .insight.ok { border-left-color:var(--verde); }
-  .insight ul { margin:10px 0 0; padding:0; list-style:none; display:grid; gap:9px; }
-  .insight ul li { position:relative; padding-left:18px; }
-  .insight ul li::before { content:'▸'; position:absolute; left:0; color:var(--verde); }
+.insight strong { color:var(--escuro); }
+.insight.ok { border-left-color:var(--verde); }
+.insight ul { margin:10px 0 0; padding:0; list-style:none; display:grid; gap:9px; }
+.insight ul li { position:relative; padding-left:18px; }
+.insight ul li::before { content:'▸'; position:absolute; left:0; color:var(--verde); }
 
-  .bar-wrap { background:var(--surface2); height:6px; border-radius:3px; overflow:hidden; margin-top:6px; }
-  .bar { height:100%; background:var(--verde); border-radius:3px; }
-  .bar.gold { background:var(--gold); }
+.bar-wrap { background:var(--surface2); height:6px; border-radius:3px; overflow:hidden; margin-top:6px; }
+.bar { height:100%; background:var(--verde); border-radius:3px; }
+.bar.gold { background:var(--gold); }
 
-  .kmini { margin-top:14px; display:grid; gap:5px; }
-  .krow { display:flex; align-items:center; gap:8px; }
-  .krow .kl { font-size:8.5px; color:var(--text-mute); width:28px; letter-spacing:.1em; font-weight:700; text-transform:uppercase; flex:0 0 auto; }
-  .krow .ktrack { flex:1; background:var(--surface2); height:6px; border-radius:2px; overflow:hidden; }
-  .krow .kb { display:block; height:100%; border-radius:2px; background:#C9C2AE; }
-  .krow .kb.now { background:var(--verde); }
-  .mbar { background:var(--surface2); height:4px; border-radius:2px; overflow:hidden; margin:7px 0 0 auto; max-width:150px; }
-  .mbar i { display:block; height:100%; border-radius:2px; }
-  .mbar i.ok { background:var(--verde); } .mbar i.w { background:var(--gold); } .mbar i.n { background:#9CBBA9; }
+.kmini { margin-top:14px; display:grid; gap:5px; }
+.krow { display:flex; align-items:center; gap:8px; }
+.krow.kl { font-size:8.5px; color:var(--text-mute); width:28px; letter-spacing:.1em; font-weight:700; text-transform:uppercase; flex:0 0 auto; }
+.krow.ktrack { flex:1; background:var(--surface2); height:6px; border-radius:2px; overflow:hidden; }
+.krow.kb { display:block; height:100%; border-radius:2px; background:#C9C2AE; }
+.krow.kb.now { background:var(--verde); }
+.mbar { background:var(--surface2); height:4px; border-radius:2px; overflow:hidden; margin:7px 0 0 auto; max-width:150px; }
+.mbar i { display:block; height:100%; border-radius:2px; }
+.mbar i.ok { background:var(--verde); }.mbar i.w { background:var(--gold); }.mbar i.n { background:#9CBBA9; }
 
-  .saldo-grid { display:grid; grid-template-columns:1fr 1fr; gap:14px; }
-  .saldo-card { border:1px solid var(--line); border-radius:4px; padding:22px 22px 16px; background:var(--surface); }
-  .saldo-head { display:flex; justify-content:space-between; align-items:baseline; margin-bottom:16px; gap:10px; flex-wrap:wrap; }
-  .saldo-head .u { font-size:10px; letter-spacing:.18em; text-transform:uppercase; color:var(--verde); font-weight:700; }
-  .saldo-head .tot { font-family:'Playfair Display',serif; font-size:24px; color:var(--escuro); font-weight:600; }
-  .sc-grid { display:grid; grid-template-columns:repeat(7,1fr); gap:6px; }
-  .sc-col { display:flex; flex-direction:column; align-items:center; }
-  .sc-va { font-size:10px; font-weight:700; margin-bottom:5px; white-space:nowrap; }
-  .sc-va.pos { color:var(--ok); } .sc-va.neg { color:var(--agir); } .sc-va.na { color:var(--text-mute); font-weight:600; }
-  .sc-up { height:92px; display:flex; align-items:flex-end; width:100%; justify-content:center; }
-  .sc-down { height:92px; display:flex; align-items:flex-start; width:100%; justify-content:center; }
-  .sc-bar { width:60%; }
-  .sc-bar.pos { background:var(--verde); border-radius:2px 2px 0 0; }
-  .sc-bar.neg { background:#BC5B4E; border-radius:0 0 2px 2px; }
-  .sc-bar.pos.aberto { background:repeating-linear-gradient(45deg,#0F6E56,#0F6E56 5px,#57a68d 5px,#57a68d 10px); }
-  .sc-bar.neg.aberto { background:repeating-linear-gradient(45deg,#BC5B4E,#BC5B4E 5px,#d99c92 5px,#d99c92 10px); }
-  .sc-bar.na { height:3px; background:var(--surface2); border-radius:1px; align-self:flex-end; }
-  .sc-zero { height:2px; background:var(--escuro); opacity:.25; width:100%; }
-  .sc-m { font-size:9.5px; color:var(--text-mute); margin-top:6px; font-weight:700; text-transform:uppercase; letter-spacing:.1em; }
-  .saldo-note { font-size:11px; color:var(--text2); margin-top:14px; line-height:1.55; }
-  @media (max-width:960px) { .saldo-grid { grid-template-columns:1fr; } }
+.saldo-grid { display:grid; grid-template-columns:1fr 1fr; gap:14px; }
+.saldo-card { border:1px solid var(--line); border-radius:4px; padding:22px 22px 16px; background:var(--surface); }
+.saldo-head { display:flex; justify-content:space-between; align-items:baseline; margin-bottom:16px; gap:10px; flex-wrap:wrap; }
+.saldo-head.u { font-size:10px; letter-spacing:.18em; text-transform:uppercase; color:var(--verde); font-weight:700; }
+.saldo-head.tot { font-family:'Playfair Display',serif; font-size:24px; color:var(--escuro); font-weight:600; }
+.sc-grid { display:grid; grid-template-columns:repeat(7,1fr); gap:6px; }
+.sc-col { display:flex; flex-direction:column; align-items:center; }
+.sc-va { font-size:10px; font-weight:700; margin-bottom:5px; white-space:nowrap; }
+.sc-va.pos { color:var(--ok); }.sc-va.neg { color:var(--agir); }.sc-va.na { color:var(--text-mute); font-weight:600; }
+.sc-up { height:92px; display:flex; align-items:flex-end; width:100%; justify-content:center; }
+.sc-down { height:92px; display:flex; align-items:flex-start; width:100%; justify-content:center; }
+.sc-bar { width:60%; }
+.sc-bar.pos { background:var(--verde); border-radius:2px 2px 0 0; }
+.sc-bar.neg { background:#BC5B4E; border-radius:0 0 2px 2px; }
+.sc-bar.pos.aberto { background:repeating-linear-gradient(45deg,#0F6E56,#0F6E56 5px,#57a68d 5px,#57a68d 10px); }
+.sc-bar.neg.aberto { background:repeating-linear-gradient(45deg,#BC5B4E,#BC5B4E 5px,#d99c92 5px,#d99c92 10px); }
+.sc-bar.na { height:3px; background:var(--surface2); border-radius:1px; align-self:flex-end; }
+.sc-zero { height:2px; background:var(--escuro); opacity:.25; width:100%; }
+.sc-m { font-size:9.5px; color:var(--text-mute); margin-top:6px; font-weight:700; text-transform:uppercase; letter-spacing:.1em; }
+.saldo-note { font-size:11px; color:var(--text2); margin-top:14px; line-height:1.55; }
+  @media (max-width:960px) {.saldo-grid { grid-template-columns:1fr; } }
 
-  .ficha dt { font-weight:700; color:var(--escuro); font-size:12.5px; margin-top:16px; }
-  .ficha dd { margin:4px 0 0; font-size:12.5px; color:var(--text2); line-height:1.65; }
-  .notas { counter-reset:nota; margin:0; padding:0; list-style:none; }
-  .notas li { counter-increment:nota; position:relative; padding:14px 0 14px 42px; border-bottom:1px solid var(--line);
+.ficha dt { font-weight:700; color:var(--escuro); font-size:12.5px; margin-top:16px; }
+.ficha dd { margin:4px 0 0; font-size:12.5px; color:var(--text2); line-height:1.65; }
+.notas { counter-reset:nota; margin:0; padding:0; list-style:none; }
+.notas li { counter-increment:nota; position:relative; padding:14px 0 14px 42px; border-bottom:1px solid var(--line);
     font-size:13px; color:var(--text2); line-height:1.65; }
-  .notas li:last-child { border-bottom:none; }
-  .notas li::before { content:counter(nota); position:absolute; left:0; top:14px; width:26px; height:26px;
+.notas li:last-child { border-bottom:none; }
+.notas li::before { content:counter(nota); position:absolute; left:0; top:14px; width:26px; height:26px;
     border-radius:3px; background:var(--ok-bg); color:var(--verde); font-weight:700; font-size:12px;
     display:flex; align-items:center; justify-content:center; }
-  .notas strong { color:var(--escuro); }
+.notas strong { color:var(--escuro); }
 
-  .glossary dl { display:grid; grid-template-columns:120px 1fr; gap:10px 20px; margin:0; }
-  .glossary dt { font-weight:700; color:var(--escuro); font-size:13px; }
-  .glossary dd { margin:0; font-size:13px; color:var(--text2); line-height:1.6; }
+.glossary dl { display:grid; grid-template-columns:120px 1fr; gap:10px 20px; margin:0; }
+.glossary dt { font-weight:700; color:var(--escuro); font-size:13px; }
+.glossary dd { margin:0; font-size:13px; color:var(--text2); line-height:1.6; }
 
-  .credit { text-align:center; padding:64px 0 10px; margin-top:44px; border-top:1px solid var(--line); }
-  .credit .by { font-size:9.5px; letter-spacing:.3em; text-transform:uppercase; color:var(--text-mute); margin-bottom:12px; }
-  .credit img { height:52px; width:auto; opacity:.92; }
-  .credit .tag { font-size:11px; color:var(--text-mute); margin-top:9px; }
+.credit { text-align:center; padding:64px 0 10px; margin-top:44px; border-top:1px solid var(--line); }
+.credit.by { font-size:9.5px; letter-spacing:.3em; text-transform:uppercase; color:var(--text-mute); margin-bottom:12px; }
+.credit img { height:52px; width:auto; opacity:.92; }
+.credit.tag { font-size:11px; color:var(--text-mute); margin-top:9px; }
 
-  .totop { position:fixed; right:24px; bottom:24px; width:40px; height:40px; border-radius:3px;
+.totop { position:fixed; right:24px; bottom:24px; width:40px; height:40px; border-radius:3px;
     border:1px solid var(--line); background:var(--surface); color:var(--escuro); font-size:16px;
     cursor:pointer; opacity:0; pointer-events:none; transition:.2s; z-index:40; }
-  .totop.show { opacity:1; pointer-events:auto; }
-  .totop:hover { border-color:var(--verde); color:var(--verde); }
+.totop.show { opacity:1; pointer-events:auto; }
+.totop:hover { border-color:var(--verde); color:var(--verde); }
 
-  .part { margin-top:96px; padding-top:24px; border-top:2px solid var(--escuro);
+.part { margin-top:96px; padding-top:24px; border-top:2px solid var(--escuro);
     display:flex; align-items:baseline; gap:18px; scroll-margin-top:70px; }
-  .part .part-n { font-family:'Playfair Display',serif; font-size:15px; color:var(--verde); font-weight:700; flex:0 0 auto; }
-  .part h2 { font-family:'Playfair Display',serif; font-size:clamp(30px,4vw,46px); color:var(--escuro);
+.part.part-n { font-family:'Playfair Display',serif; font-size:15px; color:var(--verde); font-weight:700; flex:0 0 auto; }
+.part h2 { font-family:'Playfair Display',serif; font-size:clamp(30px,4vw,46px); color:var(--escuro);
     margin:0; letter-spacing:-.02em; line-height:1.05; text-wrap:balance; }
-  .part + section { border-top:0; margin-top:10px; padding-top:40px; }
-  .pull { font-family:'Playfair Display',serif; font-size:clamp(23px,3vw,36px); line-height:1.22;
+.part + section { border-top:0; margin-top:10px; padding-top:40px; }
+.pull { font-family:'Playfair Display',serif; font-size:clamp(23px,3vw,36px); line-height:1.22;
     color:var(--escuro); margin:30px 0 0; max-width:640px; letter-spacing:-.015em; text-wrap:balance; }
-  .pull em { font-style:italic; color:var(--verde); }
-  .periodo { font-size:11px; letter-spacing:.3em; text-transform:uppercase; color:#8fe0c3; margin:0 0 14px; font-weight:700; }
+.pull em { font-style:italic; color:var(--verde); }
+.periodo { font-size:11px; letter-spacing:.3em; text-transform:uppercase; color:#8fe0c3; margin:0 0 14px; font-weight:700; }
 
-  .js .reveal { opacity:0; transform:translateY(16px); transition:opacity .55s ease, transform .55s ease; }
-  .js .reveal.in { opacity:1; transform:none; }
-  .js .reveal .cbar { transform:scaleY(0); transform-origin:bottom; transition:transform .8s cubic-bezier(.2,.8,.2,1) .15s; }
-  .js .reveal.in .cbar { transform:scaleY(1); }
-  .js .reveal .sc-bar.pos { transform:scaleY(0); transform-origin:bottom; transition:transform .7s cubic-bezier(.2,.8,.2,1) .2s; }
-  .js .reveal .sc-bar.neg { transform:scaleY(0); transform-origin:top; transition:transform .7s cubic-bezier(.2,.8,.2,1) .2s; }
-  .js .reveal.in .sc-bar.pos, .js .reveal.in .sc-bar.neg { transform:scaleY(1); }
-  .js .reveal .kb, .js .reveal .mbar i, .js .reveal .bar, .js .reveal .obar { transform:scaleX(0); transform-origin:left; transition:transform .8s cubic-bezier(.2,.8,.2,1) .25s; }
-  .js .reveal.in .kb, .js .reveal.in .mbar i, .js .reveal.in .bar, .js .reveal.in .obar { transform:scaleX(1); }
+.js.reveal { opacity:0; transform:translateY(16px); transition:opacity.55s ease, transform.55s ease; }
+.js.reveal.in { opacity:1; transform:none; }
+.js.reveal.cbar { transform:scaleY(0); transform-origin:bottom; transition:transform.8s cubic-bezier(.2,.8,.2,1).15s; }
+.js.reveal.in.cbar { transform:scaleY(1); }
+.js.reveal.sc-bar.pos { transform:scaleY(0); transform-origin:bottom; transition:transform.7s cubic-bezier(.2,.8,.2,1).2s; }
+.js.reveal.sc-bar.neg { transform:scaleY(0); transform-origin:top; transition:transform.7s cubic-bezier(.2,.8,.2,1).2s; }
+.js.reveal.in.sc-bar.pos,.js.reveal.in.sc-bar.neg { transform:scaleY(1); }
+.js.reveal.kb,.js.reveal.mbar i,.js.reveal.bar,.js.reveal.obar { transform:scaleX(0); transform-origin:left; transition:transform.8s cubic-bezier(.2,.8,.2,1).25s; }
+.js.reveal.in.kb,.js.reveal.in.mbar i,.js.reveal.in.bar,.js.reveal.in.obar { transform:scaleX(1); }
 
   @media print {
-    .kpi-grid { background:#fff; box-shadow:none; border:1px solid #ccc; }
-    .kpi { background:#fff; }
-    .kpi::before { display:none; }
-    .kpi-value { color:#1E3A2B; } .kpi-label, .kpi-meta, .kpi-value small { color:#555; }
-    .kpi-delta.up { color:#0F6E56; }
-    .statrow { background:#fff; box-shadow:none; border:1px solid #ccc; }
-    .stat { background:#fff; }
-    .stat::before { display:none; }
-    .stat b { color:#1E3A2B; } .stat span, .stat b small { color:#555; }
-    .stat.destacado b { color:#0F6E56; }
-    .nav, .totop, .progress, .rail { display:none !important; }
+.kpi-grid { background:#fff; box-shadow:none; border:1px solid #ccc; }
+.kpi { background:#fff; }
+.kpi::before { display:none; }
+.kpi-value { color:#1E3A2B; }.kpi-label,.kpi-meta,.kpi-value small { color:#555; }
+.kpi-delta.up { color:#0F6E56; }
+.statrow { background:#fff; box-shadow:none; border:1px solid #ccc; }
+.stat { background:#fff; }
+.stat::before { display:none; }
+.stat b { color:#1E3A2B; }.stat span,.stat b small { color:#555; }
+.stat.destacado b { color:#0F6E56; }
+.nav,.totop,.progress,.rail { display:none !important; }
     body { background:#fff; }
-    section, .hero, .exec, .kpi, .acard, .saldo-card { break-inside:avoid; box-shadow:none !important; }
-    .hero { min-height:auto; }
-    .js .reveal { opacity:1 !important; transform:none !important; }
-    .js .reveal .cbar, .js .reveal .sc-bar, .js .reveal .kb, .js .reveal .mbar i { transform:none !important; }
+    section,.hero,.exec,.kpi,.acard,.saldo-card { break-inside:avoid; box-shadow:none !important; }
+.hero { min-height:auto; }
+.js.reveal { opacity:1 !important; transform:none !important; }
+.js.reveal.cbar,.js.reveal.sc-bar,.js.reveal.kb,.js.reveal.mbar i { transform:none !important; }
   }
 
   @media (max-width:960px) {
-    .kpi-grid { grid-template-columns:repeat(2,1fr); }
-    .cards { grid-template-columns:1fr 1fr; }
-    .statrow { grid-template-columns:repeat(2,1fr); }
-    .hero { padding:72px 30px 40px; min-height:70svh; }
+.kpi-grid { grid-template-columns:repeat(2,1fr); }
+.cards { grid-template-columns:1fr 1fr; }
+.statrow { grid-template-columns:repeat(2,1fr); }
+.hero { padding:72px 30px 40px; min-height:70svh; }
     section { padding:48px 0 8px; }
-    .cbar { width:22px; }
+.cbar { width:22px; }
   }
   @media (max-width:600px) {
-    .wrap { padding:0 16px 48px; }
-    .nav { margin:0 -16px; }
-    .hero { margin:0 -16px; padding:60px 22px 34px; }
-    .kpi-grid, .cards, .statrow { grid-template-columns:1fr; }
-    .chart-grid { gap:6px; } .cmonth { gap:3px; } .cbar { width:14px; }
-    .cbar .cv { display:none; }
-    .glossary dl { grid-template-columns:1fr; }
+.wrap { padding:0 16px 48px; }
+.nav { margin:0 -16px; }
+.hero { margin:0 -16px; padding:60px 22px 34px; }
+.kpi-grid,.cards,.statrow { grid-template-columns:1fr; }
+.chart-grid { gap:6px; }.cmonth { gap:3px; }.cbar { width:14px; }
+.cbar.cv { display:none; }
+.glossary dl { grid-template-columns:1fr; }
   }
 </style>
 </head>
@@ -384,9 +391,6 @@
     </div>
     <p class="periodo">Janeiro a Junho de 2026</p>
     <h1 style="font-size:clamp(30px,4.6vw,56px);">Marketing Digital | Resultados do 1º semestre e principais projetos</h1>
-    <p>Resultado da operação digital de janeiro a julho de 2026: o que o site e a central de vendas
-      já entregaram, o que construímos pra chegar aqui e o que estamos fazendo agora.</p>
-    <div class="updated">Dados até 19 de julho de 2026 · Julho aparece como prévia do 2º semestre · Preparado pela Trilha Performance Digital</div>
   </header>
 
   <div class="exec reveal" id="resumo">
@@ -408,22 +412,22 @@
     </div>
     <p class="lead">Foram <strong>65 campanhas veiculadas no primeiro semestre</strong> nas duas plataformas,
       abastecendo o site e a central de vendas das duas unidades. Os números abaixo vêm direto das contas de
-      anúncio; receita e retorno por plataforma seguem a atribuição de cada uma e não se somam ⁴.</p>
+      anúncio; receita e retorno por plataforma seguem a atribuição de cada uma e não se somam.</p>
 
     <div class="unit-title">Meta Ads</div>
     <div class="statrow">
-      <div class="stat destacado"><b>R$ 3,24</b><span>de retorno por R$ 1 investido (ROAS) · +40% vs 2025 · Maceió 2,53 · Francês 4,03 ⁴</span></div>
-      <div class="stat"><b>209</b><span>reservas geradas pelo site · +171% vs 2025 · 73 em Maceió · 136 no Francês ⁴</span></div>
-      <div class="stat"><b>2,9 <small>mi</small></b><span>de pessoas alcançadas · 1,63 mi em Maceió · 1,26 mi no Francês ⁴</span></div>
+      <div class="stat destacado"><b>R$ 3,24</b><span>de retorno por R$ 1 investido (ROAS) · +40% vs 2025 · Maceió 2,53 · Francês 4,03 </span></div>
+      <div class="stat"><b>209</b><span>reservas geradas pelo site · +171% vs 2025 · 73 em Maceió · 136 no Francês </span></div>
+      <div class="stat"><b>2,9 <small>mi</small></b><span>de pessoas alcançadas · 1,63 mi em Maceió · 1,26 mi no Francês </span></div>
       <div class="stat"><b>53</b><span>campanhas veiculadas · 26 em Maceió · 27 no Francês</span></div>
     </div>
     <p class="sub" style="margin:-14px 0 0;">O ROAS do Meta conta só as compras no site; boa parte da verba gera
-      conversa no WhatsApp, cuja venda fecha na central e não entra nesse cálculo ⁴.</p>
+      conversa no WhatsApp, cuja venda fecha na central e não entra nesse cálculo.</p>
 
     <div class="unit-title" style="margin-top:28px">Google Ads</div>
     <div class="statrow" style="grid-template-columns:repeat(3,1fr);">
-      <div class="stat destacado"><b>R$ 13,27</b><span>de retorno por R$ 1 investido (ROAS) · +91% vs 2025 · Maceió 7,92 · Francês 21,25 ⁴</span></div>
-      <div class="stat"><b>390</b><span>reservas geradas · 144 em Maceió · 246 no Francês ⁴</span></div>
+      <div class="stat destacado"><b>R$ 13,27</b><span>de retorno por R$ 1 investido (ROAS) · +91% vs 2025 · Maceió 7,92 · Francês 21,25 </span></div>
+      <div class="stat"><b>390</b><span>reservas geradas · 144 em Maceió · 246 no Francês </span></div>
       <div class="stat"><b>12</b><span>campanhas ativas · 6 por unidade</span></div>
     </div>
   </section>
@@ -499,11 +503,11 @@
       <div class="stat destacado"><b>132,3 <small>mil</small></b><span>sessões engajadas · +26% vs 1º semestre de 2025</span></div>
       <div class="stat destacado"><b>59s</b><span>de tempo médio por sessão · era 21s em 2025, quase o triplo</span></div>
       <div class="stat destacado"><b>62,6%</b><span>de taxa de engajamento · era 37,6% em 2025</span></div>
-      <div class="stat destacado"><b>R$ 1,81 <small>mi</small></b><span>de receita registrada no GA4 · +44% vs 2025 · +2% até sobre o semestre da alta temporada ⁵</span></div>
+      <div class="stat destacado"><b>R$ 1,81 <small>mi</small></b><span>de receita registrada no GA4 · +44% vs 2025 · +2% até sobre o semestre da alta temporada </span></div>
     </div>
     <div class="statrow" style="grid-template-columns:repeat(2,1fr); max-width:560px; margin-bottom:0;">
-      <div class="stat"><b>169,7 <small>mil</small></b><span>usuários ativos · 25% menos que no 1º semestre de 2025 ⁵</span></div>
-      <div class="stat"><b>211,4 <small>mil</small></b><span>sessões · 24% menos que no 1º semestre de 2025 ⁵</span></div>
+      <div class="stat"><b>169,7 <small>mil</small></b><span>usuários ativos · 25% menos que no 1º semestre de 2025 </span></div>
+      <div class="stat"><b>211,4 <small>mil</small></b><span>sessões · 24% menos que no 1º semestre de 2025 </span></div>
     </div>
     <div class="insight ok">
       <strong>Por que os usuários caíram e a receita subiu?</strong> O tráfego de 2025 era inflado por social de
@@ -523,7 +527,7 @@
       <div class="orow"><span class="on_">Outros</span><span class="otrack"><span class="obar" style="width:28%"></span></span><span class="ov"><b>12,6 mil</b> · 7%</span></div>
       <div class="orow" style="border-top:1px solid var(--line); margin-top:8px; padding-top:12px;"><span class="on_">ChatGPT <small style="color:var(--text-mute);font-weight:600;">(IA)</small></span><span class="otrack"><span class="obar" style="width:3%; background:var(--gold);"></span></span><span class="ov"><b>1,4 mil</b> · R$ 30 mil em receita</span></div>
     </div>
-    <p class="sub" style="margin-top:14px">Usuários ativos por grupo de canais, 1º semestre de 2026 · GA4 ⁵.
+    <p class="sub" style="margin-top:14px">Usuários ativos por grupo de canais, 1º semestre de 2026 · GA4.
       A linha do ChatGPT é um recorte por IA, já contido nos canais acima (não somado): foram exatamente
       <strong>1.398 usuários e R$ 29.949,74 de receita</strong> no semestre (atribuição GA4), com o medium próprio
       "ai-assistant" acelerando (480 usuários só nos últimos 28 dias).</p>
@@ -554,7 +558,7 @@
         <span><i style="background:#d8d2c2"></i>2025 (mês cheio)</span>
         <span><i style="background:#0F6E56"></i>2026 (mês cheio)</span>
         <span><i style="background:repeating-linear-gradient(45deg,#15866a,#15866a 6px,#4aa98d 6px,#4aa98d 12px)"></i>2026 em andamento (até 19/07)</span>
-        <span>Valores em R$ mil · ° jan e fev/2025 sem as vendas de Maceió (nota 2)</span>
+        <span>Valores em R$ mil · ° jan e fev/2025 sem as vendas de Maceió</span>
       </div>
     </div>
   </section>
@@ -573,7 +577,7 @@
     <div class="statrow">
       <div class="stat destacado"><b>39.676</b><span>atendimentos de jan a jun · 22% acima da meta · 47% a mais que 2025</span></div>
       <div class="stat destacado"><b>2.054</b><span>vendas fechadas pela central · 26% acima da meta de vendas do período</span></div>
-      <div class="stat destacado"><b>R$ 5,97 <small>mi</small></b><span>de receita no semestre · 25% a mais que 2025 ¹</span></div>
+      <div class="stat destacado"><b>R$ 5,97 <small>mi</small></b><span>de receita no semestre · 25% a mais que 2025 </span></div>
       <div class="stat"><b>R$ 1,69</b><span>é o custo pra trazer cada novo contato até a central em julho (era R$ 2,44 em junho)</span></div>
     </div>
 
@@ -593,7 +597,7 @@
     </table>
     </div>
     <p class="sub" style="margin-top:6px">Percentuais = realizado 2026 vs meta do mês (contagens do bloco Geração de
-      Demanda Central). Julho em andamento fora da tabela ³.</p>
+      Demanda Central). Julho em andamento fora da tabela.</p>
 
     <div class="unit-title" style="margin-top:26px">A emissão por unidade ainda não acompanha</div>
     <div class="table-scroll">
@@ -608,7 +612,7 @@
     </div>
     <p class="sub" style="margin-top:6px">Maio e junho: dash mensal (bloco de emissão por unidade), que registra a
       meta de emissão a partir de maio. Fevereiro: planilha Investimento x Retorno (sem meta de emissão registrada).
-      Julho em andamento ³: emissão parcial ainda abaixo do ritmo da meta nas duas unidades, com quase duas
+      Julho em andamento : emissão parcial ainda abaixo do ritmo da meta nas duas unidades, com quase duas
       semanas de vendas pela frente.</p>
 
     <div class="insight">
@@ -668,38 +672,49 @@
   <section id="fizemos" class="reveal">
     <div class="section-head">
       <h2>O que já fizemos em 2026</h2>
-      <div class="meta">Principais entregas · jan a jun</div>
+      <div class="meta">Principais entregas do semestre</div>
     </div>
-    <div class="cards">
+    <div class="cards c4">
       <div class="acard">
-        <div class="ic">🛒</div>
-        <h4>Resgate de reservas quase perdidas</h4>
-        <p>Quem chega perto de fechar e desiste agora recebe automaticamente uma mensagem com foto e avaliações
-          de outros hóspedes, convidando a concluir a reserva. Dinheiro que antes ia embora.</p>
+        <div class="ic">📈</div>
+        <h4>Performance</h4>
+        <ul class="entregas-list">
+          <li>Novas campanhas</li>
+          <li>Otimizações de mídia</li>
+          <li>SEO</li>
+          <li>GEO</li>
+          <li>Traqueamento do zero</li>
+        </ul>
       </div>
       <div class="acard">
-        <div class="ic">📏</div>
-        <h4>Medição reconstruída do zero</h4>
-        <p>Em maio refizemos toda a medição do site pra eliminar inconsistências. <strong>Decisão boa começa com
-          número confiável</strong>, e este relatório é feito sobre essa base.</p>
+        <div class="ic">💬</div>
+        <h4>CRM</h4>
+        <ul class="entregas-list">
+          <li>Automações</li>
+          <li>Segmentações</li>
+          <li>Higienização de base</li>
+        </ul>
       </div>
       <div class="acard">
-        <div class="ic">⚖️</div>
-        <h4>Verba reequilibrada entre site e central</h4>
-        <p>Investimento dividido de forma equilibrada entre o site e a central de vendas, acompanhando onde
-          cada real rende mais em cada momento do mês.</p>
+        <div class="ic">🖥️</div>
+        <h4>Site</h4>
+        <ul class="entregas-list">
+          <li>Melhorias em textos</li>
+          <li>Projeto novo site</li>
+          <li>Páginas do Francês e surf</li>
+          <li>Conversão</li>
+        </ul>
       </div>
       <div class="acard">
-        <div class="ic">🗓️</div>
-        <h4>Campanhas pra cada momento do ano</h4>
-        <p>São João, ofertas de última hora e compra antecipada:
-          o calendário comercial virou calendário de campanha.</p>
-      </div>
-      <div class="acard">
-        <div class="ic">🏝️</div>
-        <h4>Landing Page nova para o Hotel Ponta Verde Francês</h4>
-        <p>Criamos uma nova página do Ponta Verde Praia do Francês na internet: fotos do hotel como
-          protagonistas, texto curto e caminho direto pra reserva. Uma vitrine digital à altura do destino.</p>
+        <div class="ic">📱</div>
+        <h4>Conteúdo</h4>
+        <ul class="entregas-list">
+          <li>Calendário</li>
+          <li>Campanhas</li>
+          <li>Institucional</li>
+          <li class="hi">90 mil seguidores no PVF</li>
+          <li class="hi">100 mil seguidores no PVM</li>
+        </ul>
       </div>
     </div>
   </section>
@@ -760,80 +775,7 @@
 
 
 
-  <section id="fontes" class="reveal">
-    <div class="section-head">
-      <h2>De onde vêm esses números</h2>
-      <div class="meta">Ficha técnica · transparência total</div>
-    </div>
-    <p class="lead">Todos os números deste relatório podem ser conferidos na origem. Nenhum dado foi estimado:
-      o que é parcial ou tem limitação está marcado com nota.</p>
-    <dl class="ficha">
-      <dt>Vendas e reservas do site</dt>
-      <dd>Volux (motor de reservas), planilha "Dashboard Site e Geração de Demandas 2026", aba do mês, bloco
-        "Emissão site por dia", separado por unidade. Janeiro tem fonte Omnibees (motor usado à época).
-        Totais recalculados dia a dia e conferidos com o fechamento de cada aba.</dd>
-      <dt>Metas mensais</dt>
-      <dd>Planejamento 2026 do grupo, registrado na mesma planilha (bloco "Meta Emissões"), por unidade e por mês.</dd>
-      <dt>Central de vendas (atendimentos, vendas, receita)</dt>
-      <dd>Painel da central na mesma planilha, bloco "Geração de Demanda Central": atendimentos, oportunidades,
-        vendas e receita, comparados com meta 2026 e com o realizado 2025.</dd>
-      <dt>Visitantes e visitantes qualificados do site</dt>
-      <dd>Bloco "Performance Site" da planilha (base Volux/GA4). Estudos de tráfego por página: Google Analytics 4,
-        propriedade "hotel ponta verde – GA4" (ID 343824638), publicados mensalmente no painel online do hotel.</dd>
-      <dt>Retorno por R$ 1 investido e custo por reserva</dt>
-      <dd>Investimento das contas de anúncio Meta (Maceió act 299642416227987 · Francês act 317304155022732) e
-        Google Ads, dividido pela receita Volux do canal correspondente, conforme calculado na planilha.
-        No jargão do mercado: ROAS e CAC.</dd>
-      <dt>Mídia paga por plataforma (Meta Ads e Google Ads)</dt>
-      <dd>Puxado direto das APIs das plataformas em 20/07/26, período 01/01 a 30/06/26. Meta: contas
-        act 299642416227987 (Maceió) e act 317304155022732 (Francês); investimento, alcance, compras e receita
-        do pixel, e contagem de campanhas com veiculação. Google Ads: contas 939-415-6601 (Maceió) e
-        893-154-6062 (Francês); investimento, conversões e valor de conversão por campanha.</dd>
-      <dt>Performance do site (usuários, sessões, engajamento, origem do tráfego)</dt>
-      <dd>Google Analytics 4, propriedade "hotel ponta verde – GA4" (ID 343824638), relatório Aquisição de
-        tráfego por grupo principal de canais da sessão, período 01/01 a 30/06/26, extraído em 21/07/26 com
-        comparações vs 01/01 a 30/06/25 e vs 04/07 a 31/12/25.</dd>
-      <dt>CRM (e-mails, abertura, vendas geradas e receita)</dt>
-      <dd>Painel da ferramenta de CRM/e-mail do hotel, total das duas unidades, 1º semestre de 2026,
-        incluindo o ranking de e-mails por taxa de conversão.</dd>
-    </dl>
-  </section>
 
-  <section class="reveal">
-    <div class="section-head">
-      <h2>Notas de leitura</h2>
-      <div class="meta">o que cada marcação significa</div>
-    </div>
-    <ol class="notas">
-      <li><strong>Central, maio/26:</strong> o bloco financeiro de maio na planilha da central repete os valores de
-        referência de junho (meta e base 2025), o que sugere duplicação na planilha de origem. Os totais do semestre
-        que usam esses valores estão marcados com ¹ e valem conferência na planilha mãe antes de qualquer decisão fina.
-        Os demais meses conferem individualmente.</li>
-      <li><strong>Maceió, jan e fev de 2025:</strong> o motor de reservas da época teve problema e não registrou as vendas
-        do site. O crescimento de Maceió nesses meses não é comparável; por isso o total usa a comparação limpa de
-        março a junho: +180%.</li>
-      <li><strong>Julho/26:</strong> mês em andamento, com dados até 19/07 (Maceió) e 18/07 (Francês).
-        As comparações de julho usam o mês cheio de 2025, ou seja, o número final de 2026 tende a ficar ainda melhor.</li>
-      <li><strong>Mídia por plataforma:</strong> receita e retorno do Meta Ads seguem o pixel (compras no site,
-        janela de 7 dias após o clique e 1 dia após a visualização); os do Google Ads seguem a atribuição do próprio
-        Google (último clique), puxada pela campanha de marca. As duas réguas não se somam entre si nem com a
-        receita Volux, que segue sendo o número oficial do resultado. As reservas do Google contam só as conversões
-        de compra (390 no semestre); o total de conversões da conta (1.992) inclui ações intermediárias como carrinho
-        e checkout e registros sem valor, por isso não é usado. O ROAS de 2026 é comparado com o 1º semestre de 2025 na
-        mesma régua de compra; o rastreamento de conversões de 2025 era menos completo (motor de reservas em ajuste,
-        sobretudo em Maceió), então o crescimento vs 2025 é direcional e tende a estar superestimado, não o contrário.
-        O alcance do Meta é por conta, com sobreposição de público entre as unidades.</li>
-      <li><strong>GA4 (performance do site):</strong> usuários e sessões de 2025 estavam inflados por tráfego de
-        social de baixa qualidade (2 segundos de tempo médio); a queda de 2026 é a limpeza dessa base, e as métricas
-        de qualidade cresceram. A receita do GA4 segue a atribuição do próprio GA4 e não substitui a receita Volux.
-        Comparações usadas: mesmo período de 2025 (01/01 a 30/06/25) e semestre imediatamente anterior
-        (04/07 a 31/12/25).</li>
-      <li><strong>CRM:</strong> números do painel da ferramenta de CRM, duas unidades somadas, fornecidos em
-        21/07/26. A receita é atribuída pela própria ferramenta aos fluxos de e-mail e é uma régua independente:
-        não se soma à receita Volux nem à das plataformas de anúncio. Os percentuais de crescimento (+56% de
-        envios, +12% de abertura) seguem a comparação do próprio painel.</li>
-    </ol>
-  </section>
 
   <section class="glossary reveal">
     <div class="section-head">
@@ -867,9 +809,9 @@
     var max = h.scrollHeight - h.clientHeight;
     p.style.width = (max > 0 ? (h.scrollTop / max) * 100 : 0) + '%';
     totop.classList.toggle('show', h.scrollTop > 600);
-    var links = document.querySelectorAll('.nav a, .rail a');
+    var links = document.querySelectorAll('.nav a,.rail a');
     var current = '';
-    document.querySelectorAll('section[id], .exec[id], .part[id]').forEach(function(s){
+    document.querySelectorAll('section[id],.exec[id],.part[id]').forEach(function(s){
       if (h.scrollTop + 120 >= s.offsetTop) current = s.id;
     });
     links.forEach(function(a){ a.classList.toggle('active', a.getAttribute('href') === '#' + current); });
