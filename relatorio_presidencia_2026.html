@@ -197,14 +197,21 @@
   .orow .ov b { color:var(--escuro); }
   @media (max-width:600px) { .orow { grid-template-columns:96px 1fr; } .orow .ov { grid-column:1/-1; margin-top:-4px; } }
 
-  .statrow { display:grid; grid-template-columns:repeat(4,1fr); gap:1px; background:var(--line);
-    border:1px solid var(--line); border-radius:3px; overflow:hidden; margin:4px 0 26px; }
-  .stat { border:none; border-radius:0; padding:20px 18px; background:var(--ground); }
-  .stat b { font-family:'Playfair Display',serif; font-size:30px; color:var(--escuro); display:block; line-height:1.05; letter-spacing:-.02em; }
-  .stat b small { font-size:14px; color:var(--text2); font-weight:400; }
-  .stat span { font-size:11px; color:var(--text2); margin-top:9px; display:block; line-height:1.5; }
-  .stat.destacado { background:var(--surface); }
-  .stat.destacado b { color:var(--verde); }
+  .statrow { display:grid; grid-template-columns:repeat(4,1fr); gap:1px; background:#39463C;
+    border:none; border-radius:6px; overflow:hidden; margin:4px 0 26px;
+    box-shadow:0 18px 44px rgba(22,33,26,.16); }
+  .stat { border:none; border-radius:0; padding:22px 18px; background:var(--ink); position:relative; }
+  .stat::before { content:''; position:absolute; inset:0; pointer-events:none;
+    background:radial-gradient(320px 150px at 85% -20%, rgba(15,110,86,.35), transparent 70%); }
+  .stat > * { position:relative; }
+  .stat b { font-family:'Playfair Display',serif; font-size:30px; color:#EFEBE0; display:block; line-height:1.05; letter-spacing:-.02em; }
+  .stat b small { font-size:14px; color:#93a496; font-weight:400; }
+  .stat span { font-size:11px; color:#a7b3a8; margin-top:9px; display:block; line-height:1.5; }
+  .stat.destacado b { color:#8fe0c3; }
+  .statrow .krow .kl { color:#7d8a7f; }
+  .statrow .krow .ktrack { background:rgba(233,232,228,.13); }
+  .statrow .krow .kb { background:#6f8074; }
+  .statrow .krow .kb.now { background:#8fe0c3; }
 
   .insight { background:var(--surface); border:1px solid var(--line); border-left:3px solid var(--gold);
     border-radius:4px; padding:18px 22px; font-size:13.5px; color:#454f47; line-height:1.65; margin-top:24px; }
@@ -303,6 +310,11 @@
     .kpi::before { display:none; }
     .kpi-value { color:#1E3A2B; } .kpi-label, .kpi-meta, .kpi-value small { color:#555; }
     .kpi-delta.up { color:#0F6E56; }
+    .statrow { background:#fff; box-shadow:none; border:1px solid #ccc; }
+    .stat { background:#fff; }
+    .stat::before { display:none; }
+    .stat b { color:#1E3A2B; } .stat span, .stat b small { color:#555; }
+    .stat.destacado b { color:#0F6E56; }
     .nav, .totop, .progress, .rail { display:none !important; }
     body { background:#fff; }
     section, .hero, .exec, .kpi, .acard, .saldo-card { break-inside:avoid; box-shadow:none !important; }
