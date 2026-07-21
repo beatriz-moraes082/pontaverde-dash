@@ -182,6 +182,18 @@
 .entregas-list li { position:relative; padding-left:16px; font-size:12.8px; color:var(--text2); line-height:1.4; }
 .entregas-list li::before { content:''; position:absolute; left:0; top:7px; width:6px; height:6px; border-radius:2px; background:var(--verde); }
 .entregas-list li.hi { color:var(--escuro); font-weight:600; }
+  .rvd { display:grid; gap:16px; margin-top:8px; }
+  .rvd > div { display:flex; align-items:baseline; gap:9px; flex-wrap:wrap; }
+  .rvd-l { font-size:10px; letter-spacing:.12em; text-transform:uppercase; color:var(--text-mute); font-weight:700; width:100%; margin-bottom:-6px; }
+  .rvd b { font-family:'Playfair Display',serif; font-size:27px; color:var(--escuro); font-weight:600; letter-spacing:-.02em; }
+  .rvd em { font-style:normal; font-weight:700; font-size:12.5px; color:var(--ok); }
+  .info3 { display:grid; grid-template-columns:repeat(3,1fr); gap:14px; margin-top:14px; }
+  .infocard { background:var(--surface); border:1px solid var(--line); border-radius:4px; padding:20px 22px; }
+  .infocard h4 { margin:0 0 6px; font-family:'Playfair Display',serif; font-size:15.5px; color:var(--escuro); font-weight:700; }
+  .entregas-list .sub2 { list-style:none; margin:6px 0 0 2px; padding:0; display:grid; gap:5px; }
+  .entregas-list .sub2 li { padding-left:14px; font-size:12px; color:var(--text-mute); }
+  .entregas-list .sub2 li::before { content:"–"; left:0; top:0; background:none; color:var(--text-mute); width:auto; height:auto; }
+  @media (max-width:960px){ .info3 { grid-template-columns:1fr; } }
 
 .statrow.cols5 { grid-template-columns:repeat(5,1fr); }
   @media (max-width:960px) {.statrow.cols5 { grid-template-columns:repeat(2,1fr); } }
@@ -359,24 +371,24 @@
 <nav class="nav">
   <span class="brand">PONTA VERDE · 2026</span>
   <a href="#resumo">Resumo</a>
-  <a href="#aquisicao">Aquisição de clientes</a>
-  <a href="#resultados">Resultados do site</a>
-  <a href="#central">Central de vendas</a>
+  <a href="#aquisicao">Performance e eficiência</a>
+  <a href="#resultados">Geração de demanda</a>
+  <a href="#central">Central</a>
   <a href="#crm">CRM</a>
+  <a href="#redes">Redes Sociais</a>
   <a href="#entregas">Entregas</a>
   <a href="#proximo">Próximo semestre</a>
-  <a href="#fontes">Fontes</a>
 </nav>
 
 <div class="rail" aria-hidden="false">
   <a href="#resumo"><i></i><b>Resumo</b></a>
-  <a href="#aquisicao"><i></i><b>Aquisição de clientes</b></a>
-  <a href="#resultados"><i></i><b>Resultados do site</b></a>
-  <a href="#central"><i></i><b>Central de vendas</b></a>
+  <a href="#aquisicao"><i></i><b>Performance e eficiência</b></a>
+  <a href="#resultados"><i></i><b>Geração de demanda</b></a>
+  <a href="#central"><i></i><b>Central</b></a>
   <a href="#crm"><i></i><b>CRM</b></a>
+  <a href="#redes"><i></i><b>Redes Sociais</b></a>
   <a href="#entregas"><i></i><b>Entregas</b></a>
   <a href="#proximo"><i></i><b>Próximo semestre</b></a>
-  <a href="#fontes"><i></i><b>Fontes</b></a>
 </div>
 
 <div class="wrap">
@@ -404,17 +416,43 @@
     <p style="margin:0; font-size:15px; color:#39423a; line-height:1.68;">Os resultados apresentados refletem esse trabalho e sustentam os projetos que estão em andamento para o segundo semestre.</p>
   </div>
 
-  <div class="part reveal" id="aquisicao"><span class="part-n">01</span><h2>Aquisição de clientes</h2></div>
+  <div class="part reveal" id="aquisicao"><span class="part-n">01</span><h2>Performance e eficiência</h2></div>
   <section id="midia" class="reveal">
     <div class="section-head">
-      <h2>Google Ads e Meta Ads</h2>
-      <div class="meta">Mídia paga · jan a jun 2026 · fonte: plataformas de anúncio</div>
+      <h2>Performance e eficiência</h2>
+      <div class="meta">Mídia paga · jan a jun 2026 · vs 2025</div>
     </div>
     <p class="lead">Foram <strong>65 campanhas veiculadas no primeiro semestre</strong> nas duas plataformas,
       abastecendo o site e a central de vendas das duas unidades. Os números abaixo vêm direto das contas de
       anúncio; receita e retorno por plataforma seguem a atribuição de cada uma e não se somam.</p>
 
-    <div class="unit-title">Meta Ads</div>
+    <div class="unit-title">Mídia paga · total Google + Meta</div>
+    <div class="statrow" style="grid-template-columns:repeat(3,1fr);">
+      <div class="stat"><b>15,7 <small>mi</small></b><span>impressões no semestre · -20% vs 2025 (Google + Meta)</span></div>
+      <div class="stat destacado"><b>393,6 <small>mil</small></b><span>cliques no semestre · +6% vs 2025 (Google + Meta)</span></div>
+      <div class="stat"><b>2,9 <small>mi</small></b><span>de alcance · -28% vs 2025 (Meta; o Google não reporta alcance)</span></div>
+    </div>
+    <p class="sub" style="margin:-14px 0 0;">Menos impressões e alcance, mais cliques: mídia mais enxuta e qualificada que em 2025.</p>
+
+    <div class="unit-title" style="margin-top:28px">Receita venda direta e retorno, por unidade</div>
+    <div class="saldo-grid">
+      <div class="saldo-card">
+        <div class="saldo-head"><span class="u">Ponta Verde Maceió</span></div>
+        <div class="rvd">
+          <div><span class="rvd-l">Receita venda direta</span><b>R$ 4.216.052</b> <em>+61,2%</em></div>
+          <div><span class="rvd-l">ROAS</span><b>R$ 104,78</b> <em>+1,66%</em></div>
+        </div>
+      </div>
+      <div class="saldo-card">
+        <div class="saldo-head"><span class="u">Ponta Verde Praia do Francês</span></div>
+        <div class="rvd">
+          <div><span class="rvd-l">Receita venda direta</span><b>R$ 5.084.427</b> <em>+10,7%</em></div>
+          <div><span class="rvd-l">ROAS</span><b>R$ 152,84</b> <em>+48,06%</em></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="unit-title" style="margin-top:28px">Meta Ads</div>
     <div class="statrow">
       <div class="stat destacado"><b>R$ 3,24</b><span>de retorno por R$ 1 investido (ROAS) · +40% vs 2025 · Maceió 2,53 · Francês 4,03</span></div>
       <div class="stat"><b>209</b><span>reservas geradas pelo site · +171% vs 2025 · 73 em Maceió · 136 no Francês</span></div>
@@ -488,7 +526,7 @@
       aqui porque as peças dos próximos meses são produzidas com antecedência.</p>
   </section>
 
-  <div class="part reveal" id="resultados"><span class="part-n">02</span><h2>Resultados do site</h2></div>
+  <div class="part reveal" id="resultados"><span class="part-n">02</span><h2>Geração de demanda</h2></div>
   <p class="pull reveal">Os sites de Maceió e do Francês vendem, <em>juntos, 67% mais</em> que em 2025.</p>
   <p class="lead reveal" style="margin-top:14px;">O site manteve crescimento consistente como segundo canal de vendas
     diretas, seguindo a estratégia de reduzir a dependência de canais intermediários.</p>
@@ -531,6 +569,12 @@
       A linha do ChatGPT é um recorte por IA, já contido nos canais acima (não somado): foram exatamente
       <strong>1.398 usuários e R$ 29.949,74 de receita</strong> no semestre (atribuição GA4), com o medium próprio
       "ai-assistant" acelerando (480 usuários só nos últimos 28 dias).</p>
+
+    <div class="unit-title" style="margin-top:28px">Taxa de conversão do site, por unidade</div>
+    <div class="statrow" style="grid-template-columns:repeat(2,1fr);">
+      <div class="stat"><b>1,68%</b><span>taxa de conversão do site · Ponta Verde Maceió · média fev a jun</span></div>
+      <div class="stat"><b>1,44%</b><span>taxa de conversão do site · Praia do Francês · média fev a jun</span></div>
+    </div>
   </section>
 
   <section id="ano" class="reveal">
@@ -639,7 +683,64 @@
     </div>
   </section>
 
-  <div class="part reveal" id="entregas"><span class="part-n">04</span><h2>Principais entregas do semestre</h2></div>
+  <div class="part reveal" id="redes"><span class="part-n">04</span><h2>Redes Sociais · orgânico</h2></div>
+  <section id="redes-dados" class="reveal">
+    <div class="section-head">
+      <h2>O alcance orgânico cresceu forte</h2>
+      <div class="meta">Instagram e Facebook · orgânico · jan a jun 2026 · vs 2025</div>
+    </div>
+    <div class="saldo-grid">
+      <div class="saldo-card">
+        <div class="saldo-head"><span class="u">Ponta Verde Praia do Francês</span><span class="tot">24% <small style="font-size:12px;color:var(--text-soft);font-family:'Inter',sans-serif;">engajamento · +60%</small></span></div>
+        <ul class="entregas-list">
+          <li>Impressões 7.684.903 · +51%</li>
+          <li>Alcance 640.416 · +91,37%</li>
+          <li>Posts criados 874 · +21,62%</li>
+          <li>Interações 80.473 · +32,40%</li>
+        </ul>
+      </div>
+      <div class="saldo-card">
+        <div class="saldo-head"><span class="u">Ponta Verde Maceió</span><span class="tot">33,74% <small style="font-size:12px;color:var(--text-soft);font-family:'Inter',sans-serif;">engajamento · +34,8%</small></span></div>
+        <ul class="entregas-list">
+          <li>Impressões 10.117.753 · +97,12%</li>
+          <li>Alcance 1.674.923 · +97,12%</li>
+          <li>Posts criados 911 · +16,68%</li>
+          <li>Interações 148.214 · +139,35%</li>
+        </ul>
+      </div>
+    </div>
+    <div class="info3">
+      <div class="infocard">
+        <h4>Institucional</h4>
+        <ul class="entregas-list">
+          <li>Impressões 11.295 · +19,1%</li>
+          <li>Visitantes únicos 766 · +70,6%</li>
+          <li>Novos seguidores 383 · +64,4%</li>
+        </ul>
+      </div>
+      <div class="infocard">
+        <h4>Na Praia do Francês</h4>
+        <p class="sub" style="margin:0 0 8px;">*criado em fevereiro</p>
+        <ul class="entregas-list">
+          <li>Impressões 26.100</li>
+          <li>Contas alcançadas 14.700</li>
+          <li>Seguidores 339</li>
+        </ul>
+      </div>
+      <div class="infocard">
+        <h4>Fateixa</h4>
+        <ul class="entregas-list">
+          <li>Impressões 1.213.754</li>
+          <li>Alcance 310.800</li>
+          <li>Posts criados 188</li>
+          <li>Interações 4.900</li>
+        </ul>
+      </div>
+    </div>
+    <p class="sub" style="margin-top:12px">Dados de redes sociais orgânicas fornecidos pela equipe, total do semestre por perfil.</p>
+  </section>
+
+  <div class="part reveal" id="entregas"><span class="part-n">05</span><h2>Principais entregas do semestre</h2></div>
   <section id="fizemos" class="reveal">
     <div class="section-head">
       <h2>O que já fizemos em 2026</h2>
@@ -652,8 +753,6 @@
         <ul class="entregas-list">
           <li>Novas campanhas</li>
           <li>Otimizações de mídia</li>
-          <li>SEO</li>
-          <li>GEO</li>
           <li>Traqueamento do zero</li>
         </ul>
       </div>
@@ -673,24 +772,33 @@
           <li>Melhorias em textos</li>
           <li>Projeto novo site</li>
           <li>Páginas do Francês e surf</li>
-          <li>Conversão</li>
+          <li>Melhora na conversão</li>
         </ul>
       </div>
       <div class="acard">
         <div class="ic">📱</div>
         <h4>Conteúdo</h4>
         <ul class="entregas-list">
-          <li>Calendário</li>
-          <li>Campanhas</li>
+          <li>Calendário editorial</li>
           <li>Institucional</li>
+          <li>Perfil @napraiadofrancês</li>
           <li class="hi">90 mil seguidores no PVF</li>
           <li class="hi">100 mil seguidores no PVM</li>
+          <li>GEO</li>
+          <li>Quadros nas redes:
+            <ul class="sub2">
+              <li>sua criança no PVM</li>
+              <li>Viva Maceió</li>
+              <li>Um dia com o colaborador X</li>
+              <li>Descubra a Praia do Francês</li>
+            </ul>
+          </li>
         </ul>
       </div>
     </div>
   </section>
 
-  <div class="part reveal" id="proximo"><span class="part-n">05</span><h2>Próximo semestre: projetos e prioridades</h2></div>
+  <div class="part reveal" id="proximo"><span class="part-n">06</span><h2>Próximo semestre: projetos e prioridades</h2></div>
   <section id="fazendo" class="reveal">
     <div class="section-head">
       <h2>O que estamos fazendo agora</h2>
@@ -728,6 +836,13 @@
       <li>fortalecer o CRM</li>
       <li>otimizar mídias com foco em baixa de CAC e aumento de ROAS</li>
       <li>intencionalidade em GEO - indicação por IA - conteúdo orgânico</li>
+    </ul>
+    <div class="unit-title" style="margin-top:26px">Projetos e ações em andamento</div>
+    <ul class="lead-list">
+      <li>Surf</li>
+      <li>Novo site</li>
+      <li>Antecipação verão</li>
+      <li>Antecipação carnaval</li>
     </ul>
     <div class="insight ok">
       Mais do que executar campanhas, o foco do marketing é fortalecer ativos próprios, ampliar a receita dos
