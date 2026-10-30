@@ -8916,7 +8916,7 @@
 "nome": "25 - 65 | Cidades com voo direto (raio 40km) | IG | LookaLike 1% Mensagem 180D",
 "campanha": "Fundo de Funil | Mensagem/WhatsApp | Dezembro | 31/08/26",
 "nivel": "conjunto",
-"desc": "Localização: Brasil: Salvador (+25 mi) Bahia; Brasília (+25 mi) Federal District; Belo Horizonte (+25 mi) Minas Gerais; Rio de Janeiro (+25 mi) Rio de Janeiro (state); Campinas (+25 mi), São Paulo (+25 mi) São Paulo (state); Goiânia (+25 mi) Goiás; Recife (+25 | Otimizar localizações: Desativado | Posicionamentos: nas páginas: Feed do Instagram, Instagram Stories, Feed do perfil do Instagram ou Instagram Reels | Excluir localização: removido",
+"desc": "Localização: Brasil: Salvador (+25 mi) Bahia; Brasília (+25 mi) Federal District; Belo Horizonte (+25 mi) Minas Gerais; Rio de Janeiro, Rio de Janeiro (+25 mi) Rio de Janeiro (state); Campinas, Sao Paulo (+25 mi), São Paulo (+25 mi) São Paulo (state); Goiânia  | Otimizar localizações: Desativado | Posicionamentos: nas páginas: Feed do Instagram, Instagram Stories, Feed do perfil do Instagram ou Instagram Reels | Excluir localização: removido",
 "unidade": "Maceió",
 "canal": "Meta",
 "quando": "2026-10-27 15:06",
@@ -144259,8 +144259,8 @@
 }
 },
 "coleta": {
-"meta": "2026-10-30T09:59-03:00",
-"google": "2026-10-30T09:59-03:00"
+"meta": "2026-10-30T10:01-03:00",
+"google": "2026-10-30T10:01-03:00"
 },
 "google_desde": "2026-10-01",
 "meta_desde": "2026-10-28"
