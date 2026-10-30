@@ -3,6 +3,555 @@
 {
 "tipo": "status",
 "cat": "Pausas e ativações",
+"obj": "52588062911500",
+"nome": "F6 | VD05 | Janeiro | Motor 15-17/01",
+"campanha": "Fundo de Funil | Vendas/Site | Ongoing | 24/03/26",
+"nivel": "anúncio",
+"de": null,
+"para": "on",
+"unidade": "Francês",
+"canal": "Meta",
+"quando": "2026-10-30 11:45",
+"id": "9110bc21c8bfcbbf",
+"trilha": false
+},
+{
+"tipo": "status",
+"cat": "Pausas e ativações",
+"obj": "52588062869700",
+"nome": "F6 | BN02 | Novembro | Motor 17-19/11",
+"campanha": "Fundo de Funil | Vendas/Site | Ongoing | 24/03/26",
+"nivel": "anúncio",
+"de": null,
+"para": "on",
+"unidade": "Francês",
+"canal": "Meta",
+"quando": "2026-10-30 11:45",
+"id": "d37edd87ac32c573",
+"trilha": false
+},
+{
+"tipo": "status",
+"cat": "Pausas e ativações",
+"obj": "52588061935700",
+"nome": "F6 | VD01 | Dezembro | Motor 11-13/12",
+"campanha": "Fundo de Funil | Vendas/Site | Ongoing | 24/03/26",
+"nivel": "anúncio",
+"de": null,
+"para": "on",
+"unidade": "Francês",
+"canal": "Meta",
+"quando": "2026-10-30 11:41",
+"id": "19061ef86307b666",
+"trilha": false
+},
+{
+"tipo": "novo_anuncio",
+"cat": "Criativos",
+"obj": "52588062869700",
+"nome": "F6 | BN02 | Novembro | Motor 17-19/11",
+"campanha": "Fundo de Funil | Vendas/Site | Ongoing | 24/03/26",
+"nivel": "anúncio",
+"unidade": "Francês",
+"canal": "Meta",
+"quando": "2026-10-30 11:38",
+"id": "aa45cf1f9cbcc086",
+"trilha": true
+},
+{
+"tipo": "novo_anuncio",
+"cat": "Criativos",
+"obj": "52588062911500",
+"nome": "F6 | VD05 | Janeiro | Motor 15-17/01",
+"campanha": "Fundo de Funil | Vendas/Site | Ongoing | 24/03/26",
+"nivel": "anúncio",
+"unidade": "Francês",
+"canal": "Meta",
+"quando": "2026-10-30 11:38",
+"id": "3955c8a4a369ce9b",
+"trilha": true
+},
+{
+"tipo": "status",
+"cat": "Pausas e ativações",
+"obj": "52588061905100",
+"nome": "25+ | Semelhante 1% Suítes | SP DF GO MG",
+"campanha": "Fundo de Funil | Vendas/Site | Ongoing | 24/03/26",
+"nivel": "conjunto",
+"de": null,
+"para": "on",
+"unidade": "Francês",
+"canal": "Meta",
+"quando": "2026-10-30 11:35",
+"id": "e2a71674872fe042",
+"trilha": true
+},
+{
+"tipo": "novo_anuncio",
+"cat": "Criativos",
+"obj": "52588061935700",
+"nome": "F6 | VD01 | Dezembro | Motor 11-13/12",
+"campanha": "Fundo de Funil | Vendas/Site | Ongoing | 24/03/26",
+"nivel": "anúncio",
+"unidade": "Francês",
+"canal": "Meta",
+"quando": "2026-10-30 11:35",
+"id": "648247010f99c3b2",
+"trilha": true
+},
+{
+"tipo": "novo_conjunto",
+"cat": "Estrutura",
+"obj": "52588061905100",
+"nome": "25+ | Semelhante 1% Suítes | SP DF GO MG",
+"campanha": "Fundo de Funil | Vendas/Site | Ongoing | 24/03/26",
+"nivel": "conjunto",
+"unidade": "Francês",
+"canal": "Meta",
+"quando": "2026-10-30 11:34",
+"id": "44e10640c5500a34",
+"trilha": true
+},
+{
+"tipo": "status",
+"cat": "Pausas e ativações",
+"obj": "52588060462900",
+"nome": "F6 | BN01 | Reveillon",
+"campanha": "Fundo de Funil | Mensagem/WhatsApp | Dezembro | 31/08/26",
+"nivel": "anúncio",
+"de": null,
+"para": "on",
+"unidade": "Francês",
+"canal": "Meta",
+"quando": "2026-10-30 11:31",
+"id": "6927b06373e69c0f",
+"trilha": false
+},
+{
+"tipo": "status",
+"cat": "Pausas e ativações",
+"obj": "52588060449100",
+"nome": "F6 | VD01 | Dezembro",
+"campanha": "Fundo de Funil | Mensagem/WhatsApp | Dezembro | 31/08/26",
+"nivel": "anúncio",
+"de": null,
+"para": "on",
+"unidade": "Francês",
+"canal": "Meta",
+"quando": "2026-10-30 11:27",
+"id": "431686acb925926e",
+"trilha": false
+},
+{
+"tipo": "status",
+"cat": "Pausas e ativações",
+"obj": "52588060475700",
+"nome": "F6 | VD01 | Natal (Dezembro)",
+"campanha": "Fundo de Funil | Mensagem/WhatsApp | Dezembro | 31/08/26",
+"nivel": "anúncio",
+"de": null,
+"para": "on",
+"unidade": "Francês",
+"canal": "Meta",
+"quando": "2026-10-30 11:27",
+"id": "6f4a3fa198e59793",
+"trilha": false
+},
+{
+"tipo": "status",
+"cat": "Pausas e ativações",
+"obj": "52573280950300",
+"nome": "25+ | IG | BR | LookaLike 2% Purchase 730D",
+"campanha": "Fundo de Funil | Mensagem/WhatsApp | Dezembro | 31/08/26",
+"nivel": "conjunto",
+"de": "off",
+"para": "on",
+"unidade": "Francês",
+"canal": "Meta",
+"quando": "2026-10-30 11:25",
+"id": "8bfe6418b447aa3b",
+"trilha": true
+},
+{
+"tipo": "status",
+"cat": "Pausas e ativações",
+"obj": "52588060433300",
+"nome": "25+ | Semelhante 1% Suítes | SP DF GO MG",
+"campanha": "Fundo de Funil | Mensagem/WhatsApp | Dezembro | 31/08/26",
+"nivel": "conjunto",
+"de": null,
+"para": "on",
+"unidade": "Francês",
+"canal": "Meta",
+"quando": "2026-10-30 11:25",
+"id": "65b4e161b11f54ff",
+"trilha": true
+},
+{
+"tipo": "status",
+"cat": "Pausas e ativações",
+"obj": "52587370945500",
+"nome": "25 - 65 | Cidades com voo direto (raio 40km) | IG | LookaLike 1% Mensagem 180D",
+"campanha": "Fundo de Funil | Mensagem/WhatsApp | Dezembro | 31/08/26",
+"nivel": "conjunto",
+"de": "on",
+"para": "off",
+"unidade": "Francês",
+"canal": "Meta",
+"quando": "2026-10-30 11:25",
+"id": "e56bbcb30465b754",
+"trilha": true
+},
+{
+"tipo": "status",
+"cat": "Pausas e ativações",
+"obj": "52580846310500",
+"nome": "25 - 65 | BR | IG | LookaLike 1% Mensagem 180D",
+"campanha": "Fundo de Funil | Mensagem/WhatsApp | Dezembro | 31/08/26",
+"nivel": "conjunto",
+"de": "on",
+"para": "off",
+"unidade": "Francês",
+"canal": "Meta",
+"quando": "2026-10-30 11:25",
+"id": "ad241cd9a0368902",
+"trilha": true
+},
+{
+"tipo": "novo_anuncio",
+"cat": "Criativos",
+"obj": "52588060475700",
+"nome": "F6 | VD01 | Natal (Dezembro)",
+"campanha": "Fundo de Funil | Mensagem/WhatsApp | Dezembro | 31/08/26",
+"nivel": "anúncio",
+"unidade": "Francês",
+"canal": "Meta",
+"quando": "2026-10-30 11:25",
+"id": "22f1937c72d009e9",
+"trilha": true
+},
+{
+"tipo": "novo_anuncio",
+"cat": "Criativos",
+"obj": "52588060449100",
+"nome": "F6 | VD01 | Dezembro",
+"campanha": "Fundo de Funil | Mensagem/WhatsApp | Dezembro | 31/08/26",
+"nivel": "anúncio",
+"unidade": "Francês",
+"canal": "Meta",
+"quando": "2026-10-30 11:25",
+"id": "ea28d0becc4c8556",
+"trilha": true
+},
+{
+"tipo": "novo_anuncio",
+"cat": "Criativos",
+"obj": "52588060462900",
+"nome": "F6 | BN01 | Reveillon",
+"campanha": "Fundo de Funil | Mensagem/WhatsApp | Dezembro | 31/08/26",
+"nivel": "anúncio",
+"unidade": "Francês",
+"canal": "Meta",
+"quando": "2026-10-30 11:25",
+"id": "204503522afe8409",
+"trilha": true
+},
+{
+"tipo": "novo_conjunto",
+"cat": "Estrutura",
+"obj": "52588060433300",
+"nome": "25+ | Semelhante 1% Suítes | SP DF GO MG",
+"campanha": "Fundo de Funil | Mensagem/WhatsApp | Dezembro | 31/08/26",
+"nivel": "conjunto",
+"unidade": "Francês",
+"canal": "Meta",
+"quando": "2026-10-30 11:25",
+"id": "fd00655c212744aa",
+"trilha": true
+},
+{
+"tipo": "novo_publico",
+"cat": "Públicos e segmentação",
+"obj": "52588060371100",
+"nome": "Semelhante (BR, 1%) - Hóspedes Suítes Francês | Jan-Set 2026",
+"campanha": "",
+"nivel": "público",
+"unidade": "Francês",
+"canal": "Meta",
+"quando": "2026-10-30 11:23",
+"id": "1058c5d6be2ce220",
+"trilha": true
+},
+{
+"tipo": "novo_publico",
+"cat": "Públicos e segmentação",
+"obj": "52588060388500",
+"nome": "Lookalike (BR) - Hóspedes Suítes Francês | Jan-Set 2026",
+"campanha": "",
+"nivel": "público",
+"unidade": "Francês",
+"canal": "Meta",
+"quando": "2026-10-30 11:23",
+"id": "b8d9d7250e3f0170",
+"trilha": true
+},
+{
+"tipo": "novo_publico",
+"cat": "Públicos e segmentação",
+"obj": "52588060378700",
+"nome": "Lookalike (BR, 1%) - Hóspedes Suítes Francês | Jan-Set 2026",
+"campanha": "",
+"nivel": "público",
+"unidade": "Francês",
+"canal": "Meta",
+"quando": "2026-10-30 11:23",
+"id": "66f7739e615ac771",
+"trilha": true
+},
+{
+"tipo": "novo_publico",
+"cat": "Públicos e segmentação",
+"obj": "52588060376700",
+"nome": "Lookalike () - Hóspedes Suítes Francês | Jan-Set 2026",
+"campanha": "",
+"nivel": "público",
+"unidade": "Francês",
+"canal": "Meta",
+"quando": "2026-10-30 11:23",
+"id": "15dfc61964eb2ecc",
+"trilha": true
+},
+{
+"tipo": "novo_publico",
+"cat": "Públicos e segmentação",
+"obj": "52588060283500",
+"nome": "Hóspedes Suítes Francês | Jan-Set 2026",
+"campanha": "",
+"nivel": "público",
+"unidade": "Francês",
+"canal": "Meta",
+"quando": "2026-10-30 11:22",
+"id": "874818b2692506f5",
+"trilha": true
+},
+{
+"tipo": "status",
+"cat": "Pausas e ativações",
+"obj": "120251386412970429",
+"nome": "MCZ | VD01 | Early Booking (Novembro)",
+"campanha": "Fundo de Funil | Mensagem/WhatsApp | Novembro | 17/08",
+"nivel": "anúncio",
+"de": null,
+"para": "on",
+"unidade": "Maceió",
+"canal": "Meta",
+"quando": "2026-10-30 11:07",
+"id": "8f7845ad91f8827c",
+"trilha": false
+},
+{
+"tipo": "status",
+"cat": "Pausas e ativações",
+"obj": "52588055456300",
+"nome": "F6 | VD03 | Ongoing (Novembro)",
+"campanha": "Fundo de Funil | Mensagem/WhatsApp | Novembro | 17/08",
+"nivel": "anúncio",
+"de": null,
+"para": "on",
+"unidade": "Francês",
+"canal": "Meta",
+"quando": "2026-10-30 11:07",
+"id": "ea6e569fee084f0f",
+"trilha": false
+},
+{
+"tipo": "status",
+"cat": "Pausas e ativações",
+"obj": "120251386407170429",
+"nome": "25+ | Regional de carro | SE BA PE PB RN",
+"campanha": "Fundo de Funil | Mensagem/WhatsApp | Novembro | 17/08",
+"nivel": "conjunto",
+"de": null,
+"para": "on",
+"unidade": "Maceió",
+"canal": "Meta",
+"quando": "2026-10-30 11:00",
+"id": "d0979bef05b832b6",
+"trilha": true
+},
+{
+"tipo": "segmentacao",
+"cat": "Públicos e segmentação",
+"obj": "120251386407170429",
+"nome": "25+ | Regional de carro | SE BA PE PB RN",
+"campanha": "Fundo de Funil | Mensagem/WhatsApp | Novembro | 17/08",
+"nivel": "conjunto",
+"desc": "Público personalizado: Semelhante (2%) - Hóspedes Maceió | Nov 2025",
+"unidade": "Maceió",
+"canal": "Meta",
+"quando": "2026-10-30 11:00",
+"id": "c8e7c9a662dac7be",
+"trilha": true
+},
+{
+"tipo": "status",
+"cat": "Pausas e ativações",
+"obj": "120251386407170429",
+"nome": "25+ | Regional de carro | SE BA PE PB RN",
+"campanha": "Fundo de Funil | Mensagem/WhatsApp | Novembro | 17/08",
+"nivel": "conjunto",
+"de": "on",
+"para": null,
+"unidade": "Maceió",
+"canal": "Meta",
+"quando": "2026-10-30 11:00",
+"id": "481a6a57a8fd25dc",
+"trilha": true
+},
+{
+"tipo": "status",
+"cat": "Pausas e ativações",
+"obj": "52588055410500",
+"nome": "24+ | Regional de carro | SE BA PE PB RN",
+"campanha": "Fundo de Funil | Mensagem/WhatsApp | Novembro | 17/08",
+"nivel": "conjunto",
+"de": null,
+"para": "on",
+"unidade": "Francês",
+"canal": "Meta",
+"quando": "2026-10-30 11:00",
+"id": "0664a83de0f397ed",
+"trilha": true
+},
+{
+"tipo": "segmentacao",
+"cat": "Públicos e segmentação",
+"obj": "52588055410500",
+"nome": "24+ | Regional de carro | SE BA PE PB RN",
+"campanha": "Fundo de Funil | Mensagem/WhatsApp | Novembro | 17/08",
+"nivel": "conjunto",
+"desc": "Público personalizado: Semelhante (2%) - Hóspedes Francês | Nov 2025",
+"unidade": "Francês",
+"canal": "Meta",
+"quando": "2026-10-30 11:00",
+"id": "d0a8929a072e2257",
+"trilha": true
+},
+{
+"tipo": "status",
+"cat": "Pausas e ativações",
+"obj": "52588055410500",
+"nome": "24+ | Regional de carro | SE BA PE PB RN",
+"campanha": "Fundo de Funil | Mensagem/WhatsApp | Novembro | 17/08",
+"nivel": "conjunto",
+"de": "on",
+"para": null,
+"unidade": "Francês",
+"canal": "Meta",
+"quando": "2026-10-30 11:00",
+"id": "e24c6599f90420cf",
+"trilha": true
+},
+{
+"tipo": "status",
+"cat": "Pausas e ativações",
+"obj": "120251386407170429",
+"nome": "25+ | Regional de carro | SE BA PE PB RN",
+"campanha": "Fundo de Funil | Mensagem/WhatsApp | Novembro | 17/08",
+"nivel": "conjunto",
+"de": "off",
+"para": "on",
+"unidade": "Maceió",
+"canal": "Meta",
+"quando": "2026-10-30 10:57",
+"id": "d5c0765d6bf1f666",
+"trilha": true
+},
+{
+"tipo": "status",
+"cat": "Pausas e ativações",
+"obj": "52588055410500",
+"nome": "24+ | Regional de carro | SE BA PE PB RN",
+"campanha": "Fundo de Funil | Mensagem/WhatsApp | Novembro | 17/08",
+"nivel": "conjunto",
+"de": null,
+"para": "on",
+"unidade": "Francês",
+"canal": "Meta",
+"quando": "2026-10-30 10:57",
+"id": "1daa1cd0ab7265f2",
+"trilha": true
+},
+{
+"tipo": "novo_anuncio",
+"cat": "Criativos",
+"obj": "52588055456300",
+"nome": "F6 | VD03 | Ongoing (Novembro)",
+"campanha": "Fundo de Funil | Mensagem/WhatsApp | Novembro | 17/08",
+"nivel": "anúncio",
+"unidade": "Francês",
+"canal": "Meta",
+"quando": "2026-10-30 10:57",
+"id": "e0412df2323a4dd6",
+"trilha": true
+},
+{
+"tipo": "novo_conjunto",
+"cat": "Estrutura",
+"obj": "52588055410500",
+"nome": "24+ | Regional de carro | SE BA PE PB RN",
+"campanha": "Fundo de Funil | Mensagem/WhatsApp | Novembro | 17/08",
+"nivel": "conjunto",
+"unidade": "Francês",
+"canal": "Meta",
+"quando": "2026-10-30 10:57",
+"id": "6c82466c33a7903b",
+"trilha": true
+},
+{
+"tipo": "status",
+"cat": "Pausas e ativações",
+"obj": "120251386407170429",
+"nome": "25+ | Regional de carro | SE BA PE PB RN",
+"campanha": "Fundo de Funil | Mensagem/WhatsApp | Novembro | 17/08",
+"nivel": "conjunto",
+"de": null,
+"para": "off",
+"unidade": "Maceió",
+"canal": "Meta",
+"quando": "2026-10-30 10:56",
+"id": "9016d8308cff2a22",
+"trilha": true
+},
+{
+"tipo": "novo_anuncio",
+"cat": "Criativos",
+"obj": "120251386412970429",
+"nome": "MCZ | VD01 | Early Booking (Novembro)",
+"campanha": "Fundo de Funil | Mensagem/WhatsApp | Novembro | 17/08",
+"nivel": "anúncio",
+"unidade": "Maceió",
+"canal": "Meta",
+"quando": "2026-10-30 10:56",
+"id": "0491c59a9fa7ef2f",
+"trilha": true
+},
+{
+"tipo": "novo_conjunto",
+"cat": "Estrutura",
+"obj": "120251386407170429",
+"nome": "25+ | Regional de carro | SE BA PE PB RN",
+"campanha": "Fundo de Funil | Mensagem/WhatsApp | Novembro | 17/08",
+"nivel": "conjunto",
+"unidade": "Maceió",
+"canal": "Meta",
+"quando": "2026-10-30 10:56",
+"id": "9b6ba58fb8d4d250",
+"trilha": true
+},
+{
+"tipo": "status",
+"cat": "Pausas e ativações",
 "obj": "120250383858150429",
 "nome": "MCZ | BN06 | Dezembro",
 "campanha": "Fundo de Funil | Vendas | Ongoing | 03/03/26",
@@ -142841,6 +143390,7 @@
 "mapas": {
 "MACEIO": {
 "conjunto": {
+"120251386407170429": "Fundo de Funil | Mensagem/WhatsApp | Novembro | 17/08",
 "120251367018370429": "Fundo de Funil | Mensagem/WhatsApp | Fevereiro | 29/10",
 "120251367018360429": "Fundo de Funil | Mensagem/WhatsApp | Fevereiro | 29/10",
 "120251367018350429": "Fundo de Funil | Mensagem/WhatsApp | Fevereiro | 29/10",
@@ -143275,6 +143825,7 @@
 "120200323836940429": "HPV | MCZ | Verão 24 | HOT | RMKT | Gastronomia | Localização | Quartos | CONV. ADD TO CART | | 2023-09-13"
 },
 "anuncio": {
+"120251386412970429": "120251386407170429",
 "120250383858150429": "120249717769230429",
 "120250383858510429": "120244760107080429",
 "120251384953400429": "120249717769230429",
@@ -145396,6 +145947,9 @@
 },
 "FRANCES": {
 "conjunto": {
+"52588061905100": "Fundo de Funil | Vendas/Site | Ongoing | 24/03/26",
+"52588060433300": "Fundo de Funil | Mensagem/WhatsApp | Dezembro | 31/08/26",
+"52588055410500": "Fundo de Funil | Mensagem/WhatsApp | Novembro | 17/08",
 "52587881004500": "Fundo de Funil | Mensagem/WhatsApp | Fevereiro | 29/10",
 "52587880992900": "Fundo de Funil | Mensagem/WhatsApp | Fevereiro | 29/10",
 "52587880972900": "Fundo de Funil | Mensagem/WhatsApp | Fevereiro | 29/10",
@@ -146324,6 +146878,13 @@
 "6085801424096": "aniversário sp"
 },
 "anuncio": {
+"52588062911500": "52588061905100",
+"52588062869700": "52588061905100",
+"52588061935700": "52588061905100",
+"52588060462900": "52588060433300",
+"52588060449100": "52588060433300",
+"52588060475700": "52588060433300",
+"52588055456300": "52588055410500",
 "52588033836700": "52569753887700",
 "52580661016300": "52569753887700",
 "52580661044100": "52569753887700",
@@ -150572,9 +151133,1605 @@
 }
 },
 "coleta": {
-"meta": "2026-10-30T10:43-03:00",
-"google": "2026-10-30T10:43-03:00"
+"meta": "2026-10-30T12:09-03:00",
+"google": "2026-10-30T12:09-03:00",
+"clickup": "2026-10-30T12:10-03:00"
 },
 "google_desde": "2026-10-01",
-"meta_desde": "2026-01-01"
+"meta_desde": "2026-01-01",
+"briefings": [
+{
+"u": "Maceió",
+"n": "E-mail: Pré e pós Carnaval",
+"s": "produção",
+"tipo": null,
+"criado": "2026-10-30",
+"prazo": "2026-11-03",
+"feito": null
+},
+{
+"u": "Francês",
+"n": "E-mail: Pré e pós Carnaval",
+"s": "produção",
+"tipo": null,
+"criado": "2026-10-30",
+"prazo": "2026-11-03",
+"feito": null
+},
+{
+"u": "Francês",
+"n": "Fevereiro: Pré e pós Carnaval",
+"s": "produção",
+"tipo": "Motion",
+"criado": "2026-10-30",
+"prazo": "2026-11-03",
+"feito": null
+},
+{
+"u": "Maceió",
+"n": "Janeiro: Sabor e artesanato de Maceió",
+"s": "briefing",
+"tipo": "Motion",
+"criado": "2026-10-30",
+"prazo": null,
+"feito": null
+},
+{
+"u": "Maceió",
+"n": "Janeiro: Um dia em Maceió",
+"s": "briefing",
+"tipo": "Motion",
+"criado": "2026-10-30",
+"prazo": null,
+"feito": null
+},
+{
+"u": "Maceió",
+"n": "Janeiro: Domingo na Ponta Verde",
+"s": "produção",
+"tipo": "Motion",
+"criado": "2026-10-30",
+"prazo": "2026-11-04",
+"feito": null
+},
+{
+"u": "Maceió",
+"n": "Janeiro: Verão em Maceió",
+"s": "produção",
+"tipo": "Motion",
+"criado": "2026-10-30",
+"prazo": "2026-11-04",
+"feito": null
+},
+{
+"u": "Maceió",
+"n": "Dezembro: 15 a 20",
+"s": "produção",
+"tipo": "Card",
+"criado": "2026-10-30",
+"prazo": "2026-11-04",
+"feito": null
+},
+{
+"u": "Maceió",
+"n": "Dezembro: 11 a 13",
+"s": "produção",
+"tipo": "Card",
+"criado": "2026-10-30",
+"prazo": "2026-11-04",
+"feito": null
+},
+{
+"u": "Maceió",
+"n": "Dezembro: 01 a 03",
+"s": "produção",
+"tipo": "Card",
+"criado": "2026-10-30",
+"prazo": "2026-11-03",
+"feito": null
+},
+{
+"u": "Maceió",
+"n": "Novembro: 24 a 29",
+"s": "produção",
+"tipo": "Card",
+"criado": "2026-10-30",
+"prazo": "2026-11-03",
+"feito": null
+},
+{
+"u": "Maceió",
+"n": "Novembro: 17 a 19",
+"s": "produção",
+"tipo": "Card",
+"criado": "2026-10-30",
+"prazo": "2026-11-03",
+"feito": null
+},
+{
+"u": "Maceió",
+"n": "Novembro: 10 a 12",
+"s": "produção",
+"tipo": "Card",
+"criado": "2026-10-30",
+"prazo": "2026-11-03",
+"feito": null
+},
+{
+"u": "Francês",
+"n": "Novembro: cards gerais",
+"s": "produção",
+"tipo": "Card",
+"criado": "2026-10-30",
+"prazo": "2026-11-02",
+"feito": null
+},
+{
+"u": "Maceió",
+"n": "Novembro: cards gerais",
+"s": "produção",
+"tipo": "Card",
+"criado": "2026-10-30",
+"prazo": "2026-11-02",
+"feito": null
+},
+{
+"u": "Francês",
+"n": "Carnaval 2027",
+"s": "alteração",
+"tipo": "Motion",
+"criado": "2026-10-23",
+"prazo": "2026-10-29",
+"feito": null
+},
+{
+"u": "Maceió",
+"n": "Carnaval 2027",
+"s": "alteração",
+"tipo": "Motion",
+"criado": "2026-10-23",
+"prazo": "2026-10-29",
+"feito": null
+},
+{
+"u": "Francês",
+"n": "Carnaval 2027: hotel",
+"s": "complete",
+"tipo": "Card",
+"criado": "2026-10-23",
+"prazo": null,
+"feito": "2026-10-29"
+},
+{
+"u": "Francês",
+"n": "Carnaval 2027: destino",
+"s": "complete",
+"tipo": "Card",
+"criado": "2026-10-23",
+"prazo": null,
+"feito": "2026-10-29"
+},
+{
+"u": "Maceió",
+"n": "Carnaval 2027: hotel",
+"s": "complete",
+"tipo": "Card",
+"criado": "2026-10-23",
+"prazo": null,
+"feito": "2026-10-29"
+},
+{
+"u": "Maceió",
+"n": "Carnaval 2027: destino",
+"s": "complete",
+"tipo": "Card",
+"criado": "2026-10-23",
+"prazo": null,
+"feito": "2026-10-29"
+},
+{
+"u": "Francês",
+"n": "Carnaval 2027: posicionamento",
+"s": "complete",
+"tipo": "Card",
+"criado": "2026-10-23",
+"prazo": null,
+"feito": "2026-10-29"
+},
+{
+"u": "Maceió",
+"n": "Carnaval 2027: posicionamento",
+"s": "complete",
+"tipo": "Card",
+"criado": "2026-10-23",
+"prazo": null,
+"feito": "2026-10-29"
+},
+{
+"u": "Maceió",
+"n": "Outubro: 18 → 31 (banners)",
+"s": "stand by",
+"tipo": "Card",
+"criado": "2026-10-14",
+"prazo": "2026-10-19",
+"feito": "2026-10-19"
+},
+{
+"u": "Maceió",
+"n": "Natal (vídeo família)",
+"s": "complete",
+"tipo": "Motion",
+"criado": "2026-10-13",
+"prazo": null,
+"feito": "2026-10-21"
+},
+{
+"u": "Francês",
+"n": "Natal (vídeo)",
+"s": "complete",
+"tipo": "Motion",
+"criado": "2026-10-13",
+"prazo": null,
+"feito": "2026-10-21"
+},
+{
+"u": "Maceió",
+"n": "Outubro: 18 → 31",
+"s": "complete",
+"tipo": "Motion",
+"criado": "2026-10-08",
+"prazo": null,
+"feito": "2026-10-19"
+},
+{
+"u": "Maceió",
+"n": "Outubro: 18 → 31 (vídeo família)",
+"s": "complete",
+"tipo": "Motion",
+"criado": "2026-10-08",
+"prazo": null,
+"feito": "2026-10-19"
+},
+{
+"u": "Maceió",
+"n": "Outubro: dia 13",
+"s": "complete",
+"tipo": "Motion",
+"criado": "2026-10-08",
+"prazo": null,
+"feito": "2026-10-19"
+},
+{
+"u": "Francês",
+"n": "Outubro: 12 → 14 (vídeo)",
+"s": "complete",
+"tipo": "Motion",
+"criado": "2026-10-08",
+"prazo": null,
+"feito": "2026-10-19"
+},
+{
+"u": "Francês",
+"n": "Outubro: última hora (vídeo)",
+"s": "complete",
+"tipo": "Motion",
+"criado": "2026-10-06",
+"prazo": null,
+"feito": "2026-10-19"
+},
+{
+"u": "Maceió",
+"n": "Feriado Novembro | Versão WhatsApp",
+"s": "complete",
+"tipo": "Card",
+"criado": "2026-09-30",
+"prazo": null,
+"feito": "2026-10-06"
+},
+{
+"u": "Maceió",
+"n": "Outubro: 18 a 31",
+"s": "complete",
+"tipo": null,
+"criado": "2026-09-29",
+"prazo": null,
+"feito": "2026-10-06"
+},
+{
+"u": "Maceió",
+"n": "Outubro: 13",
+"s": "complete",
+"tipo": null,
+"criado": "2026-09-29",
+"prazo": null,
+"feito": "2026-10-06"
+},
+{
+"u": "Maceió",
+"n": "Outubro: 1 → 9",
+"s": "stand by",
+"tipo": null,
+"criado": "2026-09-29",
+"prazo": null,
+"feito": "2026-10-06"
+},
+{
+"u": "Maceió",
+"n": "Feriado Novembro",
+"s": "complete",
+"tipo": "Card",
+"criado": "2026-09-18",
+"prazo": null,
+"feito": "2026-10-06"
+},
+{
+"u": "Francês",
+"n": "Feriado Novembro: Finados",
+"s": "complete",
+"tipo": "Card",
+"criado": "2026-09-18",
+"prazo": "2026-09-28",
+"feito": "2026-09-30"
+},
+{
+"u": "Francês",
+"n": "Outubro: 25 → 31",
+"s": "complete",
+"tipo": "Card",
+"criado": "2026-09-18",
+"prazo": "2026-09-28",
+"feito": "2026-09-29"
+},
+{
+"u": "Francês",
+"n": "Outubro: 19 → 23",
+"s": "complete",
+"tipo": "Card",
+"criado": "2026-09-18",
+"prazo": "2026-09-28",
+"feito": "2026-09-29"
+},
+{
+"u": "Francês",
+"n": "Outubro: 12 → 14",
+"s": "complete",
+"tipo": "Card",
+"criado": "2026-09-18",
+"prazo": "2026-09-28",
+"feito": "2026-09-29"
+},
+{
+"u": "Francês",
+"n": "Outubro: 01 → 07",
+"s": "stand by",
+"tipo": "Card",
+"criado": "2026-09-18",
+"prazo": null,
+"feito": "2026-10-06"
+},
+{
+"u": "Francês",
+"n": "Lastminute",
+"s": "complete",
+"tipo": "Card",
+"criado": "2026-09-18",
+"prazo": "2026-09-28",
+"feito": "2026-09-29"
+},
+{
+"u": "Francês",
+"n": "Novo rooftop",
+"s": "complete",
+"tipo": "Carrossel",
+"criado": "2026-09-09",
+"prazo": "2026-08-10",
+"feito": "2026-08-17"
+},
+{
+"u": "Francês",
+"n": "Ajustar cor dos vídeos",
+"s": "complete",
+"tipo": null,
+"criado": "2026-09-04",
+"prazo": "2026-09-08",
+"feito": "2026-09-09"
+},
+{
+"u": "Francês",
+"n": "Dezembro na Praia do Francês",
+"s": "complete",
+"tipo": "Motion",
+"criado": "2026-08-31",
+"prazo": "2026-09-02",
+"feito": "2026-09-04"
+},
+{
+"u": "Francês",
+"n": "Dezembro na Praia do Francês",
+"s": "complete",
+"tipo": "Motion",
+"criado": "2026-08-31",
+"prazo": "2026-09-02",
+"feito": "2026-09-04"
+},
+{
+"u": "Maceió",
+"n": "Dezembro: família",
+"s": "complete",
+"tipo": "Motion",
+"criado": "2026-08-31",
+"prazo": "2026-09-02",
+"feito": "2026-09-04"
+},
+{
+"u": "Maceió",
+"n": "Dezembro à beira-mar",
+"s": "complete",
+"tipo": "Motion",
+"criado": "2026-08-31",
+"prazo": "2026-09-10",
+"feito": "2026-09-24"
+},
+{
+"u": "Maceió",
+"n": "Programação | Dia das crianças",
+"s": "complete",
+"tipo": "Carrossel",
+"criado": "2026-08-21",
+"prazo": "2026-08-24",
+"feito": "2026-08-26"
+},
+{
+"u": "Maceió",
+"n": "Dia das crianças 03",
+"s": "complete",
+"tipo": "Card",
+"criado": "2026-08-19",
+"prazo": "2026-08-25",
+"feito": "2026-08-26"
+},
+{
+"u": "Maceió",
+"n": "Dia das crianças 01",
+"s": "complete",
+"tipo": "Motion",
+"criado": "2026-08-19",
+"prazo": "2026-08-21",
+"feito": "2026-08-26"
+},
+{
+"u": "Maceió",
+"n": "Dia das crianças 02",
+"s": "complete",
+"tipo": "Motion",
+"criado": "2026-08-17",
+"prazo": "2026-08-21",
+"feito": "2026-08-26"
+},
+{
+"u": "Maceió",
+"n": "Cupom de desconto | 30%",
+"s": "complete",
+"tipo": null,
+"criado": "2026-08-06",
+"prazo": null,
+"feito": "2026-08-17"
+},
+{
+"u": "Maceió",
+"n": "Cupom | 15%",
+"s": "complete",
+"tipo": "Card",
+"criado": "2026-08-06",
+"prazo": "2026-08-17",
+"feito": "2026-08-21"
+},
+{
+"u": "Francês",
+"n": "Cupom | 15%",
+"s": "complete",
+"tipo": "Card",
+"criado": "2026-08-06",
+"prazo": null,
+"feito": "2026-08-31"
+},
+{
+"u": "Francês",
+"n": "Cupom de desconto | 30%",
+"s": "complete",
+"tipo": null,
+"criado": "2026-08-05",
+"prazo": null,
+"feito": "2026-08-17"
+},
+{
+"u": "Francês",
+"n": "Early Booking (Janeiro)",
+"s": "complete",
+"tipo": "Motion",
+"criado": "2026-07-21",
+"prazo": "2026-08-03",
+"feito": "2026-08-05"
+},
+{
+"u": "Francês",
+"n": "Early Booking (Janeiro)",
+"s": "complete",
+"tipo": "Card",
+"criado": "2026-07-21",
+"prazo": "2026-08-03",
+"feito": "2026-08-05"
+},
+{
+"u": "Maceió",
+"n": "Early Booking (Janeiro)",
+"s": "complete",
+"tipo": "Motion",
+"criado": "2026-07-21",
+"prazo": "2026-08-03",
+"feito": "2026-08-05"
+},
+{
+"u": "Francês",
+"n": "Orgânicos • Casal (Julho)",
+"s": "complete",
+"tipo": "Motion",
+"criado": "2026-07-15",
+"prazo": "2026-07-17",
+"feito": "2026-07-20"
+},
+{
+"u": "Maceió",
+"n": "Orgânicos • Casal (Julho)",
+"s": "complete",
+"tipo": "Motion",
+"criado": "2026-07-15",
+"prazo": "2026-07-17",
+"feito": "2026-07-20"
+},
+{
+"u": "Francês",
+"n": "Orgânicos • Casal (Julho)",
+"s": "complete",
+"tipo": "Motion",
+"criado": "2026-07-15",
+"prazo": "2026-07-17",
+"feito": "2026-07-20"
+},
+{
+"u": "Maceió",
+"n": "Orgânicos • Casal (Julho)",
+"s": "complete",
+"tipo": "Motion",
+"criado": "2026-07-15",
+"prazo": "2026-07-17",
+"feito": "2026-07-20"
+},
+{
+"u": "Maceió",
+"n": "Semana do saco cheio | Native Ads",
+"s": "complete",
+"tipo": "Motion",
+"criado": "2026-07-14",
+"prazo": "2026-07-22",
+"feito": "2026-07-23"
+},
+{
+"u": "Maceió",
+"n": "Semana do saco cheio",
+"s": "complete",
+"tipo": "Card",
+"criado": "2026-07-14",
+"prazo": "2026-07-20",
+"feito": "2026-07-23"
+},
+{
+"u": "Maceió",
+"n": "Semana do saco cheio",
+"s": "complete",
+"tipo": "Motion",
+"criado": "2026-07-14",
+"prazo": "2026-07-20",
+"feito": "2026-07-23"
+},
+{
+"u": "Maceió",
+"n": "Early Booking (Janeiro)",
+"s": "complete",
+"tipo": "Card",
+"criado": "2026-07-14",
+"prazo": null,
+"feito": "2026-08-05"
+},
+{
+"u": "Francês",
+"n": "Novo rooftop",
+"s": "complete",
+"tipo": "Motion",
+"criado": "2026-07-14",
+"prazo": "2026-09-11",
+"feito": "2026-09-15"
+},
+{
+"u": "Francês",
+"n": "Novo rooftop",
+"s": "stand by",
+"tipo": "Motion",
+"criado": "2026-07-14",
+"prazo": null,
+"feito": "2026-07-20"
+},
+{
+"u": "Francês",
+"n": "Ano novo - H. Ponta Verde - Frances",
+"s": "complete",
+"tipo": "Card",
+"criado": "2026-07-13",
+"prazo": "2026-08-11",
+"feito": "2026-08-17"
+},
+{
+"u": "Francês",
+"n": "Natal - H. Ponta Verde - Frances",
+"s": "complete",
+"tipo": "Card",
+"criado": "2026-07-13",
+"prazo": null,
+"feito": "2026-08-17"
+},
+{
+"u": "Maceió",
+"n": "Ano novo - H. Ponta Verde - Mcz",
+"s": "complete",
+"tipo": "Card",
+"criado": "2026-07-13",
+"prazo": null,
+"feito": "2026-08-12"
+},
+{
+"u": "Maceió",
+"n": "Natal - H. Ponta Verde - Mcz",
+"s": "complete",
+"tipo": "Card",
+"criado": "2026-07-13",
+"prazo": null,
+"feito": "2026-08-12"
+},
+{
+"u": "Maceió",
+"n": "Pacotes",
+"s": "complete",
+"tipo": "Carrossel",
+"criado": "2026-07-07",
+"prazo": "2026-07-10",
+"feito": "2026-07-15"
+},
+{
+"u": "Francês",
+"n": "Pacotes",
+"s": "complete",
+"tipo": "Carrossel",
+"criado": "2026-07-07",
+"prazo": "2026-07-10",
+"feito": "2026-07-15"
+},
+{
+"u": "Maceió",
+"n": "Férias de Julho",
+"s": "stand by",
+"tipo": "Card",
+"criado": "2026-07-06",
+"prazo": null,
+"feito": "2026-07-16"
+},
+{
+"u": "Maceió",
+"n": "Criativo: Dia dos pais",
+"s": "complete",
+"tipo": "Motion",
+"criado": "2026-06-23",
+"prazo": "2026-06-30",
+"feito": "2026-06-30"
+},
+{
+"u": "Francês",
+"n": "Criativo: Dia dos avós",
+"s": "complete",
+"tipo": "Card",
+"criado": "2026-06-23",
+"prazo": "2026-06-30",
+"feito": "2026-06-30"
+},
+{
+"u": "Francês",
+"n": "Criativo: Dia dos amigos",
+"s": "complete",
+"tipo": "Card",
+"criado": "2026-06-23",
+"prazo": "2026-07-03",
+"feito": "2026-07-03"
+},
+{
+"u": "Francês",
+"n": "Criativos: Last Minute",
+"s": "complete",
+"tipo": "Card",
+"criado": "2026-06-23",
+"prazo": "2026-06-30",
+"feito": "2026-06-30"
+},
+{
+"u": "Francês",
+"n": "Criativos: Last Minute",
+"s": "complete",
+"tipo": "Motion",
+"criado": "2026-06-23",
+"prazo": "2026-06-30",
+"feito": "2026-06-30"
+},
+{
+"u": "Francês",
+"n": "Add pin: Hotel Ponta Verde Francês",
+"s": "complete",
+"tipo": "Motion",
+"criado": "2026-06-18",
+"prazo": "2026-07-09",
+"feito": "2026-07-09"
+},
+{
+"u": "Maceió",
+"n": "Criativos: Last Minute",
+"s": "complete",
+"tipo": "Motion",
+"criado": "2026-06-16",
+"prazo": "2026-06-30",
+"feito": "2026-06-30"
+},
+{
+"u": "Francês",
+"n": "Early booking: Dezembro (Maceió e Francês)",
+"s": "complete",
+"tipo": "Motion",
+"criado": "2026-06-09",
+"prazo": "2026-06-23",
+"feito": "2026-06-23"
+},
+{
+"u": "Maceió",
+"n": "Early booking: Dezembro (Maceió e Francês)",
+"s": "complete",
+"tipo": "Motion",
+"criado": "2026-06-09",
+"prazo": "2026-06-23",
+"feito": "2026-06-23"
+},
+{
+"u": "Francês",
+"n": "Early booking: Dezembro (Maceió e Francês)",
+"s": "complete",
+"tipo": "Card",
+"criado": "2026-06-09",
+"prazo": null,
+"feito": "2026-06-17"
+},
+{
+"u": "Maceió",
+"n": "Early booking: Dezembro (Maceió e Francês)",
+"s": "complete",
+"tipo": "Card",
+"criado": "2026-06-09",
+"prazo": null,
+"feito": "2026-06-17"
+},
+{
+"u": "Maceió",
+"n": "Criativos: Last Minute",
+"s": "complete",
+"tipo": "Card",
+"criado": "2026-06-08",
+"prazo": "2026-06-30",
+"feito": "2026-06-30"
+},
+{
+"u": "Francês",
+"n": "Criativo | Campanha Early Booking (Maceió e Francês - 2 videos)",
+"s": "complete",
+"tipo": "Motion",
+"criado": "2026-05-22",
+"prazo": null,
+"feito": "2026-06-07"
+},
+{
+"u": "Maceió",
+"n": "Criativo | Campanha Early Booking (Maceió e Francês - 2 videos)",
+"s": "complete",
+"tipo": "Motion",
+"criado": "2026-05-22",
+"prazo": null,
+"feito": "2026-06-07"
+},
+{
+"u": "Francês",
+"n": "Criativo | Campanha Early Booking (Maceió e Francês - 2 cards)",
+"s": "complete",
+"tipo": "Card",
+"criado": "2026-05-22",
+"prazo": null,
+"feito": "2026-06-07"
+},
+{
+"u": "Maceió",
+"n": "Criativo | Campanha Early Booking (Maceió e Francês - 2 cards)",
+"s": "complete",
+"tipo": "Card",
+"criado": "2026-05-22",
+"prazo": null,
+"feito": "2026-06-07"
+},
+{
+"u": "Maceió",
+"n": "Criativos de Junho | Maceió (São João MCZ)",
+"s": "complete",
+"tipo": "Motion",
+"criado": "2026-05-21",
+"prazo": null,
+"feito": "2026-06-02"
+},
+{
+"u": "Maceió",
+"n": "Criativos de Junho | Maceió (São João MCZ)",
+"s": "complete",
+"tipo": "Card",
+"criado": "2026-05-21",
+"prazo": null,
+"feito": "2026-06-02"
+},
+{
+"u": "Francês",
+"n": "Criativo para surfistas | Francês",
+"s": "complete",
+"tipo": "Motion",
+"criado": "2026-05-21",
+"prazo": null,
+"feito": "2026-08-31"
+},
+{
+"u": "Francês",
+"n": "Criativo para surfistas | Francês",
+"s": "complete",
+"tipo": "Card",
+"criado": "2026-05-21",
+"prazo": "2026-06-30",
+"feito": "2026-06-30"
+},
+{
+"u": "Fateixa",
+"n": "Criativo Ongoing | Fateixa (card 2)",
+"s": "complete",
+"tipo": "Card",
+"criado": "2026-05-18",
+"prazo": null,
+"feito": "2026-06-02"
+},
+{
+"u": "Maceió",
+"n": "Criativos de Julho | Maceió (video - organico 3)",
+"s": "complete",
+"tipo": "Motion",
+"criado": "2026-05-18",
+"prazo": "2026-05-22",
+"feito": "2026-05-25"
+},
+{
+"u": "Maceió",
+"n": "Criativos de Julho | Maceió (video - organico 2)",
+"s": "complete",
+"tipo": "Motion",
+"criado": "2026-05-18",
+"prazo": "2026-05-22",
+"feito": "2026-05-25"
+},
+{
+"u": "Maceió",
+"n": "Criativos de Agosto | Maceió (Card familia)",
+"s": "complete",
+"tipo": "Card",
+"criado": "2026-05-18",
+"prazo": null,
+"feito": "2026-06-04"
+},
+{
+"u": "Maceió",
+"n": "Criativos de Julho | Maceió (video - organico 1)",
+"s": "complete",
+"tipo": "Motion",
+"criado": "2026-05-18",
+"prazo": "2026-05-22",
+"feito": "2026-05-25"
+},
+{
+"u": "Maceió",
+"n": "Criativos de Julho | Maceió",
+"s": "complete",
+"tipo": "Motion",
+"criado": "2026-05-18",
+"prazo": "2026-05-22",
+"feito": "2026-05-25"
+},
+{
+"u": "Fateixa",
+"n": "Criativo Ongoing | Fateixa",
+"s": "complete",
+"tipo": "Motion",
+"criado": "2026-05-18",
+"prazo": null,
+"feito": "2026-06-02"
+},
+{
+"u": "Fateixa",
+"n": "Criativo Ongoing | Fateixa (card 1)",
+"s": "complete",
+"tipo": "Card",
+"criado": "2026-05-18",
+"prazo": null,
+"feito": "2026-06-02"
+},
+{
+"u": "Maceió",
+"n": "Criativos de Agosto | Maceió",
+"s": "complete",
+"tipo": "Card",
+"criado": "2026-05-13",
+"prazo": "2026-05-21",
+"feito": "2026-05-21"
+},
+{
+"u": "Maceió",
+"n": "Criativos de Agosto | Maceió (2 motions)",
+"s": "complete",
+"tipo": "Motion",
+"criado": "2026-05-13",
+"prazo": "2026-05-21",
+"feito": "2026-05-21"
+},
+{
+"u": "Francês",
+"n": "Criativos de Agosto | Francês",
+"s": "complete",
+"tipo": "Card",
+"criado": "2026-05-13",
+"prazo": "2026-05-22",
+"feito": "2026-05-22"
+},
+{
+"u": "Francês",
+"n": "Criativos de Agosto | Francês (2 motions)",
+"s": "complete",
+"tipo": "Motion",
+"criado": "2026-05-13",
+"prazo": "2026-05-21",
+"feito": "2026-05-21"
+},
+{
+"u": "Fateixa",
+"n": "Dia dos namorados",
+"s": "complete",
+"tipo": "Motion",
+"criado": "2026-05-13",
+"prazo": "2026-05-20",
+"feito": "2026-05-20"
+},
+{
+"u": "Fateixa",
+"n": "Dia dos namorados",
+"s": "complete",
+"tipo": "Card",
+"criado": "2026-05-13",
+"prazo": "2026-05-20",
+"feito": "2026-05-20"
+},
+{
+"u": "Fateixa",
+"n": "Dia dos namorados",
+"s": "complete",
+"tipo": "Card",
+"criado": "2026-05-13",
+"prazo": "2026-05-20",
+"feito": "2026-05-20"
+},
+{
+"u": "Maceió",
+"n": "Cards Fluxo Abandono de Carrinho | HPV Maceió",
+"s": "complete",
+"tipo": "Card",
+"criado": "2026-04-14",
+"prazo": "2026-07-27",
+"feito": "2026-07-28"
+},
+{
+"u": "Francês",
+"n": "Cards Fluxo Abandono de Carrinho | HPV Francês",
+"s": "complete",
+"tipo": "Card",
+"criado": "2026-04-14",
+"prazo": "2026-07-27",
+"feito": "2026-07-28"
+},
+{
+"u": "Maceió",
+"n": "Julho | Maceió³",
+"s": "complete",
+"tipo": "Motion",
+"criado": "2026-04-02",
+"prazo": null,
+"feito": "2026-04-17"
+},
+{
+"u": "Maceió",
+"n": "Julho | Maceió²",
+"s": "complete",
+"tipo": "Card",
+"criado": "2026-04-02",
+"prazo": null,
+"feito": "2026-04-17"
+},
+{
+"u": "Maceió",
+"n": "Julho | Maceió",
+"s": "complete",
+"tipo": "Card",
+"criado": "2026-04-02",
+"prazo": null,
+"feito": "2026-04-17"
+},
+{
+"u": "Francês",
+"n": "Julho | Francês³",
+"s": "complete",
+"tipo": "Card",
+"criado": "2026-03-25",
+"prazo": "2026-04-02",
+"feito": "2026-04-08"
+},
+{
+"u": "Francês",
+"n": "Julho | Francês²",
+"s": "complete",
+"tipo": "Card",
+"criado": "2026-03-25",
+"prazo": null,
+"feito": "2026-04-17"
+},
+{
+"u": "Francês",
+"n": "Julho | Francês¹",
+"s": "complete",
+"tipo": "Card",
+"criado": "2026-03-25",
+"prazo": "2026-03-26",
+"feito": "2026-03-27"
+},
+{
+"u": "Francês",
+"n": "Junho | Francês²",
+"s": "complete",
+"tipo": "Motion",
+"criado": "2026-03-24",
+"prazo": "2026-03-25",
+"feito": "2026-03-27"
+},
+{
+"u": "Francês",
+"n": "Junho | Francês¹",
+"s": "complete",
+"tipo": "Motion",
+"criado": "2026-03-24",
+"prazo": "2026-03-25",
+"feito": "2026-04-08"
+},
+{
+"u": "Maceió",
+"n": "Junho | Maceió³",
+"s": "complete",
+"tipo": "Motion",
+"criado": "2026-03-24",
+"prazo": "2026-03-25",
+"feito": "2026-03-27"
+},
+{
+"u": "Maceió",
+"n": "Junho | Maceió²",
+"s": "complete",
+"tipo": "Card",
+"criado": "2026-03-24",
+"prazo": "2026-03-25",
+"feito": "2026-03-27"
+},
+{
+"u": "Maceió",
+"n": "Junho | Maceió¹",
+"s": "complete",
+"tipo": "Card",
+"criado": "2026-03-24",
+"prazo": "2026-03-25",
+"feito": "2026-03-27"
+},
+{
+"u": "Francês",
+"n": "Card 2 | B2C Semana do Consumidor (F6)",
+"s": "complete",
+"tipo": "Card",
+"criado": "2026-03-11",
+"prazo": "2026-03-12",
+"feito": "2026-03-17"
+},
+{
+"u": "Francês",
+"n": "Hotel PV F6 | Semana do consumidor 03",
+"s": "complete",
+"tipo": "Motion",
+"criado": "2026-03-06",
+"prazo": "2026-03-13",
+"feito": "2026-03-17"
+},
+{
+"u": "Francês",
+"n": "Hotel PV F6 | Semana do consumidor 02",
+"s": "complete",
+"tipo": "Card",
+"criado": "2026-03-06",
+"prazo": "2026-03-13",
+"feito": "2026-03-17"
+},
+{
+"u": "Francês",
+"n": "Hotel PV F6 | Semana do consumidor 01",
+"s": "complete",
+"tipo": "Card",
+"criado": "2026-03-06",
+"prazo": "2026-03-13",
+"feito": "2026-03-17"
+},
+{
+"u": "Maceió",
+"n": "Hotel PV Maceió | Semana do consumidor 03",
+"s": "complete",
+"tipo": "Motion",
+"criado": "2026-03-06",
+"prazo": "2026-03-13",
+"feito": "2026-03-17"
+},
+{
+"u": "Maceió",
+"n": "Hotel PV Maceió | Semana do consumidor 02",
+"s": "complete",
+"tipo": "Card",
+"criado": "2026-03-06",
+"prazo": "2026-03-13",
+"feito": "2026-03-17"
+},
+{
+"u": "Maceió",
+"n": "Hotel PV Maceió | Semana do consumidor 01",
+"s": "complete",
+"tipo": "Card",
+"criado": "2026-03-06",
+"prazo": "2026-03-13",
+"feito": "2026-03-17"
+},
+{
+"u": "Maceió",
+"n": "Topo de funil 04 | Argentina",
+"s": "complete",
+"tipo": "Card",
+"criado": "2026-02-26",
+"prazo": "2026-03-02",
+"feito": "2026-03-05"
+},
+{
+"u": "Maceió",
+"n": "Topo de funil 03 | Argentina",
+"s": "complete",
+"tipo": "Card",
+"criado": "2026-02-26",
+"prazo": "2026-03-02",
+"feito": "2026-03-05"
+},
+{
+"u": "Maceió",
+"n": "Topo de funil 02 | Argentina",
+"s": "complete",
+"tipo": "Card",
+"criado": "2026-02-26",
+"prazo": "2026-03-02",
+"feito": "2026-03-11"
+},
+{
+"u": "Maceió",
+"n": "Topo de funil 01 | Argentina",
+"s": "complete",
+"tipo": "Card",
+"criado": "2026-02-26",
+"prazo": "2026-03-02",
+"feito": "2026-03-05"
+},
+{
+"u": "Francês",
+"n": "Topo de funil 04 | Argentina",
+"s": "complete",
+"tipo": "Card",
+"criado": "2026-02-26",
+"prazo": "2026-03-18",
+"feito": "2026-03-18"
+},
+{
+"u": "Francês",
+"n": "Topo de funil 03 | Argentina",
+"s": "complete",
+"tipo": "Card",
+"criado": "2026-02-26",
+"prazo": null,
+"feito": "2026-03-16"
+},
+{
+"u": "Francês",
+"n": "Topo de funil 02 | Argentina",
+"s": "complete",
+"tipo": "Card",
+"criado": "2026-02-26",
+"prazo": null,
+"feito": "2026-03-16"
+},
+{
+"u": "Francês",
+"n": "Topo de funil 01 | Argentina",
+"s": "complete",
+"tipo": "Card",
+"criado": "2026-02-26",
+"prazo": null,
+"feito": "2026-03-16"
+},
+{
+"u": "Francês",
+"n": "Maio | Francês 03",
+"s": "complete",
+"tipo": "Motion",
+"criado": "2026-02-12",
+"prazo": "2026-02-25",
+"feito": "2026-02-27"
+},
+{
+"u": "Francês",
+"n": "Maio | Francês 02",
+"s": "complete",
+"tipo": "Card",
+"criado": "2026-02-12",
+"prazo": null,
+"feito": "2026-02-23"
+},
+{
+"u": "Francês",
+"n": "Maio | Francês 01",
+"s": "complete",
+"tipo": "Card",
+"criado": "2026-02-12",
+"prazo": null,
+"feito": "2026-03-03"
+},
+{
+"u": "Maceió",
+"n": "Maio | Maceió 03",
+"s": "complete",
+"tipo": "Motion",
+"criado": "2026-02-12",
+"prazo": null,
+"feito": "2026-03-05"
+},
+{
+"u": "Maceió",
+"n": "Maio | Maceió 02",
+"s": "complete",
+"tipo": "Card",
+"criado": "2026-02-12",
+"prazo": "2026-02-26",
+"feito": "2026-02-27"
+},
+{
+"u": "Maceió",
+"n": "Maio | Maceió 01",
+"s": "complete",
+"tipo": "Card",
+"criado": "2026-02-12",
+"prazo": null,
+"feito": "2026-03-03"
+},
+{
+"u": "Maceió",
+"n": "3 Fundo de Funil | Hotel Ponta Verde Maceió",
+"s": "complete",
+"tipo": "Card",
+"criado": "2026-02-11",
+"prazo": "2026-02-20",
+"feito": "2026-02-23"
+},
+{
+"u": "Maceió",
+"n": "2 Fundo de Funil | Hotel Ponta Verde Maceió",
+"s": "complete",
+"tipo": "Card",
+"criado": "2026-02-11",
+"prazo": "2026-02-20",
+"feito": "2026-02-23"
+},
+{
+"u": "Maceió",
+"n": "1 Fundo de Funil | Hotel Ponta Verde Maceió",
+"s": "complete",
+"tipo": "Card",
+"criado": "2026-02-11",
+"prazo": null,
+"feito": "2026-03-03"
+},
+{
+"u": "Maceió",
+"n": "Ajuste | Peças (Março/Maceió)",
+"s": "complete",
+"tipo": null,
+"criado": "2026-02-10",
+"prazo": null,
+"feito": "2026-02-11"
+},
+{
+"u": "Maceió",
+"n": "[B2B] Fique 6, page 7 (Maceió/Abril)",
+"s": "complete",
+"tipo": "Motion",
+"criado": "2026-02-06",
+"prazo": "2026-02-10",
+"feito": "2026-02-11"
+},
+{
+"u": "Maceió",
+"n": "[B2B] Fique 6, page 7 (Maceió/Abril)",
+"s": "complete",
+"tipo": "Card",
+"criado": "2026-02-06",
+"prazo": "2026-02-10",
+"feito": "2026-02-12"
+},
+{
+"u": "Maceió",
+"n": "[B2C] Fique 6, page 7 (Maceió/Abril)",
+"s": "complete",
+"tipo": "Card",
+"criado": "2026-02-06",
+"prazo": "2026-02-10",
+"feito": "2026-02-12"
+},
+{
+"u": "Maceió",
+"n": "[B2C] Fique 6, page 7 (Maceió/Abril)",
+"s": "complete",
+"tipo": "Motion",
+"criado": "2026-02-06",
+"prazo": "2026-02-10",
+"feito": "2026-02-10"
+},
+{
+"u": "Maceió",
+"n": "Fundo de Funil | Maceió",
+"s": "complete",
+"tipo": null,
+"criado": "2026-02-04",
+"prazo": "2026-02-05",
+"feito": "2026-02-06"
+},
+{
+"u": "Francês",
+"n": "Cupom de desconto | Abandono de carrinho",
+"s": "complete",
+"tipo": "Motion",
+"criado": "2026-01-29",
+"prazo": "2026-04-30",
+"feito": "2026-04-30"
+},
+{
+"u": "Maceió",
+"n": "Cupom de desconto | Abandono de carrinho",
+"s": "complete",
+"tipo": "Motion",
+"criado": "2026-01-29",
+"prazo": "2026-04-30",
+"feito": "2026-04-30"
+},
+{
+"u": "Francês",
+"n": "Fundo de funil (Site/ Last Minute) → Francês",
+"s": "complete",
+"tipo": "Motion",
+"criado": "2026-01-22",
+"prazo": null,
+"feito": "2026-02-03"
+},
+{
+"u": "Francês",
+"n": "Fundo de funil (Site/Meio da semana) → Francês",
+"s": "complete",
+"tipo": "Card",
+"criado": "2026-01-22",
+"prazo": "2026-02-04",
+"feito": "2026-02-06"
+},
+{
+"u": "Maceió",
+"n": "Fundo de funil (P1/WhatsApp) Ongoing → Maceió",
+"s": "complete",
+"tipo": "Motion",
+"criado": "2026-01-22",
+"prazo": null,
+"feito": "2026-02-10"
+},
+{
+"u": "Maceió",
+"n": "Fundo de funil (P2/Vendas) Ongoing → Maceió",
+"s": "complete",
+"tipo": "Card",
+"criado": "2026-01-22",
+"prazo": "2026-02-03",
+"feito": "2026-02-06"
+},
+{
+"u": "Maceió",
+"n": "Fundo de funil (P1/Vendas) Ongoing → Maceió",
+"s": "complete",
+"tipo": "Motion",
+"criado": "2026-01-22",
+"prazo": "2026-02-03",
+"feito": "2026-02-06"
+},
+{
+"u": "Francês",
+"n": "Antecipação | Março",
+"s": "complete",
+"tipo": "Card",
+"criado": "2026-01-21",
+"prazo": "2026-01-28",
+"feito": "2026-02-04"
+},
+{
+"u": "Francês",
+"n": "Antecipação | Março",
+"s": "complete",
+"tipo": "Motion",
+"criado": "2026-01-21",
+"prazo": null,
+"feito": "2026-01-26"
+},
+{
+"u": "Maceió",
+"n": "Antecipação | Março",
+"s": "complete",
+"tipo": "Card",
+"criado": "2026-01-21",
+"prazo": null,
+"feito": "2026-01-29"
+},
+{
+"u": "Maceió",
+"n": "Antecipação | Março",
+"s": "complete",
+"tipo": "Motion",
+"criado": "2026-01-21",
+"prazo": "2026-01-22",
+"feito": "2026-01-23"
+},
+{
+"u": "Francês",
+"n": "Antecipação Fevereiro | Francês",
+"s": "complete",
+"tipo": "Card",
+"criado": "2026-01-16",
+"prazo": "2026-01-21",
+"feito": "2026-01-22"
+},
+{
+"u": "Francês",
+"n": "Antecipação Fevereiro | Francês",
+"s": "complete",
+"tipo": "Motion",
+"criado": "2026-01-16",
+"prazo": null,
+"feito": "2026-01-22"
+},
+{
+"u": "Maceió",
+"n": "Antecipação Fevereiro | Maceió",
+"s": "complete",
+"tipo": "Motion",
+"criado": "2026-01-16",
+"prazo": "2026-01-21",
+"feito": "2026-01-22"
+},
+{
+"u": "Maceió",
+"n": "Antecipação Fevereiro | Maceió",
+"s": "complete",
+"tipo": "Card",
+"criado": "2026-01-16",
+"prazo": "2026-01-21",
+"feito": "2026-01-22"
+},
+{
+"u": "Francês",
+"n": "Remarketing | Francês 01",
+"s": "complete",
+"tipo": "Motion",
+"criado": "2026-01-16",
+"prazo": "2026-01-19",
+"feito": "2026-01-21"
+},
+{
+"u": "Maceió",
+"n": "Antecipação | Maceió (Abril) 03",
+"s": "complete",
+"tipo": "Card",
+"criado": "2026-01-16",
+"prazo": "2026-01-20",
+"feito": "2026-01-20"
+},
+{
+"u": "Maceió",
+"n": "Antecipação | Maceió (Abril) 02",
+"s": "complete",
+"tipo": "Motion",
+"criado": "2026-01-16",
+"prazo": "2026-01-20",
+"feito": "2026-01-20"
+},
+{
+"u": "Maceió",
+"n": "Antecipação | Maceió (Abril) 01",
+"s": "complete",
+"tipo": "Motion",
+"criado": "2026-01-16",
+"prazo": "2026-01-20",
+"feito": "2026-01-20"
+},
+{
+"u": "Francês",
+"n": "Ongoing | Ponta Verde Francês (Abril) 01",
+"s": "complete",
+"tipo": "Motion",
+"criado": "2026-01-14",
+"prazo": "2026-02-12",
+"feito": "2026-02-12"
+},
+{
+"u": "Francês",
+"n": "Antecipação | Ponta Verde Francês (Abril) 02",
+"s": "complete",
+"tipo": "Motion",
+"criado": "2026-01-14",
+"prazo": "2026-02-12",
+"feito": "2026-02-12"
+},
+{
+"u": "Francês",
+"n": "Antecipação | Ponta Verde Francês (Abril)",
+"s": "complete",
+"tipo": "Card",
+"criado": "2026-01-14",
+"prazo": "2026-02-12",
+"feito": "2026-02-12"
+},
+{
+"u": "Francês",
+"n": "Antecipação | Ponta Verde Francês (Abril) 01",
+"s": "complete",
+"tipo": "Motion",
+"criado": "2026-01-14",
+"prazo": "2026-02-12",
+"feito": "2026-02-12"
+}
+]
 }
