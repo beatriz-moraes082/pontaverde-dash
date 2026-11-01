@@ -151133,9 +151133,9 @@
 }
 },
 "coleta": {
-"meta": "2026-10-30T12:09-03:00",
-"google": "2026-10-30T12:09-03:00",
-"clickup": "2026-10-30T12:10-03:00"
+"meta": "2026-10-31T21:37-03:00",
+"google": "2026-10-31T21:38-03:00",
+"clickup": "2026-10-31T21:38-03:00"
 },
 "google_desde": "2026-10-01",
 "meta_desde": "2026-01-01",
@@ -151170,19 +151170,19 @@
 {
 "u": "Maceió",
 "n": "Janeiro: Sabor e artesanato de Maceió",
-"s": "briefing",
+"s": "produção",
 "tipo": "Motion",
 "criado": "2026-10-30",
-"prazo": null,
+"prazo": "2026-11-04",
 "feito": null
 },
 {
 "u": "Maceió",
 "n": "Janeiro: Um dia em Maceió",
-"s": "briefing",
+"s": "produção",
 "tipo": "Motion",
 "criado": "2026-10-30",
-"prazo": null,
+"prazo": "2026-11-04",
 "feito": null
 },
 {
