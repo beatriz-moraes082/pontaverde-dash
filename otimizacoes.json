@@ -3,6 +3,96 @@
 {
 "tipo": "status",
 "cat": "Pausas e ativações",
+"obj": "120251386407170429",
+"nome": "25+ | Regional de carro | SE BA PE PB RN",
+"campanha": "Fundo de Funil | Mensagem/WhatsApp | Novembro | 17/08",
+"nivel": "conjunto",
+"de": "off",
+"para": "on",
+"unidade": "Maceió",
+"canal": "Meta",
+"quando": "2026-11-02 19:37",
+"id": "414629c6767aba1f",
+"trilha": true
+},
+{
+"tipo": "status",
+"cat": "Pausas e ativações",
+"obj": "120250148373970429",
+"nome": "25+ | BR | Mix Quente 14D",
+"campanha": "Fundo de Funil | Mensagem/WhatsApp | Novembro | 17/08",
+"nivel": "conjunto",
+"de": "off",
+"para": "on",
+"unidade": "Maceió",
+"canal": "Meta",
+"quando": "2026-11-02 19:25",
+"id": "96852eefb5d5366c",
+"trilha": true
+},
+{
+"tipo": "status",
+"cat": "Pausas e ativações",
+"obj": "120250571748000429",
+"nome": "25+ | Regional | Lookalike Hóspedes Nov 2025",
+"campanha": "Fundo de Funil | Mensagem/WhatsApp | Novembro | 17/08",
+"nivel": "conjunto",
+"de": "off",
+"para": "on",
+"unidade": "Maceió",
+"canal": "Meta",
+"quando": "2026-11-02 19:25",
+"id": "8ee68b14263e03a2",
+"trilha": true
+},
+{
+"tipo": "status",
+"cat": "Pausas e ativações",
+"obj": "120250148373970429",
+"nome": "25+ | BR | Mix Quente 14D",
+"campanha": "Fundo de Funil | Mensagem/WhatsApp | Novembro | 17/08",
+"nivel": "conjunto",
+"de": "on",
+"para": "off",
+"unidade": "Maceió",
+"canal": "Meta",
+"quando": "2026-11-02 19:25",
+"id": "fff7cca45fd67a08",
+"trilha": true
+},
+{
+"tipo": "status",
+"cat": "Pausas e ativações",
+"obj": "120250571748000429",
+"nome": "25+ | Regional | Lookalike Hóspedes Nov 2025",
+"campanha": "Fundo de Funil | Mensagem/WhatsApp | Novembro | 17/08",
+"nivel": "conjunto",
+"de": "on",
+"para": "off",
+"unidade": "Maceió",
+"canal": "Meta",
+"quando": "2026-11-02 19:25",
+"id": "fb8c64e3091464a5",
+"trilha": true
+},
+{
+"tipo": "status",
+"cat": "Pausas e ativações",
+"obj": "120251386407170429",
+"nome": "25+ | Regional de carro | SE BA PE PB RN",
+"campanha": "Fundo de Funil | Mensagem/WhatsApp | Novembro | 17/08",
+"nivel": "conjunto",
+"de": "on",
+"para": "off",
+"unidade": "Maceió",
+"canal": "Meta",
+"quando": "2026-11-02 19:25",
+"id": "b31d086e453238f5",
+"trilha": true
+},
+{
+"tipo": "status",
+"cat": "Pausas e ativações",
 "obj": "52585398581300",
 "nome": "F6 | VD02 | Última Hora 19-31 (Outubro)",
 "campanha": "Fundo de Funil | Mensagem/WhatsApp | Outubro | 01/07/26",
@@ -152693,9 +152783,9 @@
 }
 },
 "coleta": {
-"meta": "2026-11-02T16:57-03:00",
-"google": "2026-11-02T16:57-03:00",
-"clickup": "2026-11-02T16:57-03:00"
+"meta": "2026-11-03T00:17-03:00",
+"google": "2026-11-03T00:17-03:00",
+"clickup": "2026-11-03T00:17-03:00"
 },
 "google_desde": "2026-10-01",
 "meta_desde": "2026-01-01",
@@ -152841,7 +152931,7 @@
 "s": "alteração",
 "tipo": "Motion",
 "criado": "2026-10-23",
-"prazo": "2026-10-29",
+"prazo": "2026-11-03",
 "feito": null
 },
 {
@@ -152850,7 +152940,7 @@
 "s": "alteração",
 "tipo": "Motion",
 "criado": "2026-10-23",
-"prazo": "2026-10-29",
+"prazo": "2026-11-03",
 "feito": null
 },
 {
