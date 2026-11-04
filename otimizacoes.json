@@ -153048,9 +153048,9 @@
 }
 },
 "coleta": {
-"meta": "2026-11-03T14:29-03:00",
-"google": "2026-11-03T14:29-03:00",
-"clickup": "2026-11-03T14:30-03:00"
+"meta": "2026-11-03T22:51-03:00",
+"google": "2026-11-03T22:51-03:00",
+"clickup": "2026-11-03T22:51-03:00"
 },
 "google_desde": "2026-10-01",
 "meta_desde": "2026-01-01",
@@ -153139,19 +153139,19 @@
 {
 "u": "Maceió",
 "n": "Dezembro: 01 a 03",
-"s": "produção",
+"s": "aprovação",
 "tipo": "Card",
 "criado": "2026-10-30",
-"prazo": "2026-11-03",
+"prazo": null,
 "feito": null
 },
 {
 "u": "Maceió",
 "n": "Novembro: 24 a 29",
-"s": "produção",
+"s": "aprovação",
 "tipo": "Card",
 "criado": "2026-10-30",
-"prazo": "2026-11-03",
+"prazo": null,
 "feito": null
 },
 {
@@ -153160,7 +153160,7 @@
 "s": "aprovação",
 "tipo": "Card",
 "criado": "2026-10-30",
-"prazo": "2026-11-03",
+"prazo": null,
 "feito": null
 },
 {
@@ -153169,7 +153169,7 @@
 "s": "aprovação",
 "tipo": "Card",
 "criado": "2026-10-30",
-"prazo": "2026-11-03",
+"prazo": null,
 "feito": null
 },
 {
@@ -153178,7 +153178,7 @@
 "s": "aprovação",
 "tipo": "Card",
 "criado": "2026-10-30",
-"prazo": "2026-11-02",
+"prazo": null,
 "feito": null
 },
 {
@@ -153187,7 +153187,7 @@
 "s": "aprovação",
 "tipo": "Card",
 "criado": "2026-10-30",
-"prazo": "2026-11-03",
+"prazo": null,
 "feito": null
 },
 {
