@@ -3,6 +3,36 @@
 {
 "tipo": "status",
 "cat": "Pausas e ativações",
+"obj": "120250383858150429",
+"nome": "MCZ | BN06 | Dezembro",
+"campanha": "Fundo de Funil | Vendas | Ongoing | 03/03/26",
+"nivel": "anúncio",
+"de": null,
+"para": "on",
+"unidade": "Maceió",
+"canal": "Meta",
+"quando": "2026-11-04 20:07",
+"id": "1aa782e4f3ff094c",
+"trilha": false
+},
+{
+"tipo": "status",
+"cat": "Pausas e ativações",
+"obj": "120250383858510429",
+"nome": "MCZ | BN06 | Dezembro",
+"campanha": "Fundo de Funil | Vendas | Ongoing | 03/03/26",
+"nivel": "anúncio",
+"de": null,
+"para": "on",
+"unidade": "Maceió",
+"canal": "Meta",
+"quando": "2026-11-04 20:07",
+"id": "a522b790626d3404",
+"trilha": false
+},
+{
+"tipo": "status",
+"cat": "Pausas e ativações",
 "obj": "120255191715870066",
 "nome": "03/10/26 - Charque Acebolado",
 "campanha": "Fundo de Funil | Leads - Mensagem | Francês Ongoing",
@@ -146294,6 +146324,10 @@
 "120200323836940429": "HPV | MCZ | Verão 24 | HOT | RMKT | Gastronomia | Localização | Quartos | CONV. ADD TO CART | | 2023-09-13"
 },
 "anuncio": {
+"120250383858150429": "120249717769230429",
+"120250383858510429": "120244760107080429",
+"120244760107100429": "120244760107080429",
+"120244760107120429": "120244760107080429",
 "120251341308160429": "120251341258740429",
 "120251341311170429": "120251341258740429",
 "120251341312700429": "120251341258740429",
@@ -146322,8 +146356,6 @@
 "120251211570770429": "120248916701220429",
 "120251211571750429": "120244760107080429",
 "120251386412970429": "120251386407170429",
-"120250383858150429": "120249717769230429",
-"120250383858510429": "120244760107080429",
 "120251384953400429": "120249717769230429",
 "120251026353480429": "120244760107080429",
 "120250386528940429": "120250386482320429",
@@ -146437,8 +146469,6 @@
 "120251367741070429": "120244760107080429",
 "120251367741080429": "120244760107080429",
 "120249616212880429": "120247872753130429",
-"120244760107120429": "120244760107080429",
-"120244760107100429": "120244760107080429",
 "120244760107110429": "120244760107080429",
 "120244760107140429": "120244760107080429",
 "120244760107130429": "120244760107080429",
@@ -153610,9 +153640,9 @@
 }
 },
 "coleta": {
-"meta": "2026-11-04T14:43-03:00",
-"google": "2026-11-04T14:43-03:00",
-"clickup": "2026-11-04T14:44-03:00"
+"meta": "2026-11-04T22:58-03:00",
+"google": "2026-11-04T22:58-03:00",
+"clickup": "2026-11-04T22:58-03:00"
 },
 "google_desde": "2026-10-01",
 "meta_desde": "2026-01-01",
@@ -153629,19 +153659,19 @@
 {
 "u": "Francês",
 "n": "E-mail: Pré e pós Carnaval",
-"s": "aprovação",
+"s": "alteração",
 "tipo": null,
 "criado": "2026-10-30",
-"prazo": "2026-11-03",
+"prazo": "2026-11-05",
 "feito": null
 },
 {
 "u": "Francês",
 "n": "Fevereiro: Pré e pós Carnaval",
-"s": "produção",
+"s": "aprovação",
 "tipo": "Motion",
 "criado": "2026-10-30",
-"prazo": "2026-11-03",
+"prazo": "2026-11-04",
 "feito": null
 },
 {
@@ -153650,13 +153680,13 @@
 "s": "produção",
 "tipo": "Motion",
 "criado": "2026-10-30",
-"prazo": "2026-11-04",
+"prazo": "2026-11-05",
 "feito": null
 },
 {
 "u": "Maceió",
 "n": "Janeiro: Um dia em Maceió",
-"s": "produção",
+"s": "aprovação",
 "tipo": "Motion",
 "criado": "2026-10-30",
 "prazo": "2026-11-04",
@@ -153665,7 +153695,7 @@
 {
 "u": "Maceió",
 "n": "Janeiro: Domingo na Ponta Verde",
-"s": "produção",
+"s": "aprovação",
 "tipo": "Motion",
 "criado": "2026-10-30",
 "prazo": "2026-11-04",
@@ -153674,16 +153704,16 @@
 {
 "u": "Maceió",
 "n": "Janeiro: Verão em Maceió",
-"s": "produção",
+"s": "aprovação",
 "tipo": "Motion",
 "criado": "2026-10-30",
-"prazo": "2026-11-04",
+"prazo": null,
 "feito": null
 },
 {
 "u": "Maceió",
 "n": "Dezembro: 15 a 20",
-"s": "produção",
+"s": "aprovação",
 "tipo": "Card",
 "criado": "2026-10-30",
 "prazo": "2026-11-04",
@@ -153692,10 +153722,10 @@
 {
 "u": "Maceió",
 "n": "Dezembro: 11 a 13",
-"s": "produção",
+"s": "aprovação",
 "tipo": "Card",
 "criado": "2026-10-30",
-"prazo": "2026-11-04",
+"prazo": null,
 "feito": null
 },
 {
@@ -153710,10 +153740,10 @@
 {
 "u": "Maceió",
 "n": "Novembro: 24 a 29",
-"s": "aprovação",
+"s": "alteração",
 "tipo": "Card",
 "criado": "2026-10-30",
-"prazo": null,
+"prazo": "2026-11-05",
 "feito": null
 },
 {
@@ -153755,10 +153785,10 @@
 {
 "u": "Francês",
 "n": "Carnaval 2027",
-"s": "alteração",
+"s": "aprovação",
 "tipo": "Motion",
 "criado": "2026-10-23",
-"prazo": "2026-11-04",
+"prazo": "2026-11-05",
 "feito": null
 },
 {
@@ -153767,7 +153797,7 @@
 "s": "alteração",
 "tipo": "Motion",
 "criado": "2026-10-23",
-"prazo": "2026-11-04",
+"prazo": "2026-11-05",
 "feito": null
 },
 {
