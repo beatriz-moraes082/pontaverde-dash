@@ -157343,9 +157343,9 @@
 }
 },
 "coleta": {
-"meta": "2026-11-09T17:22-03:00",
-"google": "2026-11-09T17:23-03:00",
-"clickup": "2026-11-09T17:23-03:00"
+"meta": "2026-11-10T00:56-03:00",
+"google": "2026-11-10T00:56-03:00",
+"clickup": "2026-11-10T00:57-03:00"
 },
 "google_desde": "2026-10-01",
 "meta_desde": "2026-01-01",
@@ -157452,7 +157452,7 @@
 {
 "u": "Francês",
 "n": "Janeiro: vídeo orgânico",
-"s": "produção",
+"s": "aprovação",
 "tipo": "Motion",
 "criado": "2026-11-06",
 "prazo": "2026-11-09",
@@ -157461,19 +157461,19 @@
 {
 "u": "Maceió",
 "n": "E-mail: Pré e pós Carnaval",
-"s": "complete",
+"s": "alteração",
 "tipo": null,
 "criado": "2026-10-30",
-"prazo": "2026-11-03",
-"feito": "2026-11-04"
+"prazo": "2026-11-10",
+"feito": null
 },
 {
 "u": "Francês",
 "n": "E-mail: Pré e pós Carnaval",
-"s": "aprovação",
+"s": "alteração",
 "tipo": null,
 "criado": "2026-10-30",
-"prazo": "2026-11-05",
+"prazo": "2026-11-10",
 "feito": null
 },
 {
@@ -157581,7 +157581,7 @@
 "s": "aprovação",
 "tipo": "Card",
 "criado": "2026-10-30",
-"prazo": "2026-11-05",
+"prazo": null,
 "feito": null
 },
 {
@@ -157608,7 +157608,7 @@
 "s": "aprovação",
 "tipo": "Motion",
 "criado": "2026-10-23",
-"prazo": "2026-11-05",
+"prazo": null,
 "feito": null
 },
 {
