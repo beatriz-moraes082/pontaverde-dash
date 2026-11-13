@@ -3,6 +3,51 @@
 {
 "tipo": "status",
 "cat": "Pausas e ativações",
+"obj": "120251488753120429",
+"nome": "MCZ | BN02 | Novembro beira-mar (Novembro)",
+"campanha": "Fundo de Funil | Mensagem/WhatsApp | Novembro | 17/08",
+"nivel": "anúncio",
+"de": null,
+"para": "on",
+"unidade": "Maceió",
+"canal": "Meta",
+"quando": "2026-11-12 20:18",
+"id": "c0cb78a9a3caa480",
+"trilha": true
+},
+{
+"tipo": "status",
+"cat": "Pausas e ativações",
+"obj": "120251488751570429",
+"nome": "MCZ | BN01 | Novembro é verão (Novembro)",
+"campanha": "Fundo de Funil | Mensagem/WhatsApp | Novembro | 17/08",
+"nivel": "anúncio",
+"de": null,
+"para": "on",
+"unidade": "Maceió",
+"canal": "Meta",
+"quando": "2026-11-12 20:18",
+"id": "686f7e15053ad13c",
+"trilha": true
+},
+{
+"tipo": "status",
+"cat": "Pausas e ativações",
+"obj": "120251386412970429",
+"nome": "MCZ | VD01 | Early Booking (Novembro)",
+"campanha": "Fundo de Funil | Mensagem/WhatsApp | Novembro | 17/08",
+"nivel": "anúncio",
+"de": null,
+"para": "on",
+"unidade": "Maceió",
+"canal": "Meta",
+"quando": "2026-11-12 20:18",
+"id": "117d4d8f768809ce",
+"trilha": true
+},
+{
+"tipo": "status",
+"cat": "Pausas e ativações",
 "obj": "120251488488870429",
 "nome": "MCZ | BN04 | Família piscina | Motor 10-12/11",
 "campanha": "Fundo de Funil | Vendas | Ongoing | 03/03/26",
@@ -151335,6 +151380,9 @@
 "120200323836940429": "HPV | MCZ | Verão 24 | HOT | RMKT | Gastronomia | Localização | Quartos | CONV. ADD TO CART | | 2023-09-13"
 },
 "anuncio": {
+"120251488753120429": "120251386407170429",
+"120251488751570429": "120251386407170429",
+"120251386412970429": "120251386407170429",
 "120251488488870429": "120249717769230429",
 "120251488512630429": "120244760107080429",
 "120251488499370429": "120244760107080429",
@@ -151363,9 +151411,6 @@
 "120251341309200429": "120251341258740429",
 "120251341312260429": "120251341258740429",
 "120251341305650429": "120251341258740429",
-"120251488753120429": "120251386407170429",
-"120251488751570429": "120251386407170429",
-"120251386412970429": "120251386407170429",
 "120251373909410429": "120251367018360429",
 "120251373704820429": "120251367018360429",
 "120251373703690429": "120251367018360429",
@@ -158732,9 +158777,9 @@
 }
 },
 "coleta": {
-"meta": "2026-11-12T14:52-03:00",
-"google": "2026-11-12T14:52-03:00",
-"clickup": "2026-11-12T14:52-03:00"
+"meta": "2026-11-12T23:21-03:00",
+"google": "2026-11-12T23:21-03:00",
+"clickup": "2026-11-12T23:21-03:00"
 },
 "google_desde": "2026-10-01",
 "meta_desde": "2026-01-01",
