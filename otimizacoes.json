@@ -165708,9 +165708,9 @@
 }
 },
 "coleta": {
-"meta": "2026-11-18T15:36-03:00",
-"google": "2026-11-18T15:36-03:00",
-"clickup": "2026-11-18T15:36-03:00"
+"meta": "2026-11-18T23:55-03:00",
+"google": "2026-11-18T23:55-03:00",
+"clickup": "2026-11-18T23:55-03:00"
 },
 "google_desde": "2026-10-01",
 "meta_desde": "2026-01-01",
@@ -165730,7 +165730,7 @@
 "s": "aprovação",
 "tipo": "Card",
 "criado": "2026-11-09",
-"prazo": "2026-11-18",
+"prazo": null,
 "feito": null
 },
 {
@@ -165739,7 +165739,7 @@
 "s": "aprovação",
 "tipo": "Card",
 "criado": "2026-11-09",
-"prazo": "2026-11-26",
+"prazo": null,
 "feito": null
 },
 {
@@ -165775,7 +165775,7 @@
 "s": "aprovação",
 "tipo": "Card",
 "criado": "2026-11-09",
-"prazo": "2026-11-19",
+"prazo": null,
 "feito": null
 },
 {
@@ -165793,7 +165793,7 @@
 "s": "aprovação",
 "tipo": "Motion",
 "criado": "2026-11-09",
-"prazo": "2026-11-18",
+"prazo": null,
 "feito": null
 },
 {
@@ -165808,7 +165808,7 @@
 {
 "u": "Francês",
 "n": "Beach Friday: pré-lançamento",
-"s": "aprovado",
+"s": "complete",
 "tipo": "Card",
 "criado": "2026-11-09",
 "prazo": null,
@@ -165817,7 +165817,7 @@
 {
 "u": "Maceió",
 "n": "Beach Friday: pré-lançamento",
-"s": "aprovado",
+"s": "complete",
 "tipo": "Card",
 "criado": "2026-11-09",
 "prazo": null,
@@ -165835,20 +165835,20 @@
 {
 "u": "Maceió",
 "n": "E-mail: Pré e pós Carnaval",
-"s": "aprovação",
+"s": "complete",
 "tipo": null,
 "criado": "2026-10-30",
 "prazo": "2026-11-16",
-"feito": null
+"feito": "2026-11-18"
 },
 {
 "u": "Francês",
 "n": "E-mail: Pré e pós Carnaval",
-"s": "aprovação",
+"s": "complete",
 "tipo": null,
 "criado": "2026-10-30",
 "prazo": "2026-11-16",
-"feito": null
+"feito": "2026-11-18"
 },
 {
 "u": "Francês",
